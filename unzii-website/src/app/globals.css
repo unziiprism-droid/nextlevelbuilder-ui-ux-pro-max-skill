@@ -25,6 +25,9 @@
   --color-accent: var(--color-brand-supporting);
   --color-accent-strong: var(--color-brand-secondary);
 
+  /* Status accent — used only for functional "live/available" signals, never decoratively */
+  --color-status-live: #1a9c6b;
+
   --shadow-soft: 0 1px 2px rgba(16, 24, 39, 0.04), 0 8px 24px -8px rgba(16, 24, 39, 0.08);
   --shadow-lifted: 0 4px 8px rgba(16, 24, 39, 0.04), 0 24px 48px -12px rgba(16, 24, 39, 0.16);
 }
@@ -53,6 +56,7 @@
 
   --color-accent: var(--color-accent);
   --color-accent-strong: var(--color-accent-strong);
+  --color-status-live: var(--color-status-live);
 
   --shadow-soft: var(--shadow-soft);
   --shadow-lifted: var(--shadow-lifted);

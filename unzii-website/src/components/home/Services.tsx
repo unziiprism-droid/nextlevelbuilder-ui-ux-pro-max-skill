@@ -36,8 +36,14 @@ export function Services() {
                   className="group flex h-full flex-col rounded-3xl border border-border bg-surface p-8 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brand-secondary/20 hover:shadow-lifted"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="flex size-12 items-center justify-center rounded-2xl bg-surface-muted text-brand-supporting transition-colors duration-300 group-hover:bg-brand-secondary group-hover:text-text-inverse">
+                    <span className="relative flex size-12 items-center justify-center rounded-2xl bg-surface-muted text-brand-supporting transition-colors duration-300 group-hover:bg-brand-secondary group-hover:text-text-inverse">
                       <Icon className="size-5.5" aria-hidden />
+                      {service.status === "live" && (
+                        <span
+                          className="absolute -right-0.5 -bottom-0.5 size-2.5 rounded-full bg-status-live ring-2 ring-surface"
+                          aria-hidden
+                        />
+                      )}
                     </span>
                     {service.status === "coming-soon" && (
                       <span className="rounded-full bg-brand-bg px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-supporting">
