@@ -17,12 +17,12 @@ const faqs = [
   {
     question: "How long does a typical website project take?",
     answer:
-      "Timelines depend on scope, but most website projects move from discovery to launch within a few weeks. We'll give you a clear timeline before work begins — no vague estimates.",
+      "Timelines depend on scope, but most website projects move from discovery to launch within a few weeks. We'll give you a clear timeline before work begins, not vague estimates.",
   },
   {
     question: "Will my website be optimized for SEO from the start?",
     answer:
-      "Yes. Every site we build follows technical SEO best practices from day one — clean semantic markup, fast load times, and a structure search engines can crawl effectively.",
+      "Yes. Every site we build follows technical SEO best practices from day one, with clean semantic markup, fast load times, and a structure search engines can crawl effectively.",
   },
   {
     question: "How much does a project cost?",

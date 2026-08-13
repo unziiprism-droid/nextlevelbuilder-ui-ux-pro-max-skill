@@ -19,8 +19,8 @@ export function FinalCTA() {
             Ready to grow your business online?
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-text-inverse-muted">
-            Tell us about your project and we&apos;ll get back to you with next steps —
-            no pressure, no fake urgency, just a straightforward conversation.
+            Tell us about your project and we&apos;ll get back to you with next steps.
+            No pressure, no fake urgency, just a straightforward conversation.
           </p>
         </Reveal>
         <Reveal delay={0.1} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">

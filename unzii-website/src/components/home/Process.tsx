@@ -13,7 +13,7 @@ const steps = [
     number: "02",
     title: "Design",
     description:
-      "Wireframes and visual design tailored to your brand — reviewed and refined together with you.",
+      "Wireframes and visual design tailored to your brand, reviewed and refined together with you.",
   },
   {
     number: "03",
@@ -25,7 +25,7 @@ const steps = [
     number: "04",
     title: "Launch & Grow",
     description:
-      "We ship, monitor performance, and keep optimizing — your site is never just left to sit.",
+      "We ship, monitor performance, and keep optimizing. Your site is never just left to sit.",
   },
 ];
 

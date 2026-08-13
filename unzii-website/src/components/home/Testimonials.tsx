@@ -50,7 +50,7 @@ export function Testimonials() {
             <p className="mt-4 text-sm leading-relaxed text-text-secondary">
               We&apos;re early in our client journey and won&apos;t publish testimonials
               we haven&apos;t earned. This space is reserved for genuine feedback from
-              the businesses we work with — check back soon.
+              the businesses we work with. Check back soon.
             </p>
           </Reveal>
         )}

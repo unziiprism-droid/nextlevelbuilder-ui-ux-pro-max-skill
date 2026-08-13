@@ -8,7 +8,7 @@ const reasons = [
     icon: Rocket,
     title: "Performance-obsessed",
     description:
-      "Every build is engineered for speed from the ground up — optimized assets, clean code, and Core Web Vitals in mind at every step.",
+      "Every build is engineered for speed from the ground up, with optimized assets, clean code, and Core Web Vitals in mind at every step.",
   },
   {
     icon: LineChart,
@@ -20,7 +20,7 @@ const reasons = [
     icon: MessageCircle,
     title: "Direct communication",
     description:
-      "You work directly with the people building your project — no account managers relaying messages back and forth.",
+      "You work directly with the people building your project, not account managers relaying messages back and forth.",
   },
   {
     icon: ShieldCheck,
@@ -32,7 +32,7 @@ const reasons = [
     icon: Sparkles,
     title: "Modern craftsmanship",
     description:
-      "Thoughtful design and clean, scalable code — built to feel premium and to hold up as your business grows.",
+      "Thoughtful design and clean, scalable code, built to feel premium and to hold up as your business grows.",
   },
   {
     icon: Globe2,

@@ -23,7 +23,7 @@ export function PortfolioPreview() {
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
               We&apos;re building our case study library one project at a time. Rather
               than pad this section with filler, we&apos;d rather show you real,
-              measurable work as it launches — starting with yours.
+              measurable work as it launches, starting with yours.
             </p>
           </Reveal>
 
