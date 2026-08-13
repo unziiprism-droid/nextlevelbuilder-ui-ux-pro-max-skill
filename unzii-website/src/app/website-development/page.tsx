@@ -142,6 +142,7 @@ export default function WebsiteDevelopmentPage() {
         description="We design and build fast, modern websites engineered for real business results, not just good looks."
         secondaryLabel="See Our Process"
         secondaryHref="#process"
+        background="bg-surface-tint"
       />
       <Overview
         eyebrow="Overview"

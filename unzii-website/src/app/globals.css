@@ -12,6 +12,8 @@
   --color-surface-subtle: #f6f8fa;
   --color-surface-muted: var(--color-brand-bg);
   --color-surface-inverse: var(--color-brand-secondary);
+  /* Deeper tint of Slate Blue, for section backgrounds that need more weight than Soft Grey */
+  --color-surface-tint: #d8dee7;
 
   --color-border: #e2e6ec;
   --color-border-strong: #c9d0db;
@@ -44,6 +46,7 @@
   --color-surface-subtle: var(--color-surface-subtle);
   --color-surface-muted: var(--color-surface-muted);
   --color-surface-inverse: var(--color-surface-inverse);
+  --color-surface-tint: var(--color-surface-tint);
 
   --color-border: var(--color-border);
   --color-border-strong: var(--color-border-strong);

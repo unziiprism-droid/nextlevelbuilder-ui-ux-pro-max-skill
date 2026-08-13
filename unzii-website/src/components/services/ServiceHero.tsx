@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { cn } from "@/lib/utils";
 
 export function ServiceHero({
   eyebrow,
@@ -13,6 +14,7 @@ export function ServiceHero({
   primaryHref = "/start-your-project",
   secondaryLabel,
   secondaryHref,
+  background = "bg-surface-muted/30",
 }: {
   eyebrow: string;
   heading: string;
@@ -21,6 +23,7 @@ export function ServiceHero({
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  background?: string;
 }) {
   return (
     <section className="relative overflow-hidden">
@@ -31,7 +34,7 @@ export function ServiceHero({
           animate={{ x: [0, 20, -10, 0], y: [0, -14, 10, 0] }}
           transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 bg-surface-muted/30" />
+        <div className={cn("absolute inset-0", background)} />
       </div>
 
       <Container className="flex flex-col items-center pt-20 pb-20 text-center lg:pt-28 lg:pb-24">
