@@ -15,7 +15,8 @@ const serviceOptions = [
 ];
 
 const budgetOptions = [
-  "Under $1,000",
+  "Under $300",
+  "$300 to $1,000",
   "$1,000 to $5,000",
   "$5,000 to $15,000",
   "$15,000 and up",
