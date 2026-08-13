@@ -59,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.6,
     },
+    {
+      url: `${siteConfig.url}/start-your-project`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.9,
+    },
     ...postEntries,
   ];
 }
