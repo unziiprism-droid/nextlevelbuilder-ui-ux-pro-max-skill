@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Newspaper } from "lucide-react";
-import { ServiceHero } from "@/components/services/ServiceHero";
 import { Features } from "@/components/services/Features";
+import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogExplorer } from "@/components/blog/BlogExplorer";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
@@ -51,13 +51,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <ServiceHero
-        eyebrow="Blog"
-        heading="Insights on Web, SEO, and Growth"
-        description="Practical, no fluff writing on building fast websites and improving search visibility. Our first articles are on the way."
-        secondaryLabel="See Our Services"
-        secondaryHref="/website-development"
-      />
+      <BlogHero categories={categories} />
 
       <section className="py-24 lg:py-32">
         <Container>
