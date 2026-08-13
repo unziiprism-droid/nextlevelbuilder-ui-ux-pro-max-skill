@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
   icons: {
-    icon: "/logo/unzii-mark.svg",
+    icon: "/logo/unzii-mark.jpg",
   },
 };
 

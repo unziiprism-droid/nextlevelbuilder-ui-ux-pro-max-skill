@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     // No Node server available to resize images on demand under a
-    // static export; all images here are local SVGs served as-is.
+    // static export; local images are served as-is.
     unoptimized: true,
   },
 };
