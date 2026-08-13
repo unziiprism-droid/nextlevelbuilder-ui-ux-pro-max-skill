@@ -2,7 +2,13 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
-const steps = [
+export interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const defaultSteps: ProcessStep[] = [
   {
     number: "01",
     title: "Discovery",
@@ -29,22 +35,38 @@ const steps = [
   },
 ];
 
-export function Process() {
+export function Process({
+  id,
+  eyebrow = "Our Process",
+  heading = "A clear path from idea to launch",
+  description = "No guesswork, no surprises. Every project follows the same disciplined process.",
+  steps = defaultSteps,
+}: {
+  id?: string;
+  eyebrow?: string;
+  heading?: string;
+  description?: string;
+  steps?: ProcessStep[];
+}) {
+  const gridCols =
+    steps.length >= 5
+      ? "sm:grid-cols-2 lg:grid-cols-5"
+      : "sm:grid-cols-2 lg:grid-cols-4";
+
   return (
-    <section className="py-24 lg:py-32">
+    <section id={id} className="scroll-mt-20 py-24 lg:py-32">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow className="justify-center">Our Process</Eyebrow>
+          <Eyebrow className="justify-center">{eyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
-            A clear path from idea to launch
+            {heading}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-secondary">
-            No guesswork, no surprises. Every project follows the same disciplined
-            process.
+            {description}
           </p>
         </Reveal>
 
-        <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className={`relative mt-16 grid grid-cols-1 gap-10 lg:gap-8 ${gridCols}`}>
           <div
             aria-hidden
             className="absolute top-6 left-0 right-0 hidden h-px bg-border lg:block"

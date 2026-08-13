@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
-const technologies = [
+const defaultTechnologies = [
   "Next.js",
   "React",
   "TypeScript",
@@ -17,16 +17,24 @@ const technologies = [
   "Vercel",
 ];
 
-export function Technologies() {
-  const row = [...technologies, ...technologies];
+export function Technologies({
+  eyebrow = "Our Toolkit",
+  heading = "Built with a modern, proven stack",
+  items = defaultTechnologies,
+}: {
+  eyebrow?: string;
+  heading?: string;
+  items?: string[];
+}) {
+  const row = [...items, ...items];
 
   return (
     <section className="border-y border-border bg-surface-muted py-20 lg:py-24">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow className="justify-center">Our Toolkit</Eyebrow>
+          <Eyebrow className="justify-center">{eyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
-            Built with a modern, proven stack
+            {heading}
           </h2>
         </Reveal>
       </Container>

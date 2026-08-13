@@ -3,7 +3,12 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
-const faqs = [
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const defaultFaqs: FAQItem[] = [
   {
     question: "What services does Unzii offer?",
     answer:
@@ -36,7 +41,15 @@ const faqs = [
   },
 ];
 
-export function FAQ() {
+export function FAQ({
+  eyebrow = "FAQ",
+  heading = "Frequently asked questions",
+  faqs = defaultFaqs,
+}: {
+  eyebrow?: string;
+  heading?: string;
+  faqs?: FAQItem[];
+}) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -58,9 +71,9 @@ export function FAQ() {
       />
       <Container className="mx-auto max-w-3xl">
         <Reveal className="text-center">
-          <Eyebrow className="justify-center">FAQ</Eyebrow>
+          <Eyebrow className="justify-center">{eyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
-            Frequently asked questions
+            {heading}
           </h2>
         </Reveal>
 
