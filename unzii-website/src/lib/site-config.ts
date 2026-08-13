@@ -18,6 +18,13 @@ export const chatConfig = {
   whatsappMessage: "Hi! I'd like to learn more about Unzii's services.",
 };
 
+// Form submissions: delivered by Web3Forms (web3forms.com) directly to
+// siteConfig.email, no backend required. Access key from the Unzii
+// Web3Forms account.
+export const formConfig = {
+  web3formsAccessKey: "20e85d44-38a6-4fcc-bdec-c8ee3edba2fb",
+};
+
 export type ServiceStatus = "live" | "coming-soon";
 
 export interface ServiceLink {

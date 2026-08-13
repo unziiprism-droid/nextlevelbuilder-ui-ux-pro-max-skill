@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
+import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
+import { formConfig, siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const steps = ["About You", "Your Project", "Budget & Timeline"];
@@ -53,10 +53,12 @@ const initialState: FormState = {
   timeline: "",
 };
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export function ProjectForm() {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormState>(initialState);
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -69,41 +71,48 @@ export function ProjectForm() {
         ? form.service !== "" && form.description.trim() !== ""
         : form.budget !== "" && form.timeline !== "";
 
-  function handleSubmit() {
-    const subject = `Project inquiry from ${form.name}`;
-    const body = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      form.company && `Company: ${form.company}`,
-      `Service: ${form.service}`,
-      `Budget: ${form.budget}`,
-      `Timeline: ${form.timeline}`,
-      "",
-      "Project description:",
-      form.description,
-    ]
-      .filter(Boolean)
-      .join("\n");
+  async function handleSubmit() {
+    setStatus("loading");
 
-    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: formConfig.web3formsAccessKey,
+          subject: `Project inquiry from ${form.name}`,
+          name: form.name,
+          email: form.email,
+          company: form.company || "Not provided",
+          service: form.service,
+          budget: form.budget,
+          timeline: form.timeline,
+          message: form.description,
+        }),
+      });
+      const result = await response.json();
+      setStatus(result.success ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (sent) {
+  if (status === "success") {
     return (
       <div className="flex flex-col items-center rounded-3xl border border-border bg-surface-muted p-10 text-center sm:p-14">
         <span className="flex size-12 items-center justify-center rounded-full bg-brand-secondary text-text-inverse">
           <Check className="size-5" aria-hidden />
         </span>
         <h2 className="mt-6 text-xl font-semibold text-brand-secondary">
-          Your email app should be open now
+          Project details received
         </h2>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-text-secondary">
-          If it didn&apos;t open, email us directly at {siteConfig.email} with the same
-          details. We read every message ourselves and reply within one to two
-          business days.
+          Thank you, {form.name.split(" ")[0] || "there"}. We typically reply
+          within 15 minutes during business hours with next steps.
+        </p>
+        <p className="mt-2 flex items-center gap-1.5 text-sm font-medium text-brand-secondary">
+          <MessageCircle className="size-4" aria-hidden />
+          Need a faster answer? Use the live chat in the corner of this page.
         </p>
       </div>
     );
@@ -300,11 +309,11 @@ export function ProjectForm() {
         ) : (
           <button
             type="button"
-            disabled={!canContinue}
+            disabled={!canContinue || status === "loading"}
             onClick={handleSubmit}
             className="group inline-flex items-center gap-2 rounded-full bg-brand-secondary px-6 py-3 text-sm font-medium text-text-inverse transition-all duration-300 hover:bg-accent active:scale-[0.98] disabled:opacity-40 disabled:hover:bg-brand-secondary"
           >
-            Send My Project Details
+            {status === "loading" ? "Sending…" : "Send My Project Details"}
             <ArrowRight
               className="size-4 transition-transform duration-300 group-hover:translate-x-0.5"
               aria-hidden
@@ -312,6 +321,13 @@ export function ProjectForm() {
           </button>
         )}
       </div>
+
+      {status === "error" && (
+        <p className="mt-4 text-xs text-red-600">
+          Something went wrong sending your details. Please try again, or
+          email us directly at {siteConfig.email}.
+        </p>
+      )}
     </div>
   );
 }
