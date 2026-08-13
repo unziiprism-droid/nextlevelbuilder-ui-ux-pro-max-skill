@@ -14,6 +14,10 @@ export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
+// Required for static export: only pre-generated slugs exist as files.
+// Add real posts to src/lib/blog.ts and rebuild to generate new pages.
+export const dynamicParams = false;
+
 export async function generateMetadata(props: PageProps<"/blog/[slug]">): Promise<Metadata> {
   const { slug } = await props.params;
   const post = getPostBySlug(slug);
