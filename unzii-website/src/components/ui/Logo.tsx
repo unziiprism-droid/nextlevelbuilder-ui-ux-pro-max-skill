@@ -2,26 +2,42 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /**
- * Renders the original Unzii mark as-is, with no live text next to it —
- * never recreated or re-colored. Drop the exact SVGs at
- * public/logo/unzii-mark.svg (light backgrounds) and
- * public/logo/unzii-mark-inverse.svg (dark backgrounds, e.g. the footer)
+ * Renders the original Unzii logo as-is, never recreated or re-colored.
+ * Drop the exact files at:
+ *   public/logo/unzii-mark.svg           (monogram, light backgrounds)
+ *   public/logo/unzii-mark-inverse.svg   (monogram, dark backgrounds)
+ *   public/logo/unzii-logo.svg           (full logo, light backgrounds)
+ *   public/logo/unzii-logo-inverse.svg   (full logo, dark backgrounds)
  * to replace the temporary placeholders referenced here.
+ *
+ * Use variant="mark" in compact spaces (nav bar) and variant="full" where
+ * there's room for the complete logo (footer, larger brand moments).
  */
 export function Logo({
+  variant = "mark",
   inverse = false,
   className,
 }: {
+  variant?: "mark" | "full";
   inverse?: boolean;
   className?: string;
 }) {
+  const isMark = variant === "mark";
+  const src = isMark
+    ? inverse
+      ? "/logo/unzii-mark-inverse.svg"
+      : "/logo/unzii-mark.svg"
+    : inverse
+      ? "/logo/unzii-logo-inverse.svg"
+      : "/logo/unzii-logo.svg";
+
   return (
     <Image
-      src={inverse ? "/logo/unzii-mark-inverse.svg" : "/logo/unzii-mark.svg"}
+      src={src}
       alt="Unzii"
-      width={40}
-      height={40}
-      className={cn("h-10 w-10", className)}
+      width={isMark ? 44 : 148}
+      height={44}
+      className={cn(isMark ? "h-11 w-11" : "h-11 w-auto", className)}
       priority
     />
   );

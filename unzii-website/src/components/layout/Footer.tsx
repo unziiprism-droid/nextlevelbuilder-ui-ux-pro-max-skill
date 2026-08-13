@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-5">
             <div>
-              <Logo inverse />
+              <Logo variant="full" inverse />
               <p className="mt-2 text-[11px] font-medium tracking-wide text-text-inverse-muted">
                 {siteConfig.tagline}
               </p>
