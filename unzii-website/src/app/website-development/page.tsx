@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Gauge, LayoutTemplate, Lock, Search, TrendingUp, Wrench } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
+import { BrowserMockup } from "@/components/services/BrowserMockup";
 import { Overview } from "@/components/services/Overview";
 import { Benefits } from "@/components/services/Benefits";
 import { Features } from "@/components/services/Features";
@@ -144,6 +145,7 @@ export default function WebsiteDevelopmentPage() {
         secondaryHref="#process"
         background="bg-surface-tint"
       />
+      <BrowserMockup />
       <Overview
         eyebrow="Overview"
         heading="A website is more than a design file"
