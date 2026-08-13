@@ -12,8 +12,8 @@ export const siteConfig = {
 // copy the Property ID and Widget ID from Admin > Channels > Chat Widget.
 // WhatsApp (secondary): international format, digits only, no "+" or spaces.
 export const chatConfig = {
-  tawkPropertyId: "",
-  tawkWidgetId: "",
+  tawkPropertyId: "6a7dbc1882fc091d476a6d0f",
+  tawkWidgetId: "1jvtidga2",
   whatsappNumber: "",
   whatsappMessage: "Hi! I'd like to learn more about Unzii's services.",
 };
