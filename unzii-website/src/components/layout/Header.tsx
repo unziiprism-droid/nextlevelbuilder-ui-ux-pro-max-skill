@@ -45,7 +45,7 @@ export function Header() {
     >
       <Container className="flex h-18 items-center justify-between">
         <Link href="/" className="shrink-0" aria-label="Unzii home">
-          <Logo />
+          <Logo variant="full" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

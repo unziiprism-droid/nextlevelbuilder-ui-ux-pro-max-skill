@@ -12,8 +12,8 @@ export function Footer() {
       <Container className="py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-5">
-            <div className="inline-flex w-fit items-center rounded-2xl bg-surface px-4 py-3">
-              <Logo variant="full" />
+            <div className="inline-flex w-fit items-center rounded-2xl bg-surface p-3">
+              <Logo variant="mark" />
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-text-inverse-muted">
               {siteConfig.description}
