@@ -7,6 +7,17 @@ export const siteConfig = {
   email: "hello@unzii.com",
 };
 
+// Live chat: both are optional and inactive until a real value is set.
+// Tawk.to (primary, universal): create a free account at tawk.to, then
+// copy the Property ID and Widget ID from Admin > Channels > Chat Widget.
+// WhatsApp (secondary): international format, digits only, no "+" or spaces.
+export const chatConfig = {
+  tawkPropertyId: "",
+  tawkWidgetId: "",
+  whatsappNumber: "",
+  whatsappMessage: "Hi! I'd like to learn more about Unzii's services.",
+};
+
 export type ServiceStatus = "live" | "coming-soon";
 
 export interface ServiceLink {

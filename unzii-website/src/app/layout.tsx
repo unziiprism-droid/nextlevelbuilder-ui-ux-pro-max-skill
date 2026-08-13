@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/providers/MotionProvider";
+import { TawkWidget } from "@/components/chat/TawkWidget";
+import { WhatsAppButton } from "@/components/chat/WhatsAppButton";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -45,6 +47,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="flex-1">{children}</main>
           <Footer />
         </MotionProvider>
+        <WhatsAppButton />
+        <TawkWidget />
       </body>
     </html>
   );
