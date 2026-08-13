@@ -56,7 +56,7 @@ export function BlogPreview() {
             <Newspaper className="size-6 text-brand-supporting" aria-hidden />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-text-secondary">
               Our first articles on web development, SEO, and growth are in progress.
-              Check back soon for practical, no-fluff insights.
+              Check back soon for practical insights, without the fluff.
             </p>
           </Reveal>
         )}

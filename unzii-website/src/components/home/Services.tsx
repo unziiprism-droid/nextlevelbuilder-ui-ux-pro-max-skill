@@ -21,7 +21,7 @@ export function Services() {
             Everything your business needs to grow online
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-secondary">
-            From the first line of code to long-term search visibility, we build the
+            From the first line of code to long term search visibility, we build the
             digital foundation your business runs on.
           </p>
         </Reveal>

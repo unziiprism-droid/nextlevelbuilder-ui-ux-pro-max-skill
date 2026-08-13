@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const reasons = [
   {
     icon: Rocket,
-    title: "Performance-obsessed",
+    title: "Performance obsessed",
     description:
       "Every build is engineered for speed from the ground up, with optimized assets, clean code, and Core Web Vitals in mind at every step.",
   },
@@ -26,7 +26,7 @@ const reasons = [
     icon: ShieldCheck,
     title: "Transparent process",
     description:
-      "Clear milestones, honest timelines, and no jargon-filled reports. You always know exactly where your project stands.",
+      "Clear milestones, honest timelines, and no reports full of jargon. You always know exactly where your project stands.",
   },
   {
     icon: Sparkles,

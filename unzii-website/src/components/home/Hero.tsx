@@ -8,7 +8,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 
 const valueProps = [
   { icon: Gauge, label: "Fast, modern builds" },
-  { icon: Search, label: "SEO-first foundations" },
+  { icon: Search, label: "SEO focused foundations" },
   { icon: TrendingUp, label: "Built to convert" },
 ];
 

@@ -20,19 +20,19 @@ export const services: ServiceLink[] = [
   {
     label: "Website Development",
     href: "/website-development",
-    description: "Custom-built, high-performance websites engineered to convert.",
+    description: "Custom built, high performance websites engineered to convert.",
     status: "live",
   },
   {
     label: "SEO",
     href: "/seo",
-    description: "Technical, on-page, and content SEO that compounds over time.",
+    description: "Technical, on page, and content SEO that compounds over time.",
     status: "live",
   },
   {
     label: "Full Stack Development",
     href: "/full-stack-development",
-    description: "End-to-end product engineering for web applications.",
+    description: "Full lifecycle product engineering for web applications.",
     status: "coming-soon",
   },
 ];
