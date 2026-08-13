@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Technology That Drives Business",
   description:
     "Unzii partners with businesses of every size to create fast websites, improve online visibility, and deliver measurable results.",
-  url: "https://unzii.com",
+  url: "https://theunzii.com",
   email: "hello@unzii.com",
 };
 

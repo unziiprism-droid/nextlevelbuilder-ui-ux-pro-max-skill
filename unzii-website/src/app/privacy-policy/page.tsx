@@ -6,7 +6,7 @@ import { TableOfContents } from "@/components/blog/TableOfContents";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Unzii handles information when you visit unzii.com or get in touch with us.",
+  description: "How Unzii handles information when you visit theunzii.com or get in touch with us.",
 };
 
 const lastUpdated = "August 2026";
@@ -16,7 +16,7 @@ const sections: BlogSection[] = [
     id: "introduction",
     heading: "Introduction",
     body: [
-      "This Privacy Policy explains how Unzii (\"we,\" \"us,\" or \"our\") handles information when you visit unzii.com or get in touch with us. We built this site to collect as little of your data as possible, and this policy explains exactly what that means in practice.",
+      "This Privacy Policy explains how Unzii (\"we,\" \"us,\" or \"our\") handles information when you visit theunzii.com or get in touch with us. We built this site to collect as little of your data as possible, and this policy explains exactly what that means in practice.",
     ],
   },
   {

@@ -6,7 +6,7 @@ import { TableOfContents } from "@/components/blog/TableOfContents";
 
 export const metadata: Metadata = {
   title: "Terms",
-  description: "The terms that govern your use of unzii.com.",
+  description: "The terms that govern your use of theunzii.com.",
 };
 
 const lastUpdated = "August 2026";
@@ -16,14 +16,14 @@ const sections: BlogSection[] = [
     id: "acceptance-of-terms",
     heading: "Acceptance of Terms",
     body: [
-      "By using unzii.com, you agree to these Terms. If you don't agree, please don't use this website.",
+      "By using theunzii.com, you agree to these Terms. If you don't agree, please don't use this website.",
     ],
   },
   {
     id: "about-our-services",
     heading: "About Our Services",
     body: [
-      "Unzii provides website development and SEO services, with full stack development coming soon. The specific scope, deliverables, timeline, and cost of any project are agreed separately in writing before work begins. These website Terms cover your use of unzii.com itself, not the terms of an individual client engagement.",
+      "Unzii provides website development and SEO services, with full stack development coming soon. The specific scope, deliverables, timeline, and cost of any project are agreed separately in writing before work begins. These website Terms cover your use of theunzii.com itself, not the terms of an individual client engagement.",
     ],
   },
   {
