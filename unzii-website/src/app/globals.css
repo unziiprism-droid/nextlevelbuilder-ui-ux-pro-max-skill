@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand — exact values, do not alter */
+  --color-brand-primary: #8a96a8; /* Cool Grey */
+  --color-brand-secondary: #101827; /* Deep Navy */
+  --color-brand-supporting: #334a68; /* Slate Blue */
+  --color-brand-bg: #e8edf3; /* Soft Grey */
+
+  /* Semantic surface scale, derived only for layout use — hues stay on-brand */
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f6f8fa;
+  --color-surface-muted: var(--color-brand-bg);
+  --color-surface-inverse: var(--color-brand-secondary);
+
+  --color-border: #e2e6ec;
+  --color-border-strong: #c9d0db;
+
+  --color-text-primary: var(--color-brand-secondary);
+  --color-text-secondary: #4b5768;
+  --color-text-muted: var(--color-brand-primary);
+  --color-text-inverse: #f3f5f8;
+  --color-text-inverse-muted: #a7b0bf;
+
+  --color-accent: var(--color-brand-supporting);
+  --color-accent-strong: var(--color-brand-secondary);
+
+  --shadow-soft: 0 1px 2px rgba(16, 24, 39, 0.04), 0 8px 24px -8px rgba(16, 24, 39, 0.08);
+  --shadow-lifted: 0 4px 8px rgba(16, 24, 39, 0.04), 0 24px 48px -12px rgba(16, 24, 39, 0.16);
+}
+
+@theme inline {
+  --font-sans: var(--font-poppins);
+
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-supporting: var(--color-brand-supporting);
+  --color-brand-bg: var(--color-brand-bg);
+
+  --color-surface: var(--color-surface);
+  --color-surface-subtle: var(--color-surface-subtle);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-surface-inverse: var(--color-surface-inverse);
+
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-text-inverse-muted: var(--color-text-inverse-muted);
+
+  --color-accent: var(--color-accent);
+  --color-accent-strong: var(--color-accent-strong);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lifted: var(--shadow-lifted);
+
+  --container-page: 80rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-feature-settings: "ss01" on, "cv01" on;
+}
+
+::selection {
+  background: var(--color-brand-supporting);
+  color: var(--color-text-inverse);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
