@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 export function ServiceHero({
   eyebrow,
+  badge,
   heading,
   description,
   primaryLabel = "Start Your Project",
@@ -17,6 +18,7 @@ export function ServiceHero({
   background = "bg-surface-muted/30",
 }: {
   eyebrow: string;
+  badge?: string;
   heading: string;
   description: string;
   primaryLabel?: string;
@@ -42,8 +44,14 @@ export function ServiceHero({
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center gap-3 sm:flex-row"
         >
           <Eyebrow>{eyebrow}</Eyebrow>
+          {badge && (
+            <span className="rounded-full bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-supporting">
+              {badge}
+            </span>
+          )}
         </motion.div>
 
         <motion.h1
