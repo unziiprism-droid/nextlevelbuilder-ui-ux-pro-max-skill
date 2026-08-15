@@ -8,6 +8,7 @@ import { TableOfContents } from "@/components/blog/TableOfContents";
 import { AuthorBio } from "@/components/blog/AuthorBio";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { FinalCTA } from "@/components/shared/FinalCTA";
+import { illustrations } from "@/components/blog/illustrations/BlogIllustrations";
 import { siteConfig } from "@/lib/site-config";
 
 export function generateStaticParams() {
@@ -98,20 +99,24 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
 
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-[1fr_18rem]">
           <article className="flex max-w-3xl flex-col gap-10">
-            {post.sections.map((section) => (
-              <div key={section.id} id={section.id} className="scroll-mt-24">
-                <h2 className="text-2xl font-semibold text-brand-secondary">
-                  {section.heading}
-                </h2>
-                <div className="mt-4 flex flex-col gap-4">
-                  {section.body.map((paragraph) => (
-                    <p key={paragraph} className="text-base leading-relaxed text-text-secondary">
-                      {paragraph}
-                    </p>
-                  ))}
+            {post.sections.map((section) => {
+              const Illustration = illustrations[section.id];
+              return (
+                <div key={section.id} id={section.id} className="scroll-mt-24">
+                  <h2 className="text-2xl font-semibold text-brand-secondary">
+                    {section.heading}
+                  </h2>
+                  {Illustration && <Illustration />}
+                  <div className="mt-4 flex flex-col gap-4">
+                    {section.body.map((paragraph) => (
+                      <p key={paragraph} className="text-base leading-relaxed text-text-secondary">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </article>
 
           <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">

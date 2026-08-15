@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { Overview } from "@/components/services/Overview";
+import { SeoGrowthChart } from "@/components/services/SeoGrowthChart";
 import { Benefits } from "@/components/services/Benefits";
 import { Features } from "@/components/services/Features";
 import { Process } from "@/components/shared/Process";
@@ -168,6 +169,7 @@ export default function SeoPage() {
           "Direct communication throughout",
         ]}
       />
+      <SeoGrowthChart />
       <Benefits
         heading="Why startups invest in SEO with Unzii"
         description="Search visibility is a long term asset. Here's what that investment gets you."
