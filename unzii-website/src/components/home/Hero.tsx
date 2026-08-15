@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "motion/react";
 import { Gauge, Search, TrendingUp } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -18,48 +15,29 @@ export function Hero() {
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-surface-muted/30" />
 
       <Container className="flex flex-col items-center pt-20 pb-24 text-center lg:pt-28 lg:pb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div className="animate-fade-in-up">
           <Eyebrow>Website Development &amp; SEO Agency</Eyebrow>
-        </motion.div>
+        </div>
 
         <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl">
           Websites &amp; SEO Built to Grow Your Business
         </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-text-secondary"
-        >
+        <p className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-text-secondary animate-fade-in-up [animation-delay:150ms]">
           Unzii partners with businesses of every size to create fast websites, improve
           online visibility, and deliver measurable results.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
-        >
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row animate-fade-in-up [animation-delay:250ms]">
           <Button href="/start-your-project" size="lg" showArrow>
             Start Your Project
           </Button>
           <Button href="#services" variant="secondary" size="lg">
             Explore Services
           </Button>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 flex flex-wrap items-center justify-center gap-x-10 gap-y-4"
-        >
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 animate-fade-in-up [animation-delay:350ms]">
           {valueProps.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2.5 text-sm font-medium text-text-secondary">
               <span className="flex size-8 items-center justify-center rounded-full bg-surface-muted text-brand-supporting">
@@ -68,7 +46,7 @@ export function Hero() {
               {label}
             </div>
           ))}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );
