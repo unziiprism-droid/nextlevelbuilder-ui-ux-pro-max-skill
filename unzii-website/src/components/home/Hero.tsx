@@ -12,13 +12,6 @@ const valueProps = [
   { icon: TrendingUp, label: "Built to convert" },
 ];
 
-const headingWords = "Websites & SEO Built to Grow Your Business".split(" ");
-
-const wordVariants = {
-  hidden: { y: "115%" },
-  visible: { y: "0%" },
-};
-
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -48,24 +41,7 @@ export function Hero() {
         </motion.div>
 
         <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl">
-          {headingWords.map((word, index) => (
-            <span key={`${word}-${index}`} className="inline-block overflow-hidden pb-1 align-top">
-              <motion.span
-                className="inline-block"
-                variants={wordVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{
-                  duration: 0.7,
-                  delay: 0.15 + index * 0.06,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              >
-                {word}
-                {index < headingWords.length - 1 ? " " : ""}
-              </motion.span>
-            </span>
-          ))}
+          Websites &amp; SEO Built to Grow Your Business
         </h1>
 
         <motion.p
