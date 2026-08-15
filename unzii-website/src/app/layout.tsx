@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 import { TawkWidget } from "@/components/chat/TawkWidget";
 import { WhatsAppButton } from "@/components/chat/WhatsAppButton";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${poppins.variable} antialiased`}>
       <body className="flex min-h-screen flex-col">
+        <GoogleAnalytics />
         <MotionProvider>
           <Header />
           <main className="flex-1">{children}</main>

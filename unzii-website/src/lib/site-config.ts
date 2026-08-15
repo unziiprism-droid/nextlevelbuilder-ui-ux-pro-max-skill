@@ -25,6 +25,10 @@ export const formConfig = {
   web3formsAccessKey: "20e85d44-38a6-4fcc-bdec-c8ee3edba2fb",
 };
 
+export const analyticsConfig = {
+  ga4MeasurementId: "G-T1JSEF1KWN",
+};
+
 export type ServiceStatus = "live" | "coming-soon";
 
 export interface ServiceLink {
