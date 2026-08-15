@@ -1,12 +1,11 @@
-// Hand-drawn SVG illustrations for blog posts, in the same brand
-// palette as the rest of the site. Kept abstract/geometric (echoing
-// the logo's diamond motif) rather than photographic, since there is
-// no real photography to draw on yet.
+// Hand-drawn SVG illustrations for blog posts. Each uses colors that
+// fit its own concept (warning red for red flags, green for
+// checklist progress, etc.) rather than being locked to the brand
+// palette, since there is no real photography to draw on yet.
 
-const NAVY = "#101827";
-const SLATE = "#334a68";
-const GREY = "#8a96a8";
 const SOFT = "#e8edf3";
+const NAVY = "#101827";
+const GREY = "#8a96a8";
 
 function Frame({ children }: { children: React.ReactNode }) {
   return (
@@ -18,21 +17,6 @@ function Frame({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Diamond({ x, y, size, fill }: { x: number; y: number; size: number; fill: string }) {
-  const half = size / 2;
-  return (
-    <rect
-      x={x - half}
-      y={y - half}
-      width={size}
-      height={size}
-      fill={fill}
-      transform={`rotate(45 ${x} ${y})`}
-      rx={size * 0.14}
-    />
-  );
-}
-
 export function SpeedIllustration() {
   return (
     <Frame>
@@ -41,22 +25,19 @@ export function SpeedIllustration() {
       <path
         d="M 210 220 A 120 120 0 0 1 430 220"
         fill="none"
-        stroke={SLATE}
+        stroke="#f59e0b"
         strokeWidth="10"
         strokeLinecap="round"
       />
       <path
         d="M 210 220 A 120 120 0 0 1 360 104"
         fill="none"
-        stroke={NAVY}
+        stroke="#16a34a"
         strokeWidth="10"
         strokeLinecap="round"
       />
       <line x1="320" y1="220" x2="380" y2="140" stroke={NAVY} strokeWidth="6" strokeLinecap="round" />
       <circle cx="320" cy="220" r="10" fill={NAVY} />
-      <Diamond x={150} y={90} size={20} fill={GREY} />
-      <Diamond x={500} y={90} size={16} fill={SLATE} />
-      <Diamond x={530} y={240} size={24} fill={GREY} />
     </Frame>
   );
 }
@@ -73,24 +54,23 @@ export function SuspectsIllustration() {
           width="180"
           height="32"
           rx="8"
-          fill={i === 1 ? NAVY : "#ffffff"}
-          stroke={SLATE}
+          fill={i === 1 ? "#2563eb" : "#ffffff"}
+          stroke="#2563eb"
           strokeWidth="2"
         />
       ))}
-      <circle cx="252" cy="106" r="6" fill={SLATE} />
+      <circle cx="252" cy="106" r="6" fill="#2563eb" />
       <circle cx="252" cy="152" r="6" fill="#ffffff" />
-      <circle cx="252" cy="198" r="6" fill={SLATE} />
-      <Diamond x={440} y={106} size={18} fill={GREY} />
-      <Diamond x={440} y={198} size={18} fill={GREY} />
-      <rect x="415" y="140" width="50" height="36" rx="6" fill="none" stroke={NAVY} strokeWidth="3" />
-      <circle cx="428" cy="152" r="4" fill={NAVY} />
-      <path d="M 418 172 L 434 156 L 445 166 L 461 148" stroke={NAVY} strokeWidth="3" fill="none" />
+      <circle cx="252" cy="198" r="6" fill="#2563eb" />
+      <rect x="415" y="140" width="50" height="36" rx="6" fill="none" stroke="#f59e0b" strokeWidth="3" />
+      <circle cx="428" cy="152" r="4" fill="#f59e0b" />
+      <path d="M 418 172 L 434 156 L 445 166 L 461 148" stroke="#f59e0b" strokeWidth="3" fill="none" />
     </Frame>
   );
 }
 
 export function BottleneckIllustration() {
+  const colors = ["#8b5cf6", "#3b82f6", "#14b8a6", "#f59e0b", "#ef4444", "#8b5cf6"];
   return (
     <Frame>
       <rect width="640" height="320" fill={SOFT} />
@@ -102,13 +82,11 @@ export function BottleneckIllustration() {
           width="40"
           height={40 + (i % 3) * 26 + (i === 4 ? 60 : 0)}
           rx="6"
-          fill={i === 4 ? NAVY : SLATE}
-          opacity={i === 4 ? 1 : 0.55 + (i % 3) * 0.1}
+          fill={colors[i]}
+          opacity={i === 4 ? 1 : 0.75}
         />
       ))}
       <line x1="110" y1="256" x2="530" y2="256" stroke={GREY} strokeWidth="2" />
-      <Diamond x={500} y={90} size={20} fill={GREY} />
-      <Diamond x={150} y={90} size={16} fill={SLATE} />
     </Frame>
   );
 }
@@ -123,8 +101,8 @@ export function ChecklistIllustration() {
             cx="230"
             cy={98 + i * 42}
             r="12"
-            fill={i < 2 ? NAVY : "#ffffff"}
-            stroke={NAVY}
+            fill={i < 2 ? "#16a34a" : "#ffffff"}
+            stroke={i < 2 ? "#16a34a" : GREY}
             strokeWidth="2.5"
           />
           {i < 2 && (
@@ -137,11 +115,17 @@ export function ChecklistIllustration() {
               strokeLinejoin="round"
             />
           )}
-          <rect x="260" y={90 + i * 42} width={220 - i * 24} height="16" rx="8" fill={i < 2 ? SLATE : GREY} opacity={i < 2 ? 1 : 0.5} />
+          <rect
+            x="260"
+            y={90 + i * 42}
+            width={220 - i * 24}
+            height="16"
+            rx="8"
+            fill={i < 2 ? "#16a34a" : GREY}
+            opacity={i < 2 ? 0.35 : 0.4}
+          />
         </g>
       ))}
-      <Diamond x={520} y={200} size={26} fill={SLATE} />
-      <Diamond x={480} y={250} size={16} fill={GREY} />
     </Frame>
   );
 }
@@ -151,11 +135,10 @@ export function DecisionIllustration() {
     <Frame>
       <rect width="640" height="320" fill={SOFT} />
       <circle cx="320" cy="130" r="14" fill={NAVY} />
-      <line x1="320" y1="144" x2="220" y2="230" stroke={SLATE} strokeWidth="4" strokeLinecap="round" />
-      <line x1="320" y1="144" x2="420" y2="230" stroke={GREY} strokeWidth="4" strokeLinecap="round" />
-      <Diamond x={220} y={240} size={22} fill={SLATE} />
-      <Diamond x={420} y={240} size={22} fill={GREY} />
-      <Diamond x={320} y={90} size={16} fill={NAVY} />
+      <line x1="320" y1="144" x2="220" y2="230" stroke="#16a34a" strokeWidth="4" strokeLinecap="round" />
+      <line x1="320" y1="144" x2="420" y2="230" stroke="#ef4444" strokeWidth="4" strokeLinecap="round" />
+      <circle cx="220" cy="238" r="14" fill="#16a34a" />
+      <circle cx="420" cy="238" r="14" fill="#ef4444" />
     </Frame>
   );
 }
@@ -166,12 +149,25 @@ export function WarningIllustration() {
       <rect width="640" height="320" fill={SOFT} />
       {[0, 1, 2].map((i) => (
         <g key={i} transform={`translate(${220 + i * 90} 130)`}>
-          <path d="M 30 0 L 60 55 L 0 55 Z" fill={i === 1 ? NAVY : "#ffffff"} stroke={SLATE} strokeWidth="2.5" strokeLinejoin="round" />
-          <line x1="30" y1="18" x2="30" y2="36" stroke={i === 1 ? "#ffffff" : SLATE} strokeWidth="3" strokeLinecap="round" />
-          <circle cx="30" cy="46" r="2.5" fill={i === 1 ? "#ffffff" : SLATE} />
+          <path
+            d="M 30 0 L 60 55 L 0 55 Z"
+            fill={i === 1 ? "#ef4444" : "#ffffff"}
+            stroke="#ef4444"
+            strokeWidth="2.5"
+            strokeLinejoin="round"
+          />
+          <line
+            x1="30"
+            y1="18"
+            x2="30"
+            y2="36"
+            stroke={i === 1 ? "#ffffff" : "#ef4444"}
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+          <circle cx="30" cy="46" r="2.5" fill={i === 1 ? "#ffffff" : "#ef4444"} />
         </g>
       ))}
-      <Diamond x={320} y={230} size={18} fill={GREY} />
     </Frame>
   );
 }
@@ -180,13 +176,12 @@ export function TransparencyIllustration() {
   return (
     <Frame>
       <rect width="640" height="320" fill={SOFT} />
-      <rect x="230" y="90" width="180" height="130" rx="14" fill="#ffffff" stroke={SLATE} strokeWidth="2.5" />
-      <line x1="255" y1="125" x2="385" y2="125" stroke={GREY} strokeWidth="6" strokeLinecap="round" />
-      <line x1="255" y1="150" x2="360" y2="150" stroke={GREY} strokeWidth="6" strokeLinecap="round" />
-      <line x1="255" y1="175" x2="335" y2="175" stroke={NAVY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="380" cy="185" r="26" fill="none" stroke={NAVY} strokeWidth="4" />
-      <line x1="399" y1="204" x2="418" y2="223" stroke={NAVY} strokeWidth="5" strokeLinecap="round" />
-      <Diamond x={470} y={100} size={18} fill={GREY} />
+      <rect x="230" y="90" width="180" height="130" rx="14" fill="#ffffff" stroke="#2563eb" strokeWidth="2.5" />
+      <line x1="255" y1="125" x2="385" y2="125" stroke="#93c5fd" strokeWidth="6" strokeLinecap="round" />
+      <line x1="255" y1="150" x2="360" y2="150" stroke="#93c5fd" strokeWidth="6" strokeLinecap="round" />
+      <line x1="255" y1="175" x2="335" y2="175" stroke="#2563eb" strokeWidth="6" strokeLinecap="round" />
+      <circle cx="380" cy="185" r="26" fill="none" stroke="#2563eb" strokeWidth="4" />
+      <line x1="399" y1="204" x2="418" y2="223" stroke="#2563eb" strokeWidth="5" strokeLinecap="round" />
     </Frame>
   );
 }
@@ -195,14 +190,13 @@ export function CommunicationIllustration() {
   return (
     <Frame>
       <rect width="640" height="320" fill={SOFT} />
-      <rect x="200" y="110" width="140" height="70" rx="16" fill={NAVY} />
-      <path d="M 220 180 L 220 200 L 245 180 Z" fill={NAVY} />
-      <rect x="330" y="160" width="120" height="60" rx="16" fill="#ffffff" stroke={SLATE} strokeWidth="2.5" />
-      <path d="M 350 220 L 350 236 L 370 220 Z" fill="#ffffff" stroke={SLATE} strokeWidth="2.5" strokeLinejoin="round" />
+      <rect x="200" y="110" width="140" height="70" rx="16" fill="#14b8a6" />
+      <path d="M 220 180 L 220 200 L 245 180 Z" fill="#14b8a6" />
+      <rect x="330" y="160" width="120" height="60" rx="16" fill="#ffffff" stroke="#f59e0b" strokeWidth="2.5" />
+      <path d="M 350 220 L 350 236 L 370 220 Z" fill="#ffffff" stroke="#f59e0b" strokeWidth="2.5" strokeLinejoin="round" />
       <circle cx="230" cy="140" r="4" fill="#ffffff" />
       <circle cx="255" cy="140" r="4" fill="#ffffff" />
       <circle cx="280" cy="140" r="4" fill="#ffffff" />
-      <Diamond x={500} y={120} size={18} fill={GREY} />
     </Frame>
   );
 }
