@@ -5,6 +5,7 @@ import { Gauge, Search, TrendingUp } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { NetworkPattern } from "@/components/home/NetworkPattern";
 
 const valueProps = [
   { icon: Gauge, label: "Fast, modern builds" },
@@ -16,18 +17,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <motion.div
-          className="absolute -top-24 right-[8%] h-80 w-80 rounded-full opacity-40 blur-3xl"
-          style={{ background: "var(--color-brand-supporting)" }}
-          animate={{ x: [0, 24, -12, 0], y: [0, -18, 14, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-10 left-[4%] h-72 w-72 rounded-full opacity-30 blur-3xl"
-          style={{ background: "var(--color-brand-primary)" }}
-          animate={{ x: [0, -20, 16, 0], y: [0, 16, -10, 0] }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
+        <NetworkPattern />
         <div className="absolute inset-0 bg-surface-muted/30" />
       </div>
 
