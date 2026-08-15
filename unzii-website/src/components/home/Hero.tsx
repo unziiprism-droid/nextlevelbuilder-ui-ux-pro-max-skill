@@ -5,7 +5,7 @@ import { Gauge, Search, TrendingUp } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { NetworkPattern } from "@/components/home/NetworkPattern";
+import { DiamondPattern } from "@/components/home/DiamondPattern";
 
 const valueProps = [
   { icon: Gauge, label: "Fast, modern builds" },
@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <NetworkPattern />
+        <DiamondPattern />
         <div className="absolute inset-0 bg-surface-muted/30" />
       </div>
 
