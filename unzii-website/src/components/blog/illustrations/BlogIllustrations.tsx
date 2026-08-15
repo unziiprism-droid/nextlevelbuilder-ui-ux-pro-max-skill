@@ -1,10 +1,11 @@
-// Hand-drawn SVG illustrations for blog posts. Each uses colors that
-// fit its own concept (warning red for red flags, green for
-// checklist progress, etc.) rather than being locked to the brand
-// palette, since there is no real photography to draw on yet.
+// Blog imagery. The two hero images are real (provided by Unzii);
+// the rest are hand-drawn SVG illustrations, colored to fit each
+// section's own concept (warning red for red flags, green for
+// checklist progress, etc.) rather than locked to the brand palette.
+
+import Image from "next/image";
 
 const SOFT = "#e8edf3";
-const NAVY = "#101827";
 const GREY = "#8a96a8";
 
 function Frame({ children }: { children: React.ReactNode }) {
@@ -17,28 +18,31 @@ function Frame({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function SpeedIllustration() {
+export function WebsiteHeroImage() {
   return (
-    <Frame>
-      <rect width="640" height="320" fill={SOFT} />
-      <circle cx="320" cy="180" r="120" fill="none" stroke={GREY} strokeWidth="2" opacity="0.5" />
-      <path
-        d="M 210 220 A 120 120 0 0 1 430 220"
-        fill="none"
-        stroke="#f59e0b"
-        strokeWidth="10"
-        strokeLinecap="round"
+    <div className="relative my-2 aspect-[2/1] overflow-hidden rounded-3xl border border-border">
+      <Image
+        src="/blog/hero-website-dev.jpg"
+        alt="Building a fast, modern website"
+        fill
+        className="object-cover"
+        priority
       />
-      <path
-        d="M 210 220 A 120 120 0 0 1 360 104"
-        fill="none"
-        stroke="#16a34a"
-        strokeWidth="10"
-        strokeLinecap="round"
+    </div>
+  );
+}
+
+export function SeoHeroImage() {
+  return (
+    <div className="relative my-2 aspect-[2/1] overflow-hidden rounded-3xl border border-border">
+      <Image
+        src="/blog/hero-seo-startup.jpg"
+        alt="SEO strategy for a growing startup"
+        fill
+        className="object-cover"
+        priority
       />
-      <line x1="320" y1="220" x2="380" y2="140" stroke={NAVY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="320" cy="220" r="10" fill={NAVY} />
-    </Frame>
+    </div>
   );
 }
 
@@ -130,19 +134,6 @@ export function ChecklistIllustration() {
   );
 }
 
-export function DecisionIllustration() {
-  return (
-    <Frame>
-      <rect width="640" height="320" fill={SOFT} />
-      <circle cx="320" cy="130" r="14" fill={NAVY} />
-      <line x1="320" y1="144" x2="220" y2="230" stroke="#16a34a" strokeWidth="4" strokeLinecap="round" />
-      <line x1="320" y1="144" x2="420" y2="230" stroke="#ef4444" strokeWidth="4" strokeLinecap="round" />
-      <circle cx="220" cy="238" r="14" fill="#16a34a" />
-      <circle cx="420" cy="238" r="14" fill="#ef4444" />
-    </Frame>
-  );
-}
-
 export function WarningIllustration() {
   return (
     <Frame>
@@ -202,11 +193,11 @@ export function CommunicationIllustration() {
 }
 
 export const illustrations: Record<string, () => React.JSX.Element> = {
-  "why-speed-matters-more-than-it-seems": SpeedIllustration,
+  "why-speed-matters-more-than-it-seems": WebsiteHeroImage,
   "the-usual-suspects-and-why-theyre-not-the-whole-story": SuspectsIllustration,
   "what-actually-slows-a-website-down": BottleneckIllustration,
   "fixing-it-in-the-right-order": ChecklistIllustration,
-  "why-this-decision-is-different-for-startups": DecisionIllustration,
+  "why-this-decision-is-different-for-startups": SeoHeroImage,
   "red-flags-to-watch-for": WarningIllustration,
   "transparency-what-it-should-actually-look-like": TransparencyIllustration,
   "communication-the-most-overlooked-factor": CommunicationIllustration,
