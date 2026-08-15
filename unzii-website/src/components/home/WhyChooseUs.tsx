@@ -53,9 +53,9 @@ export function WhyChooseUs() {
               A team that treats your business like it&apos;s our own
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-text-secondary">
-              We&apos;re not a template factory. Every project gets deliberate design
-              decisions, engineering discipline, and a direct line to the people doing
-              the work.
+              As an SEO agency for startups, we&apos;re not a template factory. Every
+              project gets deliberate design decisions, engineering discipline, and a
+              direct line to the people doing the work.
             </p>
           </Reveal>
 

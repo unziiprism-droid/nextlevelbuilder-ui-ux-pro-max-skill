@@ -16,16 +16,20 @@ export function Hero() {
 
       <Container className="flex flex-col items-center pt-20 pb-24 text-center lg:pt-28 lg:pb-32">
         <div className="animate-fade-in-up">
-          <Eyebrow>Website Development &amp; SEO Agency</Eyebrow>
+          <Eyebrow>SEO Agency for Startups</Eyebrow>
         </div>
 
         <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl">
-          Websites &amp; SEO Built to Grow Your Business
+          Websites &amp; SEO Built for Growing Startups
         </h1>
 
-        <p className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-text-secondary animate-fade-in-up [animation-delay:150ms]">
-          Unzii partners with businesses of every size to create fast websites, improve
-          online visibility, and deliver measurable results.
+        <p className="mt-5 max-w-2xl text-balance text-base font-medium text-brand-supporting animate-fade-in-up [animation-delay:80ms]">
+          Built for startups, and any growing business that needs to move fast.
+        </p>
+
+        <p className="mt-4 max-w-2xl text-balance text-lg leading-relaxed text-text-secondary animate-fade-in-up [animation-delay:150ms]">
+          Unzii partners with startups and growing businesses to create fast websites,
+          improve online visibility, and deliver measurable results.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row animate-fade-in-up [animation-delay:250ms]">

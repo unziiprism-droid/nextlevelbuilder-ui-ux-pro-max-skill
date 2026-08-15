@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
+import { CurrencyToggle } from "@/components/ui/CurrencyToggle";
 import { primaryNav, services } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -110,7 +111,8 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
+          <CurrencyToggle />
           <Button href="/start-your-project" size="md">
             Start Your Project
           </Button>
@@ -165,6 +167,10 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
+              <div className="mt-3 flex items-center justify-between px-4">
+                <span className="text-xs font-medium text-text-muted">Currency</span>
+                <CurrencyToggle />
+              </div>
               <div className="mt-3 px-4">
                 <Button href="/start-your-project" onClick={closeMenus} className="w-full">
                   Start Your Project

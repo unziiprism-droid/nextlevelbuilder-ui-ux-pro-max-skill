@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/providers/MotionProvider";
+import { CurrencyProvider } from "@/components/providers/CurrencyProvider";
 import { TawkWidget } from "@/components/chat/TawkWidget";
 import { WhatsAppButton } from "@/components/chat/WhatsAppButton";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
@@ -44,11 +45,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${poppins.variable} antialiased`}>
       <body className="flex min-h-screen flex-col">
         <GoogleAnalytics />
-        <MotionProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </MotionProvider>
+        <CurrencyProvider>
+          <MotionProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </MotionProvider>
+        </CurrencyProvider>
         <WhatsAppButton />
         <TawkWidget />
       </body>

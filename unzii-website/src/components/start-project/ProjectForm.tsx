@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { formConfig, siteConfig } from "@/lib/site-config";
+import { useCurrency } from "@/components/providers/CurrencyProvider";
+import { formatCurrency, type CurrencyCode } from "@/lib/currency";
 import { cn } from "@/lib/utils";
 
 const steps = ["About You", "Your Project", "Budget & Timeline"];
@@ -14,14 +16,21 @@ const serviceOptions = [
   "Not sure yet",
 ];
 
-const budgetOptions = [
-  "Under $300",
-  "$300 to $1,000",
-  "$1,000 to $5,000",
-  "$5,000 to $15,000",
-  "$15,000 and up",
-  "Not sure yet",
-];
+const budgetTiersUsd = [200, 1000, 5000, 15000];
+
+function getBudgetOptions(currency: CurrencyCode) {
+  const [low, mid, high, top] = budgetTiersUsd.map((amount) =>
+    formatCurrency(amount, currency),
+  );
+  return [
+    `Under ${low}`,
+    `${low} to ${mid}`,
+    `${mid} to ${high}`,
+    `${high} to ${top}`,
+    `${top} and up`,
+    "Not sure yet",
+  ];
+}
 
 const timelineOptions = [
   "As soon as possible",
@@ -56,6 +65,8 @@ const initialState: FormState = {
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ProjectForm() {
+  const { currency } = useCurrency();
+  const budgetOptions = getBudgetOptions(currency);
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<Status>("idle");
@@ -85,7 +96,7 @@ export function ProjectForm() {
           email: form.email,
           company: form.company || "Not provided",
           service: form.service,
-          budget: form.budget,
+          budget: `${form.budget} (${currency})`,
           timeline: form.timeline,
           message: form.description,
         }),
@@ -254,6 +265,10 @@ export function ProjectForm() {
                   </option>
                 ))}
               </select>
+              <p className="mt-2 text-xs text-text-muted">
+                These are starting points, not hard limits. If your budget is smaller,
+                tell us in the project description, we work with a range.
+              </p>
             </div>
             <div>
               <label htmlFor="timeline" className="text-sm font-medium text-brand-secondary">

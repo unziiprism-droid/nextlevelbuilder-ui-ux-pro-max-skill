@@ -17,9 +17,9 @@ import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "SEO",
+  title: "Best SEO Agency for Startups",
   description:
-    "Technical, on page, and content SEO built to improve search visibility and deliver measurable, compounding growth over time.",
+    "Looking for the best SEO agency for startups? Unzii delivers technical, on-page, and content SEO that compounds as your business grows.",
 };
 
 const benefits = [
@@ -144,8 +144,8 @@ export default function SeoPage() {
   return (
     <>
       <ServiceHero
-        eyebrow="SEO"
-        heading="SEO That Turns Search Into Growth"
+        eyebrow="SEO Agency for Startups"
+        heading="SEO That Turns Search Into Growth for Startups"
         description="We improve how search engines see your business and how customers find you, with a process built on data, not guesswork."
         secondaryLabel="See Our Process"
         secondaryHref="#process"
@@ -156,7 +156,7 @@ export default function SeoPage() {
         heading="SEO is not a one time task"
         paragraphs={[
           "Search rankings are earned through a combination of technical health, relevant content, and consistent effort over time. We treat SEO as an ongoing discipline, not a checklist you complete once.",
-          "Every engagement starts with real data about your site and your market, so the strategy is built around what will actually move the needle for your business.",
+          "SEO built specifically for startup growth stages looks different from SEO for an established enterprise, and every engagement starts with real data about your site and your market, so the strategy is built around what will actually move the needle for your business.",
         ]}
         panelTitle="Every SEO engagement includes"
         panelPoints={[
@@ -169,7 +169,7 @@ export default function SeoPage() {
         ]}
       />
       <Benefits
-        heading="Why businesses invest in SEO with Unzii"
+        heading="Why startups invest in SEO with Unzii"
         description="Search visibility is a long term asset. Here's what that investment gets you."
         items={benefits}
       />
