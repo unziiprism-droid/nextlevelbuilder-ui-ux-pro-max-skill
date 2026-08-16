@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
+import { SeoReviewOffer } from "@/components/home/SeoReviewOffer";
 import { Services } from "@/components/home/Services";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { Pricing } from "@/components/home/Pricing";
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <SeoReviewOffer />
       <Services />
       <WhyChooseUs />
       <Pricing />
