@@ -50,7 +50,7 @@ export default function SeoServicesLahorePage() {
         eyebrow="Overview"
         heading="Straightforward SEO services in Pakistan"
         paragraphs={[
-          "Whether you run a small business in Lahore or you're scaling across Pakistan, visibility on Google is often the difference between being found and being invisible. Our SEO services in Lahore focus on the fundamentals: technical health, relevant content, and consistent work over time.",
+          "Whether you're just getting started or scaling across Pakistan, visibility on Google is often the difference between being found and being invisible. Our SEO services in Lahore focus on the fundamentals: technical health, relevant content, and consistent work over time.",
           "We serve businesses in Lahore directly, and work with clients across Pakistan and internationally using the same transparent, results-driven process, no jargon-filled reports, no vague promises.",
         ]}
         panelTitle="Every engagement includes"

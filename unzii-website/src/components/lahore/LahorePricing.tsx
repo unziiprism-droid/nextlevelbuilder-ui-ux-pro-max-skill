@@ -15,7 +15,7 @@ const tiers = [
     originalPriceInPkr: 10000,
     priceInPkr: 5000,
     period: "one time",
-    description: "For small businesses in Lahore just getting started with search.",
+    description: "For businesses just getting started with search.",
     features: [
       "Technical SEO audit",
       "On page optimization",
