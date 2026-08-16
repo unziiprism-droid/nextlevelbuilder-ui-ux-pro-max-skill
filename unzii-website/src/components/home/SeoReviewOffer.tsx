@@ -1,11 +1,8 @@
-"use client";
-
-import { useState } from "react";
 import { Search, FileSearch, Users, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { formConfig } from "@/lib/site-config";
+import { formConfig, siteConfig } from "@/lib/site-config";
 
 const included = [
   { icon: Search, label: "One technical SEO issue" },
@@ -14,53 +11,16 @@ const included = [
   { icon: CheckCircle2, label: "One action you can do this week" },
 ];
 
-interface FormState {
-  name: string;
-  email: string;
-  website: string;
-  rankFor: string;
-}
+const inputClasses =
+  "mt-2 w-full rounded-xl border border-border-strong bg-surface px-4 py-3 text-sm text-brand-secondary outline-none placeholder:text-text-muted focus:border-brand-secondary";
 
-const initialState: FormState = { name: "", email: "", website: "", rankFor: "" };
-
-type Status = "idle" | "loading" | "success" | "error";
-
+// Plain HTML form posting directly to Web3Forms, no client JS: this
+// section sits right after the Hero, and a client component here
+// (even with no animation) adds enough hydration work under
+// throttled mobile CPU to measurably delay when the browser paints
+// the Hero's LCP text. A native form with a redirect avoids that
+// entirely.
 export function SeoReviewOffer() {
-  const [form, setForm] = useState<FormState>(initialState);
-  const [status, setStatus] = useState<Status>("idle");
-
-  function update<K extends keyof FormState>(key: K, value: FormState[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }));
-  }
-
-  const canSubmit =
-    form.name.trim() !== "" && form.email.trim() !== "" && form.website.trim() !== "";
-
-  async function handleSubmit(event: React.FormEvent) {
-    event.preventDefault();
-    setStatus("loading");
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: formConfig.web3formsAccessKey,
-          subject: `Free SEO review request from ${form.name}`,
-          name: form.name,
-          email: form.email,
-          website: form.website,
-          rank_for: form.rankFor || "Not specified",
-          message: `Free SEO opportunity review request.\nWebsite: ${form.website}\nWants to rank for: ${form.rankFor || "Not specified"}`,
-        }),
-      });
-      const result = await response.json();
-      setStatus(result.success ? "success" : "error");
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <section className="border-y border-border bg-surface-muted py-16 lg:py-20">
       <Container>
@@ -87,90 +47,73 @@ export function SeoReviewOffer() {
           </div>
 
           <div className="rounded-3xl border border-border bg-surface p-6 sm:p-8">
-            {status === "success" ? (
-              <div className="flex flex-col items-center py-6 text-center">
-                <span className="flex size-12 items-center justify-center rounded-full bg-brand-secondary text-text-inverse">
-                  <CheckCircle2 className="size-5" aria-hidden />
-                </span>
-                <h3 className="mt-5 text-lg font-semibold text-brand-secondary">
-                  Request received
-                </h3>
-                <p className="mt-2 max-w-xs text-sm leading-relaxed text-text-secondary">
-                  Thanks, {form.name.split(" ")[0] || "there"}. We&apos;ll record your SEO
-                  opportunity review and send it your way shortly.
-                </p>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              className="flex flex-col gap-4"
+            >
+              <input type="hidden" name="access_key" value={formConfig.web3formsAccessKey} />
+              <input type="hidden" name="subject" value="Free SEO review request" />
+              <input type="hidden" name="redirect" value={`${siteConfig.url}/thank-you`} />
+              <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+
+              <div>
+                <label htmlFor="seo-review-name" className="text-sm font-medium text-brand-secondary">
+                  Your name
+                </label>
+                <input
+                  id="seo-review-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Full name"
+                  className={inputClasses}
+                />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <div>
-                  <label htmlFor="seo-review-name" className="text-sm font-medium text-brand-secondary">
-                    Your name
-                  </label>
-                  <input
-                    id="seo-review-name"
-                    type="text"
-                    value={form.name}
-                    onChange={(event) => update("name", event.target.value)}
-                    placeholder="Full name"
-                    className="mt-2 w-full rounded-xl border border-border-strong bg-surface px-4 py-3 text-sm text-brand-secondary outline-none placeholder:text-text-muted focus:border-brand-secondary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="seo-review-email" className="text-sm font-medium text-brand-secondary">
-                    Email
-                  </label>
-                  <input
-                    id="seo-review-email"
-                    type="email"
-                    value={form.email}
-                    onChange={(event) => update("email", event.target.value)}
-                    placeholder="you@company.com"
-                    className="mt-2 w-full rounded-xl border border-border-strong bg-surface px-4 py-3 text-sm text-brand-secondary outline-none placeholder:text-text-muted focus:border-brand-secondary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="seo-review-website" className="text-sm font-medium text-brand-secondary">
-                    Website URL
-                  </label>
-                  <input
-                    id="seo-review-website"
-                    type="text"
-                    value={form.website}
-                    onChange={(event) => update("website", event.target.value)}
-                    placeholder="yourstartup.com"
-                    className="mt-2 w-full rounded-xl border border-border-strong bg-surface px-4 py-3 text-sm text-brand-secondary outline-none placeholder:text-text-muted focus:border-brand-secondary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="seo-review-rank-for" className="text-sm font-medium text-brand-secondary">
-                    What do you want to rank for?
-                    <span className="ml-1 font-normal text-text-muted">(optional)</span>
-                  </label>
-                  <input
-                    id="seo-review-rank-for"
-                    type="text"
-                    value={form.rankFor}
-                    onChange={(event) => update("rankFor", event.target.value)}
-                    placeholder="e.g. project management software"
-                    className="mt-2 w-full rounded-xl border border-border-strong bg-surface px-4 py-3 text-sm text-brand-secondary outline-none placeholder:text-text-muted focus:border-brand-secondary"
-                  />
-                </div>
+              <div>
+                <label htmlFor="seo-review-email" className="text-sm font-medium text-brand-secondary">
+                  Email
+                </label>
+                <input
+                  id="seo-review-email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@company.com"
+                  className={inputClasses}
+                />
+              </div>
+              <div>
+                <label htmlFor="seo-review-website" className="text-sm font-medium text-brand-secondary">
+                  Website URL
+                </label>
+                <input
+                  id="seo-review-website"
+                  name="website"
+                  type="text"
+                  required
+                  placeholder="yourstartup.com"
+                  className={inputClasses}
+                />
+              </div>
+              <div>
+                <label htmlFor="seo-review-rank-for" className="text-sm font-medium text-brand-secondary">
+                  What do you want to rank for?
+                  <span className="ml-1 font-normal text-text-muted">(optional)</span>
+                </label>
+                <input
+                  id="seo-review-rank-for"
+                  name="rank_for"
+                  type="text"
+                  placeholder="e.g. project management software"
+                  className={inputClasses}
+                />
+              </div>
 
-                <Button
-                  type="submit"
-                  disabled={!canSubmit || status === "loading"}
-                  className="mt-2 w-full disabled:opacity-40"
-                >
-                  {status === "loading" ? "Sending…" : "Get My Free SEO Review"}
-                </Button>
-
-                {status === "error" && (
-                  <p className="text-xs text-red-600">
-                    Something went wrong sending your details. Please try again.
-                  </p>
-                )}
-              </form>
-            )}
+              <Button type="submit" className="mt-2 w-full">
+                Get My Free SEO Review
+              </Button>
+            </form>
           </div>
         </div>
       </Container>
