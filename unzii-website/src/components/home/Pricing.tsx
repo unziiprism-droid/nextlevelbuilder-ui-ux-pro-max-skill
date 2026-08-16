@@ -55,11 +55,11 @@ const tiers = [
   },
 ];
 
-export function LahorePricing() {
+export function Pricing() {
   const { currency } = useCurrency();
 
   return (
-    <section className="bg-surface-muted py-24 lg:py-32">
+    <section id="pricing" className="scroll-mt-20 bg-surface py-24 lg:py-32">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow className="justify-center">Pricing</Eyebrow>
@@ -72,7 +72,7 @@ export function LahorePricing() {
             currency in the header above.
           </p>
           <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-supporting">
-            New agency pricing, for our first clients in Lahore
+            New agency pricing, for our first clients
           </span>
         </Reveal>
 
@@ -83,8 +83,8 @@ export function LahorePricing() {
                 className={cn(
                   "flex h-full flex-col rounded-3xl border p-8",
                   tier.highlighted
-                    ? "border-brand-secondary bg-surface shadow-lifted"
-                    : "border-border bg-surface",
+                    ? "border-brand-secondary bg-surface-muted shadow-lifted"
+                    : "border-border bg-surface-muted",
                 )}
               >
                 <h3 className="text-lg font-semibold text-brand-secondary">{tier.name}</h3>

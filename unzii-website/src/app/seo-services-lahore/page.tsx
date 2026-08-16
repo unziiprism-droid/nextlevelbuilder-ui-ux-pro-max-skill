@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { Overview } from "@/components/services/Overview";
-import { LahorePricing } from "@/components/lahore/LahorePricing";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
@@ -20,7 +19,7 @@ const faqs = [
   {
     question: "How much do SEO services in Pakistan cost with Unzii?",
     answer:
-      "Pricing starts from the ranges shown above in PKR. Every quote is tailored to your business and goals, share your details on our Start Your Project page and we'll follow up with a clear, honest number.",
+      "You can see our current starting packages on our pricing page. Every quote is tailored to your business and goals, share your details on our Start Your Project page and we'll follow up with a clear, honest number.",
   },
   {
     question: "My website was built cheaply and it's a mess. Can you still do SEO on it?",
@@ -42,7 +41,7 @@ export default function SeoServicesLahorePage() {
         heading="SEO Services in Lahore, Built to Get You Found"
         description="We provide SEO services in Lahore and across Pakistan, practical, technical work that helps local and growing businesses show up on Google, not vague promises."
         secondaryLabel="See Pricing"
-        secondaryHref="#pricing"
+        secondaryHref="/#pricing"
         background="bg-surface-tint"
       />
 
@@ -64,11 +63,9 @@ export default function SeoServicesLahorePage() {
         ]}
       />
 
-      <div id="pricing">
-        <LahorePricing />
+      <div className="bg-surface-muted">
+        <FAQ eyebrow="FAQ" heading="SEO services in Lahore, answered" faqs={faqs} />
       </div>
-
-      <FAQ eyebrow="FAQ" heading="SEO services in Lahore, answered" faqs={faqs} />
 
       <FinalCTA
         heading="Ready to get found on Google?"

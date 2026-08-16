@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { Pricing } from "@/components/home/Pricing";
 import { Process } from "@/components/shared/Process";
 import { Technologies } from "@/components/shared/Technologies";
 import { PortfolioPreview } from "@/components/home/PortfolioPreview";
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyChooseUs />
+      <Pricing />
       <Process />
       <Technologies />
       <PortfolioPreview />

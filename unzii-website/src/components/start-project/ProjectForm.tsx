@@ -16,18 +16,17 @@ const serviceOptions = [
   "Not sure yet",
 ];
 
-const budgetTiersUsd = [200, 1000, 5000, 15000];
+const budgetTiersUsd = [20, 50, 250];
 
 function getBudgetOptions(currency: CurrencyCode) {
-  const [low, mid, high, top] = budgetTiersUsd.map((amount) =>
+  const [low, mid, high] = budgetTiersUsd.map((amount) =>
     formatCurrency(amount, currency),
   );
   return [
     `Under ${low}`,
     `${low} to ${mid}`,
     `${mid} to ${high}`,
-    `${high} to ${top}`,
-    `${top} and up`,
+    `${high} and up`,
     "Not sure yet",
   ];
 }
