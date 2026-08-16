@@ -3,14 +3,14 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { formatCurrency } from "@/lib/currency";
 import { cn } from "@/lib/utils";
 
 const tiers = [
   {
     name: "SEO Starter",
-    priceUsd: 200,
-    period: "starting from",
+    originalPrice: "₨10,000",
+    price: "₨5,000",
+    period: "one time",
     description: "For small businesses in Lahore just getting started with search.",
     features: [
       "Technical SEO audit",
@@ -22,8 +22,9 @@ const tiers = [
   },
   {
     name: "SEO Growth",
-    priceUsd: 1000,
-    period: "starting from, per month",
+    originalPrice: "₨20,000",
+    price: "₨15,000",
+    period: "per month",
     description: "Ongoing SEO for businesses ready to compete for real rankings.",
     features: [
       "Everything in Starter",
@@ -36,8 +37,9 @@ const tiers = [
   },
   {
     name: "Website + SEO Bundle",
-    priceUsd: 5000,
-    period: "starting from",
+    originalPrice: "₨100,000",
+    price: "₨70,000",
+    period: "one time",
     description: "A new SEO ready website plus ongoing SEO, from the same team.",
     features: [
       "Custom website build",
@@ -62,6 +64,9 @@ export function LahorePricing() {
             No hidden fees and no confusing packages. These are starting points, every
             quote is tailored to your business.
           </p>
+          <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-supporting">
+            New agency pricing, for our first clients in Lahore
+          </span>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -76,9 +81,10 @@ export function LahorePricing() {
                 )}
               >
                 <h3 className="text-lg font-semibold text-brand-secondary">{tier.name}</h3>
-                <p className="mt-4 text-3xl font-semibold text-brand-secondary">
-                  {formatCurrency(tier.priceUsd, "PKR")}
-                </p>
+                <div className="mt-4 flex items-baseline gap-2">
+                  <p className="text-3xl font-semibold text-brand-secondary">{tier.price}</p>
+                  <p className="text-base text-text-muted line-through">{tier.originalPrice}</p>
+                </div>
                 <p className="text-xs text-text-muted">{tier.period}</p>
                 <p className="mt-4 text-sm leading-relaxed text-text-secondary">
                   {tier.description}
