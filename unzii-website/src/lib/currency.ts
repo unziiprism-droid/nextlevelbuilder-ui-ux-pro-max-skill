@@ -18,3 +18,11 @@ export function formatCurrency(amountUsd: number, currency: CurrencyCode): strin
   const rounded = Math.round(converted / step) * step;
   return `${symbol}${rounded.toLocaleString("en-US")}`;
 }
+
+// For prices set directly in PKR (e.g. the Lahore page's local
+// pricing), converted through USD as the common base so they can
+// still be shown in whichever currency the visitor has selected.
+export function formatCurrencyFromPkr(amountPkr: number, currency: CurrencyCode): string {
+  const amountUsd = amountPkr / currencies.PKR.rateFromUsd;
+  return formatCurrency(amountUsd, currency);
+}

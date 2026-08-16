@@ -1,15 +1,19 @@
+"use client";
+
 import { Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { useCurrency } from "@/components/providers/CurrencyProvider";
+import { formatCurrencyFromPkr } from "@/lib/currency";
 import { cn } from "@/lib/utils";
 
 const tiers = [
   {
     name: "SEO Starter",
-    originalPrice: "₨10,000",
-    price: "₨5,000",
+    originalPriceInPkr: 10000,
+    priceInPkr: 5000,
     period: "one time",
     description: "For small businesses in Lahore just getting started with search.",
     features: [
@@ -22,8 +26,8 @@ const tiers = [
   },
   {
     name: "SEO Growth",
-    originalPrice: "₨20,000",
-    price: "₨15,000",
+    originalPriceInPkr: 20000,
+    priceInPkr: 15000,
     period: "per month",
     description: "Ongoing SEO for businesses ready to compete for real rankings.",
     features: [
@@ -37,8 +41,8 @@ const tiers = [
   },
   {
     name: "Website + SEO Bundle",
-    originalPrice: "₨100,000",
-    price: "₨70,000",
+    originalPriceInPkr: 100000,
+    priceInPkr: 70000,
     period: "one time",
     description: "A new SEO ready website plus ongoing SEO, from the same team.",
     features: [
@@ -52,17 +56,20 @@ const tiers = [
 ];
 
 export function LahorePricing() {
+  const { currency } = useCurrency();
+
   return (
     <section className="bg-surface-muted py-24 lg:py-32">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow className="justify-center">Pricing</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
-            Straightforward pricing in PKR
+            Straightforward pricing
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-secondary">
             No hidden fees and no confusing packages. These are starting points, every
-            quote is tailored to your business.
+            quote is tailored to your business. Prices shown in {currency}, switch
+            currency in the header above.
           </p>
           <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-supporting">
             New agency pricing, for our first clients in Lahore
@@ -82,8 +89,12 @@ export function LahorePricing() {
               >
                 <h3 className="text-lg font-semibold text-brand-secondary">{tier.name}</h3>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <p className="text-3xl font-semibold text-brand-secondary">{tier.price}</p>
-                  <p className="text-base text-text-muted line-through">{tier.originalPrice}</p>
+                  <p className="text-3xl font-semibold text-brand-secondary">
+                    {formatCurrencyFromPkr(tier.priceInPkr, currency)}
+                  </p>
+                  <p className="text-base text-text-muted line-through">
+                    {formatCurrencyFromPkr(tier.originalPriceInPkr, currency)}
+                  </p>
                 </div>
                 <p className="text-xs text-text-muted">{tier.period}</p>
                 <p className="mt-4 text-sm leading-relaxed text-text-secondary">
