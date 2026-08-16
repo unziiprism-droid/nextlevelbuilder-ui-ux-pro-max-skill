@@ -43,9 +43,43 @@ function addDirectoryIndexes(dir) {
 
 // Belt-and-suspenders: disables ModSecurity's request-filtering rules,
 // in case a host applies a generic bot-blocking ruleset in front of
-// the static files.
+// the static files. Also sets cache lifetimes for static assets.
+// CSS/JS/fonts under _next/static are content-hashed by Next.js (a
+// filename changes if the contents do), so a year-long immutable
+// cache is safe. Images live in public/ and are NOT hashed
+// (next.config.ts sets images.unoptimized for static export), so they
+// get a shorter cache instead, long enough to help repeat visits
+// without risking a stale image surviving a year past its next
+// update. HTML is left uncached so page content always updates.
 function writeHtaccess() {
-  writeFileSync(path.join(outDir, ".htaccess"), "SecRuleEngine Off\n");
+  const contents = `SecRuleEngine Off
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/jpeg "access plus 1 week"
+  ExpiresByType image/webp "access plus 1 week"
+  ExpiresByType image/svg+xml "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\\.(png|jpg|jpeg|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+`;
+  writeFileSync(path.join(outDir, ".htaccess"), contents);
 }
 
 function runBuild() {
