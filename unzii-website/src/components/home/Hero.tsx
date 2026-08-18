@@ -34,7 +34,7 @@ export function Hero() {
           <Button href="/start-your-project" size="lg" showArrow>
             Start Your Project
           </Button>
-          <Button href="#services" variant="secondary" size="lg">
+          <Button href="#pricing" variant="secondary" size="lg">
             Explore Services
           </Button>
         </div>

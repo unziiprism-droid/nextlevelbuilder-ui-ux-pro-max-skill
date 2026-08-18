@@ -7,15 +7,16 @@ export const siteConfig = {
   email: "hello@unzii.com",
 };
 
-// Live chat: both are optional and inactive until a real value is set.
-// Tawk.to (primary, universal): create a free account at tawk.to, then
-// copy the Property ID and Widget ID from Admin > Channels > Chat Widget.
-// WhatsApp (secondary): international format, digits only, no "+" or spaces.
+// WhatsApp chat: inactive (button renders nothing) until a real number is
+// set. International format, digits only, no "+" or spaces.
 export const chatConfig = {
-  tawkPropertyId: "6a7dbc1882fc091d476a6d0f",
-  tawkWidgetId: "1jvtidga2",
   whatsappNumber: "",
   whatsappMessage: "Hi! I'd like to learn more about Unzii's services.",
+};
+
+// Shown in the footer and near the chat button. Leave empty to hide.
+export const socialConfig = {
+  instagramHandle: "",
 };
 
 // Form submissions: delivered by Web3Forms (web3forms.com) directly to

@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 import { CurrencyProvider } from "@/components/providers/CurrencyProvider";
-import { TawkWidget } from "@/components/chat/TawkWidget";
 import { WhatsAppButton } from "@/components/chat/WhatsAppButton";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </MotionProvider>
         </CurrencyProvider>
         <WhatsAppButton />
-        <TawkWidget />
       </body>
     </html>
   );
