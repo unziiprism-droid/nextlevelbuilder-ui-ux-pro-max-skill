@@ -10,13 +10,13 @@ export const siteConfig = {
 // WhatsApp chat: inactive (button renders nothing) until a real number is
 // set. International format, digits only, no "+" or spaces.
 export const chatConfig = {
-  whatsappNumber: "",
+  whatsappNumber: "923265816490",
   whatsappMessage: "Hi! I'd like to learn more about Unzii's services.",
 };
 
 // Shown in the footer and near the chat button. Leave empty to hide.
 export const socialConfig = {
-  instagramHandle: "",
+  instagramHandle: "the.unzii",
 };
 
 // Form submissions: delivered by Web3Forms (web3forms.com) directly to

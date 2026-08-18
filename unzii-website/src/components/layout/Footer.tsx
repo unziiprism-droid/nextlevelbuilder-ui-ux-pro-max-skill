@@ -2,7 +2,18 @@ import Link from "next/link";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
-import { footerNav, siteConfig } from "@/lib/site-config";
+import { footerNav, siteConfig, socialConfig } from "@/lib/site-config";
+
+// Not in lucide-react (dropped for trademark reasons); plain inline SVG instead.
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -18,13 +29,29 @@ export function Footer() {
             <p className="max-w-sm text-sm leading-relaxed text-text-inverse-muted">
               {siteConfig.description}
             </p>
-            <Link
-              href={`mailto:${siteConfig.email}`}
-              className="inline-flex w-fit items-center gap-2 text-sm font-medium text-text-inverse transition-colors hover:text-brand-primary"
-            >
-              <Mail className="size-4" aria-hidden />
-              {siteConfig.email}
-            </Link>
+            <p className="text-sm text-text-inverse-muted">
+              Have a question? We&apos;re available anytime, message us on
+              Instagram or send an email.
+            </p>
+            <div className="flex flex-col gap-2.5">
+              <Link
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex w-fit items-center gap-2 text-sm font-medium text-text-inverse transition-colors hover:text-brand-primary"
+              >
+                <Mail className="size-4" aria-hidden />
+                {siteConfig.email}
+              </Link>
+              {socialConfig.instagramHandle && (
+                <Link
+                  href={`https://instagram.com/${socialConfig.instagramHandle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center gap-2 text-sm font-medium text-text-inverse transition-colors hover:text-brand-primary"
+                >
+                  <InstagramIcon />@{socialConfig.instagramHandle}
+                </Link>
+              )}
+            </div>
           </div>
 
           <div>
