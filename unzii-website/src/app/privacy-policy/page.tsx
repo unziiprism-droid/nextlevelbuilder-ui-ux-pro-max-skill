@@ -54,7 +54,7 @@ const sections: BlogSection[] = [
     id: "your-rights",
     heading: "Your Rights",
     body: [
-      "You can ask us to access, correct, or delete any personal information we hold about you by emailing hello@unzii.com.",
+      "You can ask us to access, correct, or delete any personal information we hold about you by emailing hello@theunzii.com.",
     ],
   },
   {
@@ -74,7 +74,7 @@ const sections: BlogSection[] = [
   {
     id: "contact-us",
     heading: "Contact Us",
-    body: ["Questions about this policy can be sent to hello@unzii.com."],
+    body: ["Questions about this policy can be sent to hello@theunzii.com."],
   },
 ];
 

@@ -78,7 +78,7 @@ const sections: BlogSection[] = [
   {
     id: "contact",
     heading: "Contact",
-    body: ["Questions about these Terms can be sent to hello@unzii.com."],
+    body: ["Questions about these Terms can be sent to hello@theunzii.com."],
   },
 ];
 

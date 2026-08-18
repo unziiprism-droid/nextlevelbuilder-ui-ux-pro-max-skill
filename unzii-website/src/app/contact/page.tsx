@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "What's the fastest way to reach you?",
     answer:
-      "The form on this page, or emailing us directly at hello@unzii.com. Both go to the same place.",
+      "The form on this page, or emailing us directly at hello@theunzii.com. Both go to the same place.",
   },
   {
     question: "Do you offer a free consultation?",

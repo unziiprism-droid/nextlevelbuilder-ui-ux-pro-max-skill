@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Unzii partners with businesses of every size to create fast websites, improve online visibility, and deliver measurable results.",
   url: "https://theunzii.com",
-  email: "hello@unzii.com",
+  email: "hello@theunzii.com",
 };
 
 // WhatsApp chat: inactive (button renders nothing) until a real number is
