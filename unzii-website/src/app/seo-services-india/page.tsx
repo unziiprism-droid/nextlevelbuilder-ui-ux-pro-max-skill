@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { ServiceHero } from "@/components/services/ServiceHero";
+import { Overview } from "@/components/services/Overview";
 import { CityGrid } from "@/components/countries/CityGrid";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "SEO Services in India",
+  title: "SEO Agency in India",
   description:
-    "Unzii provides SEO services across India, including Mumbai, Vadodara, and Calicut, affordable, results-driven, and transparent.",
+    "Unzii is an affordable SEO agency in India, offering low price SEO services and website development for startups and growing businesses in Mumbai, Vadodara, Calicut, and beyond.",
 };
 
 const cities = [
@@ -19,10 +20,28 @@ export default function SeoServicesIndiaPage() {
   return (
     <>
       <ServiceHero
-        eyebrow="SEO Services in India"
-        heading="SEO Services Across India"
-        description="We work with startups and growing businesses across India, from Mumbai to Vadodara to Calicut, practical, technical SEO that helps you show up on Google."
-        background="bg-surface-tint"
+        eyebrow="SEO Agency in India"
+        heading="Affordable SEO Services in India"
+        description="Looking for an SEO agency near me in India? We provide low price SEO services and website development agency work for startups and growing businesses, without cutting corners."
+        heroImage="/countries/india.jpg"
+      />
+
+      <Overview
+        eyebrow="Overview"
+        heading="A straightforward SEO agency in India"
+        paragraphs={[
+          "Finding the best SEO agency in India shouldn't mean choosing between quality and price. We built Unzii to offer low price SEO services that still cover the fundamentals properly: technical health, relevant content, and consistent work over time.",
+          "As a website development agency and SEO agency in India, we work with businesses in Mumbai, Vadodara, Calicut, and across the country, using the same transparent, results-driven process, no jargon-filled reports, no vague promises.",
+        ]}
+        panelTitle="Every engagement includes"
+        panelPoints={[
+          "Technical SEO audit and fixes",
+          "Keyword research and mapping",
+          "On page optimization",
+          "Content and internal linking strategy",
+          "Monthly reporting in plain language",
+          "Direct communication throughout",
+        ]}
       />
 
       <CityGrid cities={cities} countryName="India" />

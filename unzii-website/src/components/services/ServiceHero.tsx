@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "motion/react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -16,6 +14,7 @@ export function ServiceHero({
   secondaryLabel,
   secondaryHref,
   background = "bg-surface-muted/30",
+  heroImage,
 }: {
   eyebrow: string;
   badge?: string;
@@ -26,67 +25,68 @@ export function ServiceHero({
   secondaryLabel?: string;
   secondaryHref?: string;
   background?: string;
+  heroImage?: string;
 }) {
   return (
     <section className="relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <motion.div
-          className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-30 blur-3xl"
-          style={{ background: "var(--color-brand-supporting)" }}
-          animate={{ x: [0, 20, -10, 0], y: [0, -14, 10, 0] }}
-          transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className={cn("absolute inset-0", background)} />
-      </div>
+      {heroImage ? (
+        <div aria-hidden className="absolute inset-0 -z-10">
+          <Image src={heroImage} alt="" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-brand-secondary/70" />
+        </div>
+      ) : (
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div
+            className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-30 blur-3xl"
+            style={{ background: "var(--color-brand-supporting)" }}
+          />
+          <div className={cn("absolute inset-0", background)} />
+        </div>
+      )}
 
       <Container className="flex flex-col items-center pt-20 pb-20 text-center lg:pt-28 lg:pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col items-center gap-3 sm:flex-row"
-        >
-          <Eyebrow>{eyebrow}</Eyebrow>
+        <div className="flex flex-col items-center gap-3 sm:flex-row">
+          <Eyebrow inverse={!!heroImage}>{eyebrow}</Eyebrow>
           {badge && (
             <span className="rounded-full bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-supporting">
               {badge}
             </span>
           )}
-        </motion.div>
+        </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-6 max-w-3xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl"
+        <h1
+          className={cn(
+            "mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl",
+            heroImage ? "text-text-inverse" : "text-brand-secondary",
+          )}
         >
           {heading}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-text-secondary"
+        <p
+          className={cn(
+            "mt-6 max-w-2xl text-balance text-lg leading-relaxed",
+            heroImage ? "text-text-inverse-muted" : "text-text-secondary",
+          )}
         >
           {description}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.24, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
-        >
-          <Button href={primaryHref} size="lg" showArrow>
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+          <Button href={primaryHref} size="lg" showArrow variant={heroImage ? "inverse" : "primary"}>
             {primaryLabel}
           </Button>
           {secondaryLabel && secondaryHref && (
-            <Button href={secondaryHref} variant="secondary" size="lg">
+            <Button
+              href={secondaryHref}
+              variant="secondary"
+              size="lg"
+              className={heroImage ? "border-white/40 text-text-inverse hover:bg-white/10" : undefined}
+            >
               {secondaryLabel}
             </Button>
           )}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );
