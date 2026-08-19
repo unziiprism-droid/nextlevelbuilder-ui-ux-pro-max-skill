@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export interface CityItem {
   name: string;
   description: string;
-  image?: string;
 }
 
 export function CityGrid({
@@ -29,25 +27,15 @@ export function CityGrid({
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-12 flex max-w-2xl flex-col gap-8">
           {cities.map((city) => (
-            <div
-              key={city.name}
-              className="overflow-hidden rounded-3xl border border-border"
-            >
-              {city.image && (
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image src={city.image} alt={city.name} fill className="object-cover" />
-                </div>
-              )}
-              <div className="flex flex-col gap-2 bg-surface-muted p-5">
-                <h3 className="text-base font-semibold text-brand-secondary">
-                  SEO Services in {city.name}
-                </h3>
-                <p className="text-sm leading-relaxed text-text-secondary">
-                  {city.description}
-                </p>
-              </div>
+            <div key={city.name}>
+              <h3 className="text-lg font-semibold text-brand-secondary">
+                SEO Services in {city.name}
+              </h3>
+              <p className="mt-2 text-base leading-relaxed text-text-secondary">
+                {city.description}
+              </p>
             </div>
           ))}
         </div>
