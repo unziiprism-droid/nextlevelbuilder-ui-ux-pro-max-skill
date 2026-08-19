@@ -11,9 +11,21 @@ export const metadata: Metadata = {
 };
 
 const cities = [
-  { name: "Karachi", image: "/countries/pakistan-karachi.jpg" },
-  { name: "Lahore", image: "/countries/pakistan-lahore.jpg", href: "/seo-services-lahore" },
-  { name: "Gujranwala", image: "/countries/pakistan-gujranwala.jpg" },
+  {
+    name: "Karachi",
+    description:
+      "SEO services in Karachi for businesses that want to rank on Google in Pakistan's biggest, most competitive market, technical fixes, keyword research, and content that actually moves rankings.",
+  },
+  {
+    name: "Lahore",
+    description:
+      "SEO services in Lahore built to get local and growing businesses found, practical, technical work, not vague promises, with clear monthly reporting in plain language.",
+  },
+  {
+    name: "Gujranwala",
+    description:
+      "SEO services in Gujranwala for businesses that want the same technical, results-driven process big-city agencies charge more for, without cutting corners.",
+  },
 ];
 
 export default function SeoServicesPakistanPage() {

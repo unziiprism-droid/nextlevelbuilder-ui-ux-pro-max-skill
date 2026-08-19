@@ -11,9 +11,21 @@ export const metadata: Metadata = {
 };
 
 const cities = [
-  { name: "San Francisco", image: "/countries/us-san-francisco.jpg" },
-  { name: "New York", image: "/countries/us-new-york.jpg" },
-  { name: "Austin", image: "/countries/us-austin.jpg" },
+  {
+    name: "San Francisco",
+    description:
+      "SEO services for startups in San Francisco, technical audits, keyword strategy, and fast, modern websites built to convert, without agency-sized retainers.",
+  },
+  {
+    name: "New York",
+    description:
+      "An SEO agency for startups in New York, practical, technical work focused on getting you found on Google and giving visitors a reason to stay.",
+  },
+  {
+    name: "Austin",
+    description:
+      "SEO services for growing businesses and startups in Austin, straightforward technical SEO and web development, with direct communication throughout.",
+  },
 ];
 
 export default function SeoServicesUnitedStatesPage() {

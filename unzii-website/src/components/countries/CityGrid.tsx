@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
 
 export interface CityItem {
   name: string;
-  image: string;
-  href?: string;
+  description: string;
+  image?: string;
 }
 
 export function CityGrid({
@@ -36,18 +35,18 @@ export function CityGrid({
               key={city.name}
               className="overflow-hidden rounded-3xl border border-border"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <Image src={city.image} alt={city.name} fill className="object-cover" />
-              </div>
-              <div className="flex flex-col items-center gap-3 bg-surface-muted p-5 text-center">
+              {city.image && (
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image src={city.image} alt={city.name} fill className="object-cover" />
+                </div>
+              )}
+              <div className="flex flex-col gap-2 bg-surface-muted p-5">
                 <h3 className="text-base font-semibold text-brand-secondary">
-                  {city.name}
+                  SEO Services in {city.name}
                 </h3>
-                {city.href && (
-                  <Button href={city.href} variant="secondary" size="md">
-                    Learn More
-                  </Button>
-                )}
+                <p className="text-sm leading-relaxed text-text-secondary">
+                  {city.description}
+                </p>
               </div>
             </div>
           ))}

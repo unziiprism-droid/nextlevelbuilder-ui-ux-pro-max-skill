@@ -11,9 +11,21 @@ export const metadata: Metadata = {
 };
 
 const cities = [
-  { name: "Mumbai", image: "/countries/india-mumbai.jpg" },
-  { name: "Vadodara", image: "/countries/india-vadodara.jpg" },
-  { name: "Calicut", image: "/countries/india-calicut.jpg" },
+  {
+    name: "Mumbai",
+    description:
+      "Looking for the best SEO agency in Mumbai? We provide low price SEO services and website development for startups and growing businesses that need real results, not just reports.",
+  },
+  {
+    name: "Vadodara",
+    description:
+      "Affordable SEO services in Vadodara, technical audits, keyword research, and on page optimization from a website development agency and SEO agency in India that keeps things transparent.",
+  },
+  {
+    name: "Calicut",
+    description:
+      "SEO services in Calicut for businesses that want to show up on Google without paying big-city agency prices, low price SEO services with a clear, honest process.",
+  },
 ];
 
 export default function SeoServicesIndiaPage() {

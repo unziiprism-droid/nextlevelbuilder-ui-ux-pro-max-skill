@@ -131,10 +131,10 @@ export function Footer() {
               </Link>
             ))}
             <Link
-              href="/seo-services-lahore"
+              href="/seo-services-pakistan"
               className="text-xs text-text-inverse-muted transition-colors hover:text-text-inverse"
             >
-              SEO Services in Lahore
+              SEO Services in Pakistan
             </Link>
           </div>
         </div>
