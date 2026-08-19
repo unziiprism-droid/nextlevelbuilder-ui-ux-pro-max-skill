@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Who is Unzii?",
     answer:
-      "Unzii is a technology agency founded by Unsa Zafar in 2026, focused on website development and SEO, built around direct communication, real craftsmanship, and honest results. Full stack application development is coming soon as an additional service.",
+      "Unzii is an SEO and website development agency for startups, built around direct communication, real craftsmanship, and honest results. Full stack application development is coming soon as an additional service.",
   },
   {
     question: "Do you work with startups on a limited budget?",
