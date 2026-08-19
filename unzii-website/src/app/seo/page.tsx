@@ -8,7 +8,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
-import { Overview } from "@/components/services/Overview";
 import { SeoGrowthChart } from "@/components/services/SeoGrowthChart";
 import { Benefits } from "@/components/services/Benefits";
 import { Features } from "@/components/services/Features";
@@ -151,23 +150,6 @@ export default function SeoPage() {
         secondaryLabel="See Our Process"
         secondaryHref="#process"
         background="bg-surface-tint"
-      />
-      <Overview
-        eyebrow="Overview"
-        heading="SEO is not a one time task"
-        paragraphs={[
-          "Search rankings are earned through a combination of technical health, relevant content, and consistent effort over time. We treat SEO as an ongoing discipline, not a checklist you complete once.",
-          "SEO built specifically for startup growth stages looks different from SEO for an established enterprise, and every engagement starts with real data about your site and your market, so the strategy is built around what will actually move the needle for your business.",
-        ]}
-        panelTitle="Every SEO engagement includes"
-        panelPoints={[
-          "Technical SEO audit and fixes",
-          "Keyword research and mapping",
-          "On page optimization",
-          "Content and internal linking strategy",
-          "Monthly reporting and reviews",
-          "Direct communication throughout",
-        ]}
       />
       <SeoGrowthChart />
       <Benefits

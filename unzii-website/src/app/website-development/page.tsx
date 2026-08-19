@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Gauge, LayoutTemplate, Lock, Search, TrendingUp, Wrench } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
-import { Overview } from "@/components/services/Overview";
 import { Benefits } from "@/components/services/Benefits";
 import { Features } from "@/components/services/Features";
-import { Process } from "@/components/shared/Process";
 import { Technologies } from "@/components/shared/Technologies";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
@@ -51,39 +49,6 @@ const benefits = [
     title: "Easy to maintain",
     description:
       "Clean, documented code that will not leave you stuck if you ever need changes down the road.",
-  },
-];
-
-const processSteps = [
-  {
-    number: "01",
-    title: "Discovery & Strategy",
-    description:
-      "We start by understanding your business, your audience, and what success looks like for your new website.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description:
-      "Wireframes and visual design tailored to your brand, refined together with you before development starts.",
-  },
-  {
-    number: "03",
-    title: "Development",
-    description:
-      "Clean, scalable code built for speed, accessibility, and search performance from day one.",
-  },
-  {
-    number: "04",
-    title: "Testing & QA",
-    description:
-      "Every page is tested across devices and browsers to make sure everything works exactly as expected.",
-  },
-  {
-    number: "05",
-    title: "Launch & Support",
-    description:
-      "We launch your site, monitor performance, and stay available for updates as your business grows.",
   },
 ];
 
@@ -140,33 +105,13 @@ export default function WebsiteDevelopmentPage() {
         eyebrow="Website Design Agency for Startups"
         heading="Websites Built for Startups That Want to Grow"
         description="We design and build fast, modern websites engineered for real business results, not just good looks."
-        secondaryLabel="See Our Process"
-        secondaryHref="#process"
         background="bg-surface-tint"
-      />
-      <Overview
-        eyebrow="Overview"
-        heading="A website is more than a design file"
-        paragraphs={[
-          "Your website is often the first real interaction a potential customer has with your business. We build every site from scratch, with your goals, your customers, and your growth in mind.",
-          "No page builders stacked with bloated plugins, no recycled templates. Just clean, purposeful code built specifically for what your business needs.",
-        ]}
-        panelTitle="Every project includes"
-        panelPoints={[
-          "Fully custom design, no templates",
-          "Mobile first, responsive layouts",
-          "Built in SEO foundations",
-          "Fast loading, optimized performance",
-          "Clean, maintainable code",
-          "Direct communication throughout",
-        ]}
       />
       <Benefits
         heading="Why businesses choose Unzii for their website"
         description="A website is an investment. Here's what that investment gets you."
         items={benefits}
       />
-      <Process id="process" heading="How we build your website" steps={processSteps} />
       <Features
         heading="What's included in every website"
         description="No hidden extras. Every project ships with the essentials built in."

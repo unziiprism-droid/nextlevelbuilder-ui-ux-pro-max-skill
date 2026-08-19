@@ -1,6 +1,5 @@
 import { Search, FileSearch, Users, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { formConfig, siteConfig } from "@/lib/site-config";
 
@@ -26,10 +25,12 @@ export function SeoReviewOffer() {
       <Container>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
-            <Eyebrow>Free SEO Opportunity Review</Eyebrow>
-            <h2 className="mt-4 text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
-              Not sure why your startup isn&apos;t appearing in search?
+            <h2 className="text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
+              Free SEO Opportunity Review
             </h2>
+            <p className="mt-3 text-base font-medium text-brand-supporting">
+              Not sure why your startup isn&apos;t appearing in search?
+            </p>
             <p className="mt-4 text-base leading-relaxed text-text-secondary">
               Send us your website and we&apos;ll record three practical SEO opportunities,
               no generic report, no pressure.

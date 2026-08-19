@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Newspaper } from "lucide-react";
-import { Features } from "@/components/services/Features";
-import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogExplorer } from "@/components/blog/BlogExplorer";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
@@ -13,15 +11,6 @@ export const metadata: Metadata = {
   description:
     "Practical, no fluff writing on web development, SEO, and growth from Unzii. Our first articles are on the way.",
 };
-
-const topics = [
-  "Website performance and Core Web Vitals",
-  "Technical and on page SEO",
-  "Design and user experience decisions",
-  "Real project breakdowns as they happen",
-  "Search visibility and content strategy",
-  "Behind the scenes at Unzii",
-];
 
 const faqs = [
   {
@@ -51,7 +40,13 @@ export default function BlogPage() {
 
   return (
     <>
-      <BlogHero categories={categories} />
+      <section className="border-b border-border bg-surface-muted/30 py-16 lg:py-20">
+        <Container>
+          <h1 className="text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl">
+            The Unzii Blog
+          </h1>
+        </Container>
+      </section>
 
       <section className="py-24 lg:py-32">
         <Container>
@@ -69,13 +64,6 @@ export default function BlogPage() {
           )}
         </Container>
       </section>
-
-      <Features
-        eyebrow="What's Coming"
-        heading="What we'll be writing about"
-        description="A preview of the topics on our list, grouped around what actually helps businesses grow online."
-        features={topics}
-      />
 
       <FAQ eyebrow="FAQ" heading="Blog, answered" faqs={faqs} />
       <FinalCTA

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Code2, Compass, Quote, Search, Target, TrendingUp } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { Overview } from "@/components/services/Overview";
-import { Benefits } from "@/components/services/Benefits";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
@@ -11,39 +9,6 @@ export const metadata: Metadata = {
   description:
     "Unzii is a new agency and we'd rather be honest about that than fill this page with fake case studies. Here's what to expect instead, and what's coming.",
 };
-
-const caseStudyStructure = [
-  {
-    icon: Target,
-    title: "The problem",
-    description: "What challenge the business was facing before working with us.",
-  },
-  {
-    icon: Compass,
-    title: "Our approach",
-    description: "The decisions we made and why, not just a list of features.",
-  },
-  {
-    icon: TrendingUp,
-    title: "The result",
-    description: "Real, measurable outcomes, not vague claims.",
-  },
-  {
-    icon: Code2,
-    title: "The build",
-    description: "The stack and technical choices behind the project.",
-  },
-  {
-    icon: Search,
-    title: "The SEO impact",
-    description: "How the project performed in search after launch, where relevant.",
-  },
-  {
-    icon: Quote,
-    title: "Client feedback",
-    description: "Direct feedback from the business we worked with, only ever real.",
-  },
-];
 
 const faqs = [
   {
@@ -100,12 +65,6 @@ export default function PortfolioPage() {
           ]}
         />
       </div>
-      <Benefits
-        eyebrow="Coming Soon"
-        heading="What a future case study will include"
-        description="We're building the habit of documenting real results properly, starting with your project."
-        items={caseStudyStructure}
-      />
       <FAQ eyebrow="FAQ" heading="Portfolio, answered honestly" faqs={faqs} />
       <FinalCTA
         heading="Ready to become our next case study?"
