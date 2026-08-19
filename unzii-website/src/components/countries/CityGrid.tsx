@@ -9,7 +9,13 @@ export interface CityItem {
   href?: string;
 }
 
-export function CityGrid({ cities }: { cities: CityItem[] }) {
+export function CityGrid({
+  cities,
+  countryName,
+}: {
+  cities: CityItem[];
+  countryName: string;
+}) {
   return (
     <section className="py-24 lg:py-32">
       <Container>
@@ -18,6 +24,10 @@ export function CityGrid({ cities }: { cities: CityItem[] }) {
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
             Local, and everywhere in between
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-text-secondary">
+            These are a few of the cities we work in, we provide SEO services
+            across all of {countryName}, not just the ones shown here.
+          </p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">

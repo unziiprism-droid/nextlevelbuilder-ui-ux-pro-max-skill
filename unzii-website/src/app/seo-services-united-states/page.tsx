@@ -25,7 +25,7 @@ export default function SeoServicesUnitedStatesPage() {
         background="bg-surface-tint"
       />
 
-      <CityGrid cities={cities} />
+      <CityGrid cities={cities} countryName="the United States" />
 
       <FinalCTA
         heading="Ready to get found on Google?"

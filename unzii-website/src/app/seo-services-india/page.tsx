@@ -25,7 +25,7 @@ export default function SeoServicesIndiaPage() {
         background="bg-surface-tint"
       />
 
-      <CityGrid cities={cities} />
+      <CityGrid cities={cities} countryName="India" />
 
       <FinalCTA
         heading="Ready to get found on Google?"

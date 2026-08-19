@@ -25,7 +25,7 @@ export default function SeoServicesPakistanPage() {
         background="bg-surface-tint"
       />
 
-      <CityGrid cities={cities} />
+      <CityGrid cities={cities} countryName="Pakistan" />
 
       <FinalCTA
         heading="Ready to get found on Google?"
