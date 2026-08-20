@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Who is Unzii?",
     answer:
-      "Unzii is an SEO and website development agency for startups, built around direct communication, real craftsmanship, and honest results. Full stack application development is coming soon as an additional service.",
+      "Unzii is an agency built for startups and growing businesses that can't invest heavily in their online presence, and as a result struggle to rank on Google. We provide them with genuinely good, quality work anyway.",
   },
   {
     question: "Do you work with startups on a limited budget?",

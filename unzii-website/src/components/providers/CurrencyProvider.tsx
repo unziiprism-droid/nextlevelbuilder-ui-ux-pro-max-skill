@@ -26,7 +26,7 @@ export function CurrencyProvider({
     // mismatch. Deferring to an effect keeps the first paint matching
     // the server output, then swaps in the stored preference.
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "USD" || stored === "GBP" || stored === "INR" || stored === "PKR") {
+    if (stored === "USD" || stored === "GBP" || stored === "PKR") {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrencyState(stored);
     }
