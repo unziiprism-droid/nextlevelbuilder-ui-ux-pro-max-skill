@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceHero } from "@/components/services/ServiceHero";
+import { Container } from "@/components/ui/Container";
 import { CountryGrid } from "@/components/countries/CountryGrid";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
@@ -12,12 +12,13 @@ export const metadata: Metadata = {
 export default function CountriesWeServePage() {
   return (
     <>
-      <ServiceHero
-        eyebrow="Where We Work"
-        heading="SEO and Websites, Wherever You're Growing"
-        description="We work with startups and growing businesses across multiple countries, with the same transparent, results-driven process everywhere."
-        background="bg-surface-tint"
-      />
+      <section className="border-b border-border bg-surface-muted/30 py-16 lg:py-20">
+        <Container>
+          <h1 className="text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl">
+            Website &amp; SEO Services, Wherever You&apos;re Growing
+          </h1>
+        </Container>
+      </section>
 
       <CountryGrid />
 
