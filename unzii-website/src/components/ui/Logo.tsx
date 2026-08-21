@@ -2,8 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /**
- * Renders the original Unzii logo files as-is, never recreated or
- * re-colored:
+ * Renders the official Unzii logo files:
  *   public/logo/unzii-mark.jpg   the monogram, for compact spaces
  *   public/logo/unzii-logo.png   the full mark + wordmark
  *
@@ -23,8 +22,8 @@ export function Logo({
       <Image
         src="/logo/unzii-logo.png"
         alt="Unzii"
-        width={301}
-        height={200}
+        width={900}
+        height={497}
         className={cn("h-14 w-auto", className)}
         priority
       />
