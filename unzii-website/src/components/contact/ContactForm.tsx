@@ -120,7 +120,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand-secondary px-6 py-3.5 text-sm font-medium text-text-inverse transition-all duration-300 hover:bg-accent active:scale-[0.98] disabled:opacity-60"
+        className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand-supporting px-6 py-3.5 text-sm font-medium text-accent-ink transition-all duration-300 hover:opacity-90 active:scale-[0.98] disabled:opacity-60"
       >
         {status === "loading" ? "Sending…" : "Send Message"}
         <ArrowRight

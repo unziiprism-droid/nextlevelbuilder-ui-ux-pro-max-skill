@@ -26,7 +26,7 @@ export function SeoReviewOffer() {
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
-              Free SEO Opportunity Review
+              <span className="text-brand-supporting">Free</span> SEO Opportunity Review
             </h2>
             <p className="mt-3 text-base font-medium text-brand-supporting">
               Not sure why your startup isn&apos;t appearing in search?

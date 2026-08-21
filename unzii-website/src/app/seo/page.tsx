@@ -5,6 +5,7 @@ import {
   FileSearch,
   Link2,
   Search,
+  Sparkles,
   TrendingUp,
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
@@ -59,6 +60,12 @@ const benefits = [
     description:
       "SEO is never treated as a one time task. We monitor performance and keep refining as search evolves.",
   },
+  {
+    icon: Sparkles,
+    title: "Built for AI search too",
+    description:
+      "Beyond Google's blue links, we structure your content so tools like ChatGPT and Gemini have clear, accurate information to pull from when answering questions about businesses like yours.",
+  },
 ];
 
 const processSteps = [
@@ -105,6 +112,7 @@ const features = [
   "Search Console and Analytics setup",
   "Monthly performance reporting",
   "Ongoing monitoring and optimization",
+  "Structuring content for AI search tools like ChatGPT and Gemini",
 ];
 
 const faqs = [
@@ -137,6 +145,11 @@ const faqs = [
     question: "Can SEO be combined with a new website build?",
     answer:
       "Yes, and it's often the strongest approach. Pairing SEO with our website development service means your site is built with search performance in mind from day one.",
+  },
+  {
+    question: "Do you optimize for AI tools like ChatGPT and Gemini?",
+    answer:
+      "We build your site the way AI search tools prefer: clear structure, schema markup, and content that directly answers real questions. That improves your chances of being referenced in AI-generated answers, but like Google rankings, no one can honestly guarantee a specific AI tool will name your business.",
   },
 ];
 

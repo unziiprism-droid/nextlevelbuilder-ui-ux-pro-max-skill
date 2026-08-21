@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand — exact values, do not alter */
+  /* Brand */
   --color-brand-primary: #8a96a8; /* Cool Grey */
-  --color-brand-secondary: #101827; /* Deep Navy */
-  --color-brand-supporting: #334a68; /* Slate Blue */
-  --color-brand-bg: #e8edf3; /* Soft Grey */
+  --color-brand-secondary: #0e3a44; /* Deep Teal */
+  --color-brand-supporting: #f2933a; /* Warm Orange */
+  --color-brand-bg: #eef4f3; /* Teal Tint */
+  --color-amber: #ffc145; /* Amber — stats and secondary highlights only */
+  --color-accent-ink: #3a2400; /* Dark text for use on orange/amber fills */
 
   /* Semantic surface scale, derived only for layout use — hues stay on-brand */
   --color-surface: #ffffff;
   --color-surface-subtle: #f6f8fa;
   --color-surface-muted: var(--color-brand-bg);
   --color-surface-inverse: var(--color-brand-secondary);
-  /* Deeper tint of Slate Blue, for section backgrounds that need more weight than Soft Grey */
-  --color-surface-tint: #d8dee7;
+  /* Deeper teal tint, for section backgrounds that need more weight than the Teal Tint */
+  --color-surface-tint: #cfe0df;
 
   --color-border: #e2e6ec;
   --color-border-strong: #c9d0db;
@@ -41,6 +43,8 @@
   --color-brand-secondary: var(--color-brand-secondary);
   --color-brand-supporting: var(--color-brand-supporting);
   --color-brand-bg: var(--color-brand-bg);
+  --color-amber: var(--color-amber);
+  --color-accent-ink: var(--color-accent-ink);
 
   --color-surface: var(--color-surface);
   --color-surface-subtle: var(--color-surface-subtle);
@@ -79,7 +83,7 @@ body {
 
 ::selection {
   background: var(--color-brand-supporting);
-  color: var(--color-text-inverse);
+  color: var(--color-accent-ink);
 }
 
 @keyframes marquee {

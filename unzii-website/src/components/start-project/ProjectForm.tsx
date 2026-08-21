@@ -312,7 +312,7 @@ export function ProjectForm() {
             type="button"
             disabled={!canContinue}
             onClick={() => setStep((current) => current + 1)}
-            className="group inline-flex items-center gap-2 rounded-full bg-brand-secondary px-6 py-3 text-sm font-medium text-text-inverse transition-all duration-300 hover:bg-accent active:scale-[0.98] disabled:opacity-40 disabled:hover:bg-brand-secondary"
+            className="group inline-flex items-center gap-2 rounded-full bg-brand-supporting px-6 py-3 text-sm font-medium text-accent-ink transition-all duration-300 hover:opacity-90 active:scale-[0.98] disabled:opacity-40 disabled:hover:opacity-40"
           >
             Continue
             <ArrowRight
@@ -325,7 +325,7 @@ export function ProjectForm() {
             type="button"
             disabled={!canContinue || status === "loading"}
             onClick={handleSubmit}
-            className="group inline-flex items-center gap-2 rounded-full bg-brand-secondary px-6 py-3 text-sm font-medium text-text-inverse transition-all duration-300 hover:bg-accent active:scale-[0.98] disabled:opacity-40 disabled:hover:bg-brand-secondary"
+            className="group inline-flex items-center gap-2 rounded-full bg-brand-supporting px-6 py-3 text-sm font-medium text-accent-ink transition-all duration-300 hover:opacity-90 active:scale-[0.98] disabled:opacity-40 disabled:hover:opacity-40"
           >
             {status === "loading" ? "Sending…" : "Send My Project Details"}
             <ArrowRight
