@@ -5,26 +5,26 @@ import { CityGrid } from "@/components/countries/CityGrid";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "SEO Agency for US Startups",
+  title: "Local SEO Agency for Small Businesses in the US",
   description:
-    "Unzii is an SEO agency for startups in the United States, helping early-stage and growing businesses in San Francisco, New York, Austin, and beyond build fast websites and get found on Google.",
+    "Unzii is a local SEO agency for small businesses in the United States, offering affordable local SEO services, Google Business Profile optimization, and SEO packages for small business owners in San Francisco, New York, Austin, and beyond.",
 };
 
 const cities = [
   {
     name: "San Francisco",
     description:
-      "SEO services for startups in San Francisco, technical audits, keyword strategy, and fast, modern websites built to convert, without agency-sized retainers.",
+      "Local SEO services for small businesses in San Francisco, technical audits, Google Business Profile optimization, and local keyword strategy, without agency-sized retainers.",
   },
   {
     name: "New York",
     description:
-      "An SEO agency for startups in New York, practical, technical work focused on getting you found on Google and giving visitors a reason to stay.",
+      "A local SEO agency for small businesses in New York, practical local SEO consulting focused on getting you found by nearby customers on Google.",
   },
   {
     name: "Austin",
     description:
-      "SEO services for growing businesses and startups in Austin, straightforward technical SEO and web development, with direct communication throughout.",
+      "Affordable local SEO services for small businesses in Austin, straightforward technical SEO and Google Business Profile work, with direct communication throughout.",
   },
 ];
 
@@ -32,25 +32,25 @@ export default function SeoServicesUnitedStatesPage() {
   return (
     <>
       <ServiceHero
-        eyebrow="SEO Agency for US Startups"
-        heading="SEO Services for Startups Across the US"
-        description="We work with early-stage and growing startups across the United States, practical, technical SEO and web development that helps you show up on Google and convert visitors into customers."
+        eyebrow="Local SEO Agency for Small Business"
+        heading="Affordable Local SEO Services for Small Businesses"
+        description="We're a local SEO agency and consultant for small businesses across the US, offering affordable SEO packages, Google Business Profile optimization, and practical local SEO services that help nearby customers find you."
         heroImage="/countries/united-states.jpg"
       />
 
       <Overview
         eyebrow="Overview"
-        heading="An SEO agency built for startups"
+        heading="A local SEO agency built for small business budgets"
         paragraphs={[
-          "Startups need an SEO agency that understands limited budgets and fast timelines. We focus on the fundamentals that actually move rankings: technical health, relevant content, and consistent execution, not bloated retainers or vague reporting.",
-          "We work with startups and growing businesses in San Francisco, New York, Austin, and across the United States, combining SEO with fast, modern website development so you show up on Google and give visitors a reason to stay.",
+          "Looking for a local SEO agency near you? Unzii works with small businesses across the US, offering affordable local SEO services and straightforward local SEO consulting, without the bloated retainers bigger SEO companies charge.",
+          "From Google Business Profile optimization to on page fixes and local keyword targeting, we handle the technical work that gets small businesses found on Google Maps and in local search results, in San Francisco, New York, Austin, and beyond.",
         ]}
         panelTitle="Every engagement includes"
         panelPoints={[
-          "Technical SEO audit and fixes",
-          "Keyword research and mapping",
+          "Local SEO audit and Google Business Profile optimization",
+          "Local keyword research and mapping",
           "On page optimization",
-          "Content and internal linking strategy",
+          "Citations and local listing consistency",
           "Monthly reporting in plain language",
           "Direct communication throughout",
         ]}
@@ -59,7 +59,7 @@ export default function SeoServicesUnitedStatesPage() {
       <CityGrid cities={cities} countryName="the United States" />
 
       <FinalCTA
-        heading="Ready to get found on Google?"
+        heading="Ready to get found by local customers on Google?"
         description="Tell us about your business and we'll follow up with a clear, honest quote. No pressure, no fake urgency."
       />
     </>
