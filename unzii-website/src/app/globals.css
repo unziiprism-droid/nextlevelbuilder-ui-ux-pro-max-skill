@@ -3,9 +3,9 @@
 :root {
   /* Brand */
   --color-brand-primary: #8a96a8; /* Cool Grey */
-  --color-brand-secondary: #0e3a44; /* Deep Teal */
+  --color-brand-secondary: #101827; /* Deep Navy */
   --color-brand-supporting: #f2933a; /* Warm Orange */
-  --color-brand-bg: #eef4f3; /* Teal Tint */
+  --color-brand-bg: #e8edf3; /* Soft Grey */
   --color-amber: #ffc145; /* Amber — stats and secondary highlights only */
   --color-accent-ink: #3a2400; /* Dark text for use on orange/amber fills */
 
@@ -14,8 +14,8 @@
   --color-surface-subtle: #f6f8fa;
   --color-surface-muted: var(--color-brand-bg);
   --color-surface-inverse: var(--color-brand-secondary);
-  /* Deeper teal tint, for section backgrounds that need more weight than the Teal Tint */
-  --color-surface-tint: #cfe0df;
+  /* Deeper tint of Soft Grey, for section backgrounds that need more weight */
+  --color-surface-tint: #d8dee7;
 
   --color-border: #e2e6ec;
   --color-border-strong: #c9d0db;
