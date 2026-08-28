@@ -19,7 +19,7 @@ export function Hero() {
           <Eyebrow>SEO Agency for Startups</Eyebrow>
 
           <h1 className="mt-6 max-w-xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl">
-            Websites &amp; SEO Built for <span className="text-brand-supporting">Growing Startups</span>
+            Fast Websites for Businesses <span className="text-brand-supporting">Ready to Scale</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-balance text-base font-medium text-brand-supporting">
