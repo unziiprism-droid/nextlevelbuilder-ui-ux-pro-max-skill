@@ -15,7 +15,12 @@ export function FirstClientsOffer() {
               <span className="font-semibold">2 years of domain &amp; hosting FREE.</span>
             </p>
           </div>
-          <Button href="/start-your-project" size="md" variant="inverse" className="shrink-0">
+          <Button
+            href="/start-your-project"
+            size="md"
+            variant="inverse"
+            className="h-8 shrink-0 px-3.5 text-xs sm:h-11 sm:px-5 sm:text-sm"
+          >
             Claim This Offer
           </Button>
         </div>

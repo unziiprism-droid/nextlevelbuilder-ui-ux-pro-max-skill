@@ -56,7 +56,7 @@ export function Hero() {
           <div
             aria-hidden
             className="absolute -inset-6 -z-10 rounded-[2rem] opacity-40 blur-3xl"
-            style={{ background: "var(--color-brand-supporting)" }}
+            style={{ background: "var(--color-brand-primary)" }}
           />
 
           <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-lifted">
