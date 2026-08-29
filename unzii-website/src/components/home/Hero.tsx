@@ -19,10 +19,10 @@ export function Hero() {
           <Eyebrow>SEO Agency for Startups</Eyebrow>
 
           <h1 className="mt-6 max-w-xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl">
-            Fast Websites for Businesses <span className="text-brand-supporting">Ready to Scale</span>
+            Fast Websites for Businesses <span className="text-brand-primary">Ready to Scale</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-balance text-base font-medium text-brand-supporting">
+          <p className="mt-5 max-w-xl text-balance text-base font-medium text-brand-primary">
             Built for startups, and any growing business that needs to move fast.
           </p>
 
@@ -43,7 +43,7 @@ export function Hero() {
           <div className="mt-16 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 lg:justify-start">
             {valueProps.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2.5 text-sm font-medium text-text-secondary">
-                <span className="flex size-8 items-center justify-center rounded-full bg-surface-muted text-brand-supporting">
+                <span className="flex size-8 items-center justify-center rounded-full bg-surface-muted text-brand-steel">
                   <Icon className="size-4" aria-hidden />
                 </span>
                 {label}
@@ -84,7 +84,7 @@ export function Hero() {
                 <polyline
                   points="0,90 40,80 80,85 120,60 160,65 200,35 240,40 300,10"
                   fill="none"
-                  stroke="var(--color-brand-supporting)"
+                  stroke="var(--color-brand-steel)"
                   strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"

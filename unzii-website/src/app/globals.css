@@ -4,7 +4,8 @@
   /* Brand */
   --color-brand-primary: #8a96a8; /* Cool Grey */
   --color-brand-secondary: #101827; /* Deep Navy */
-  --color-brand-supporting: #f2933a; /* Warm Orange */
+  --color-brand-supporting: #f2933a; /* Warm Orange — small accents/eyebrows only */
+  --color-brand-steel: #46536a; /* Steel/Slate Blue-Grey — primary buttons */
   --color-brand-bg: #e8edf3; /* Soft Grey */
   --color-amber: #ffc145; /* Amber — stats and secondary highlights only */
   --color-accent-ink: #3a2400; /* Dark text for use on orange/amber fills */
@@ -42,6 +43,7 @@
   --color-brand-primary: var(--color-brand-primary);
   --color-brand-secondary: var(--color-brand-secondary);
   --color-brand-supporting: var(--color-brand-supporting);
+  --color-brand-steel: var(--color-brand-steel);
   --color-brand-bg: var(--color-brand-bg);
   --color-amber: var(--color-amber);
   --color-accent-ink: var(--color-accent-ink);
