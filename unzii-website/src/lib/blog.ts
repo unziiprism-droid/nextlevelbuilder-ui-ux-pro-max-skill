@@ -134,6 +134,67 @@ export const posts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-much-should-a-small-business-website-cost",
+    title: "How Much Should a Small Business Website Actually Cost?",
+    excerpt:
+      "Website pricing feels random because it's rarely explained. Here's what actually drives the cost, what to watch out for, and realistic ranges to expect.",
+    category: "Web Development",
+    author: { name: "Unsa Zafar", role: "Founder, Unzii" },
+    publishedAt: "2026-08-29",
+    sections: [
+      {
+        id: "why-website-pricing-feels-like-a-black-box",
+        heading: "Why website pricing feels like a black box",
+        body: [
+          "Ask five agencies for a quote on the same website and you can easily get five very different numbers, sometimes ten times apart. That is not because some of them are scamming you and others are not. It is because 'a website' is not one product. A five page brochure site and a custom booking platform are both technically websites, and they cost nothing alike to build.",
+          "Most businesses go into this conversation with no frame of reference, which makes it hard to tell whether a quote is fair, inflated, or suspiciously cheap. A little context fixes that.",
+        ],
+      },
+      {
+        id: "what-actually-drives-the-cost",
+        heading: "What actually drives the cost",
+        body: [
+          "The biggest factor is scope: how many pages, how custom the design is, and whether you need functionality beyond static content, things like booking systems, payment processing, user accounts, or a content management system your team can update on its own.",
+          "After that, it comes down to who is doing the work. A single freelancer, a small focused agency, and a large agency with account managers and a bigger team all have very different overhead, and that overhead shows up in the price whether or not it shows up in the final product.",
+          "Revisions and communication matter too. A fixed number of revision rounds built into the price keeps a project moving. Unlimited revisions sound generous, but they are usually priced in from the start, or they turn into a project that never actually finishes.",
+        ],
+      },
+      {
+        id: "realistic-price-ranges",
+        heading: "Realistic price ranges you'll actually see",
+        body: [
+          "For a straightforward small business website (a handful of pages, mobile responsive, a contact form) freelancers and small agencies typically charge somewhere in the low hundreds of dollars up to around a thousand, depending on the market and how custom the design is.",
+          "A more custom build, with a proper design system, blog, analytics, and several rounds of revisions, tends to land somewhere between several hundred and a few thousand dollars. Established agencies in markets like the US or UK often charge well above that, sometimes several thousand dollars even for a fairly standard business site, mostly because of overhead rather than the actual build being harder.",
+          "None of these numbers are universal. They shift a lot by region and by how much custom work is actually involved. Treat any range, including this one, as a starting point for a conversation, not a fixed rule.",
+        ],
+      },
+      {
+        id: "the-hidden-costs-people-forget",
+        heading: "The hidden costs people forget",
+        body: [
+          "The build price is rarely the whole story. Domain registration and hosting are ongoing costs that continue every year the website exists, and they are easy to overlook when you are focused on the upfront number.",
+          "Maintenance is the other one. Plugins and dependencies need updates, security patches matter, and content occasionally needs changing. Some of that you can do yourself if the site is built on something you can manage, some of it you will want to pay someone for. Ask upfront what happens after launch, not after something breaks.",
+        ],
+      },
+      {
+        id: "what-to-actually-compare-instead-of-just-the-number",
+        heading: "What to actually compare, instead of just the number",
+        body: [
+          "A lower price with a clear list of what is and is not included is worth more than a higher price with a vague one. Ask exactly what pages, features, and revision rounds are covered, and what counts as a change request outside that scope.",
+          "Ask who owns the website once it's built, meaning whether you get the source files and full access, or whether you are locked into that agency for every future change. And ask what happens to your site if you and the agency ever part ways. A good answer to that question tells you a lot about how they operate.",
+        ],
+      },
+      {
+        id: "how-we-approach-it-at-unzii",
+        heading: "How we approach it at Unzii",
+        body: [
+          "We price website builds based on real scope, not a one size fits all package, and we're upfront about what is included before any work starts. Right now, our first five clients also get two years of domain and hosting completely free with their website, so the ongoing cost most businesses forget about is covered from day one.",
+          "If you are trying to figure out what a website should realistically cost for your specific business, that is a conversation worth having before you commit to anyone, us included.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const categories = [
