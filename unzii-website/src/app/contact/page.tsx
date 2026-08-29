@@ -75,14 +75,14 @@ export default function ContactPage() {
               <div className="mt-8 flex flex-col gap-4">
                 <Link
                   href={`mailto:${siteConfig.email}`}
-                  className="inline-flex w-fit items-center gap-2.5 text-sm font-medium text-brand-secondary transition-colors hover:text-brand-supporting"
+                  className="inline-flex w-fit items-center gap-2.5 text-sm font-medium text-brand-secondary transition-colors hover:text-brand-steel"
                 >
                   <Mail className="size-4" aria-hidden />
                   {siteConfig.email}
                 </Link>
                 <Link
                   href="/start-your-project"
-                  className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-brand-supporting"
+                  className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-brand-steel"
                 >
                   Ready to start? Fill out our project form
                   <ArrowRight className="size-3.5" aria-hidden />
@@ -104,7 +104,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {nextSteps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.08} className="flex flex-col gap-4">
-                <span className="flex size-11 items-center justify-center rounded-full bg-surface text-brand-supporting">
+                <span className="flex size-11 items-center justify-center rounded-full bg-surface text-brand-steel">
                   <step.icon className="size-5" aria-hidden />
                 </span>
                 <div>

@@ -20,7 +20,7 @@ export function FinalCTA({
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(50% 60% at 50% 0%, color-mix(in srgb, var(--color-brand-supporting) 35%, transparent), transparent)",
+            "radial-gradient(50% 60% at 50% 0%, color-mix(in srgb, var(--color-brand-primary) 35%, transparent), transparent)",
         }}
       />
       <Container className="relative flex flex-col items-center text-center">

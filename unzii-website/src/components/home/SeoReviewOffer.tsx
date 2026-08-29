@@ -26,9 +26,9 @@ export function SeoReviewOffer() {
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
-              <span className="text-brand-supporting">Free</span> SEO Opportunity Review
+              <span className="text-brand-steel">Free</span> SEO Opportunity Review
             </h2>
-            <p className="mt-3 text-base font-medium text-brand-supporting">
+            <p className="mt-3 text-base font-medium text-brand-steel">
               Not sure why your startup isn&apos;t appearing in search?
             </p>
             <p className="mt-4 text-base leading-relaxed text-text-secondary">
@@ -38,7 +38,7 @@ export function SeoReviewOffer() {
             <ul className="mt-6 flex flex-col gap-3">
               {included.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-3 text-sm text-text-secondary">
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface text-brand-supporting">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface text-brand-steel">
                     <Icon className="size-4" aria-hidden />
                   </span>
                   {label}

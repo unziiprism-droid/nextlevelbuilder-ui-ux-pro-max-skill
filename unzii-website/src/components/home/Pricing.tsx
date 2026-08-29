@@ -70,7 +70,7 @@ export function Pricing() {
             quote is tailored to your business. Prices shown in {currency}, switch
             currency in the header above.
           </p>
-          <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-supporting">
+          <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-steel">
             New agency pricing, for our first clients
           </span>
         </div>
@@ -102,7 +102,7 @@ export function Pricing() {
               <ul className="mt-6 flex flex-col gap-3">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2 text-sm text-text-secondary">
-                    <Check className="mt-0.5 size-4 shrink-0 text-brand-supporting" aria-hidden />
+                    <Check className="mt-0.5 size-4 shrink-0 text-brand-steel" aria-hidden />
                     {feature}
                   </li>
                 ))}

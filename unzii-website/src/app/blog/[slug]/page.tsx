@@ -77,7 +77,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
         </Link>
 
         <div className="mt-8 max-w-3xl">
-          <span className="text-xs font-semibold uppercase tracking-wide text-brand-supporting">
+          <span className="text-xs font-semibold uppercase tracking-wide text-brand-steel">
             {post.category}
           </span>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl">

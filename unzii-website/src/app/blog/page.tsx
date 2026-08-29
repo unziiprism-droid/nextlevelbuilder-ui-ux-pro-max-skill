@@ -54,7 +54,7 @@ export default function BlogPage() {
             <BlogExplorer posts={posts} categories={categories} />
           ) : (
             <div className="flex flex-col items-center rounded-2xl border border-dashed border-border-strong bg-surface-muted p-12 text-center">
-              <Newspaper className="size-6 text-brand-supporting" aria-hidden />
+              <Newspaper className="size-6 text-brand-steel" aria-hidden />
               <p className="mt-4 max-w-md text-sm leading-relaxed text-text-secondary">
                 We&apos;re writing our first articles now. Search and category filtering are
                 already built into this page and will switch on the moment posts go

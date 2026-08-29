@@ -4,11 +4,8 @@
   /* Brand */
   --color-brand-primary: #8a96a8; /* Cool Grey */
   --color-brand-secondary: #101827; /* Deep Navy */
-  --color-brand-supporting: #f2933a; /* Warm Orange — small accents/eyebrows only */
   --color-brand-steel: #46536a; /* Steel/Slate Blue-Grey — primary buttons */
   --color-brand-bg: #e8edf3; /* Soft Grey */
-  --color-amber: #ffc145; /* Amber — stats and secondary highlights only */
-  --color-accent-ink: #3a2400; /* Dark text for use on orange/amber fills */
 
   /* Semantic surface scale, derived only for layout use — hues stay on-brand */
   --color-surface: #ffffff;
@@ -27,9 +24,6 @@
   --color-text-inverse: #f3f5f8;
   --color-text-inverse-muted: #a7b0bf;
 
-  --color-accent: var(--color-brand-supporting);
-  --color-accent-strong: var(--color-brand-secondary);
-
   /* Status accent — used only for functional "live/available" signals, never decoratively */
   --color-status-live: #1a9c6b;
 
@@ -42,11 +36,8 @@
 
   --color-brand-primary: var(--color-brand-primary);
   --color-brand-secondary: var(--color-brand-secondary);
-  --color-brand-supporting: var(--color-brand-supporting);
   --color-brand-steel: var(--color-brand-steel);
   --color-brand-bg: var(--color-brand-bg);
-  --color-amber: var(--color-amber);
-  --color-accent-ink: var(--color-accent-ink);
 
   --color-surface: var(--color-surface);
   --color-surface-subtle: var(--color-surface-subtle);
@@ -63,8 +54,6 @@
   --color-text-inverse: var(--color-text-inverse);
   --color-text-inverse-muted: var(--color-text-inverse-muted);
 
-  --color-accent: var(--color-accent);
-  --color-accent-strong: var(--color-accent-strong);
   --color-status-live: var(--color-status-live);
 
   --shadow-soft: var(--shadow-soft);
@@ -84,8 +73,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-brand-supporting);
-  color: var(--color-accent-ink);
+  background: var(--color-brand-steel);
+  color: var(--color-text-inverse);
 }
 
 @keyframes marquee {

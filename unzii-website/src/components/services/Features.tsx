@@ -33,7 +33,7 @@ export function Features({
           <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
             {features.map((feature) => (
               <div key={feature} className="flex items-start gap-3">
-                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-brand-bg text-brand-supporting">
+                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-brand-bg text-brand-steel">
                   <Check className="size-3" aria-hidden />
                 </span>
                 <span className="text-sm leading-relaxed text-text-secondary">{feature}</span>

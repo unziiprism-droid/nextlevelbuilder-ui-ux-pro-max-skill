@@ -39,7 +39,7 @@ export function Benefits({
           {items.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.06}>
               <div className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-surface p-6">
-                <span className="flex size-10 items-center justify-center rounded-xl bg-surface-muted text-brand-supporting">
+                <span className="flex size-10 items-center justify-center rounded-xl bg-surface-muted text-brand-steel">
                   <item.icon className="size-5" aria-hidden />
                 </span>
                 <div>

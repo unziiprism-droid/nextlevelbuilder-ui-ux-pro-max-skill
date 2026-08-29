@@ -9,7 +9,7 @@ export function PostCard({ post }: { post: BlogPost }) {
       href={`/blog/${post.slug}`}
       className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-secondary/20 hover:shadow-lifted"
     >
-      <span className="text-xs font-semibold uppercase tracking-wide text-brand-supporting">
+      <span className="text-xs font-semibold uppercase tracking-wide text-brand-steel">
         {post.category}
       </span>
       <h3 className="mt-3 text-lg font-semibold text-brand-secondary">{post.title}</h3>

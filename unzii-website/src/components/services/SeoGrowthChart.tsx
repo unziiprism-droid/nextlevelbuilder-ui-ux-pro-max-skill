@@ -42,8 +42,8 @@ export function SeoGrowthChart() {
               <svg viewBox="0 0 580 260" className="h-auto w-full" role="img" aria-hidden>
                 <defs>
                   <linearGradient id="seoGrowthFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="var(--color-brand-supporting)" stopOpacity="0.35" />
-                    <stop offset="100%" stopColor="var(--color-brand-supporting)" stopOpacity="0" />
+                    <stop offset="0%" stopColor="var(--color-brand-primary)" stopOpacity="0.35" />
+                    <stop offset="100%" stopColor="var(--color-brand-primary)" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 {[60, 120, 180].map((y) => (

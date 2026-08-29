@@ -43,11 +43,11 @@ export function FirstClientsOffer() {
           <X className="size-4" aria-hidden />
         </button>
 
-        <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-surface-muted text-brand-supporting">
+        <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-surface-muted text-brand-steel">
           <Gift className="size-5" aria-hidden />
         </span>
 
-        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-supporting">
+        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-steel">
           Limited to our first 5 clients
         </p>
 

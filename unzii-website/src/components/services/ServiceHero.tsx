@@ -49,7 +49,7 @@ export function ServiceHero({
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div
             className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-30 blur-3xl"
-            style={{ background: "var(--color-brand-supporting)" }}
+            style={{ background: "var(--color-brand-primary)" }}
           />
           <div className={cn("absolute inset-0", background)} />
         </div>
@@ -59,7 +59,7 @@ export function ServiceHero({
         <div className="flex flex-col items-center gap-3 sm:flex-row">
           <Eyebrow inverse={inverse}>{eyebrow}</Eyebrow>
           {badge && (
-            <span className="rounded-full bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-supporting">
+            <span className="rounded-full bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
               {badge}
             </span>
           )}
