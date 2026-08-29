@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
 const tiers = [
   {
     name: "Starter Website",
-    originalPriceInPkr: 50000,
-    priceInPkr: 35000,
+    originalPriceInPkr: 80000,
+    priceInPkr: 55600,
     period: "one time",
     description: "A clean, professional website for businesses that need to launch fast.",
     features: [
@@ -25,8 +25,8 @@ const tiers = [
   },
   {
     name: "Business Website",
-    originalPriceInPkr: 100000,
-    priceInPkr: 70000,
+    originalPriceInPkr: 160000,
+    priceInPkr: 111200,
     period: "one time",
     description: "A custom built website for businesses ready to grow online.",
     features: [
@@ -40,8 +40,8 @@ const tiers = [
   },
   {
     name: "Ongoing Growth",
-    originalPriceInPkr: 20000,
-    priceInPkr: 15000,
+    originalPriceInPkr: 22240,
+    priceInPkr: 15290,
     period: "per month",
     description: "Ongoing SEO and content support after your website is live.",
     features: [
