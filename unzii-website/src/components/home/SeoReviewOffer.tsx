@@ -1,12 +1,12 @@
-import { Search, FileSearch, Users, CheckCircle2 } from "lucide-react";
+import { Gauge, Smartphone, LayoutTemplate, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { formConfig, siteConfig } from "@/lib/site-config";
 
 const included = [
-  { icon: Search, label: "One technical SEO issue" },
-  { icon: FileSearch, label: "One page or content opportunity" },
-  { icon: Users, label: "One competitor gap" },
+  { icon: Gauge, label: "One speed or performance issue" },
+  { icon: Smartphone, label: "One mobile experience gap" },
+  { icon: LayoutTemplate, label: "One design or conversion opportunity" },
   { icon: CheckCircle2, label: "One action you can do this week" },
 ];
 
@@ -26,13 +26,13 @@ export function SeoReviewOffer() {
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
-              <span className="text-brand-steel">Free</span> SEO Opportunity Review
+              <span className="text-brand-steel">Free</span> Website Review
             </h2>
             <p className="mt-3 text-base font-medium text-brand-steel">
-              Not sure why your startup isn&apos;t appearing in search?
+              Not sure if your website is helping or hurting your business?
             </p>
             <p className="mt-4 text-base leading-relaxed text-text-secondary">
-              Send us your website and we&apos;ll record three practical SEO opportunities,
+              Send us your website and we&apos;ll record three practical improvements,
               no generic report, no pressure.
             </p>
             <ul className="mt-6 flex flex-col gap-3">
@@ -54,7 +54,7 @@ export function SeoReviewOffer() {
               className="flex flex-col gap-4"
             >
               <input type="hidden" name="access_key" value={formConfig.web3formsAccessKey} />
-              <input type="hidden" name="subject" value="Free SEO review request" />
+              <input type="hidden" name="subject" value="Free website review request" />
               <input type="hidden" name="redirect" value={`${siteConfig.url}/thank-you`} />
               <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
@@ -99,20 +99,20 @@ export function SeoReviewOffer() {
               </div>
               <div>
                 <label htmlFor="seo-review-rank-for" className="text-sm font-medium text-brand-secondary">
-                  What do you want to rank for?
+                  What&apos;s the main goal for your site?
                   <span className="ml-1 font-normal text-text-muted">(optional)</span>
                 </label>
                 <input
                   id="seo-review-rank-for"
-                  name="rank_for"
+                  name="goal"
                   type="text"
-                  placeholder="e.g. project management software"
+                  placeholder="e.g. more leads, a faster site, a redesign"
                   className={inputClasses}
                 />
               </div>
 
               <Button type="submit" className="mt-2 w-full">
-                Get My Free SEO Review
+                Get My Free Website Review
               </Button>
             </form>
           </div>
