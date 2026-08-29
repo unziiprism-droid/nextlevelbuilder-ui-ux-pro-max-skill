@@ -10,44 +10,44 @@ import { cn } from "@/lib/utils";
 
 const tiers = [
   {
-    name: "SEO Starter",
-    originalPriceInPkr: 10000,
-    priceInPkr: 5000,
+    name: "Starter Website",
+    originalPriceInPkr: 50000,
+    priceInPkr: 35000,
     period: "one time",
-    description: "For businesses just getting started with search.",
+    description: "A clean, professional website for businesses that need to launch fast.",
     features: [
-      "Technical SEO audit",
-      "On page optimization",
-      "Google Search Console setup",
-      "Monthly report",
+      "Up to 5 pages",
+      "Mobile responsive design",
+      "Contact form",
+      "Basic on page SEO setup",
     ],
     highlighted: false,
   },
   {
-    name: "SEO Growth",
-    originalPriceInPkr: 20000,
-    priceInPkr: 15000,
-    period: "per month",
-    description: "Ongoing SEO for businesses ready to compete for real rankings.",
+    name: "Business Website",
+    originalPriceInPkr: 100000,
+    priceInPkr: 70000,
+    period: "one time",
+    description: "A custom built website for businesses ready to grow online.",
     features: [
-      "Everything in Starter",
-      "Keyword research and mapping",
-      "Content strategy",
-      "Internal linking strategy",
-      "Monthly strategy call",
+      "Up to 10 pages",
+      "Custom design system",
+      "Blog setup",
+      "Analytics integration",
+      "Three rounds of revisions",
     ],
     highlighted: true,
   },
   {
-    name: "Website + SEO Bundle",
-    originalPriceInPkr: 100000,
-    priceInPkr: 70000,
-    period: "one time",
-    description: "A new SEO ready website plus ongoing SEO, from the same team.",
+    name: "Ongoing Growth",
+    originalPriceInPkr: 20000,
+    priceInPkr: 15000,
+    period: "per month",
+    description: "Ongoing SEO and content support after your website is live.",
     features: [
-      "Custom website build",
-      "SEO ready foundation",
-      "Three months of SEO included",
+      "Monthly SEO check ins",
+      "Content strategy",
+      "Performance reporting",
       "Priority support",
     ],
     highlighted: false,
@@ -71,7 +71,7 @@ export function Pricing() {
             currency in the header above.
           </p>
           <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-steel">
-            New agency pricing, for our first clients
+            First 5 clients also get 2 years of domain &amp; hosting free
           </span>
         </div>
 
