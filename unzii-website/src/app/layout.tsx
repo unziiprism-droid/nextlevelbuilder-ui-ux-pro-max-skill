@@ -6,7 +6,7 @@ import { MotionProvider } from "@/components/providers/MotionProvider";
 import { CurrencyProvider } from "@/components/providers/CurrencyProvider";
 import { WhatsAppButton } from "@/components/chat/WhatsAppButton";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, socialConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -39,10 +39,29 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  email: siteConfig.email,
+  logo: `${siteConfig.url}/logo/unzii-mark.jpg`,
+  sameAs: [
+    ...(socialConfig.instagramHandle
+      ? [`https://instagram.com/${socialConfig.instagramHandle}`]
+      : []),
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${poppins.variable} antialiased`}>
       <body className="flex min-h-screen flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <GoogleAnalytics />
         <CurrencyProvider>
           <MotionProvider>
