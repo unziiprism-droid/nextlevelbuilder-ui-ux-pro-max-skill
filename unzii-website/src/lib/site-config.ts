@@ -68,7 +68,6 @@ export interface NavLink {
 export const primaryNav: NavLink[] = [
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Countries We Serve", href: "/countries-we-serve" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
