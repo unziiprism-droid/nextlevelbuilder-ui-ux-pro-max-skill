@@ -130,12 +130,6 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/seo-services-pakistan"
-              className="text-xs text-text-inverse-muted transition-colors hover:text-text-inverse"
-            >
-              SEO Services in Pakistan
-            </Link>
           </div>
         </div>
       </Container>
