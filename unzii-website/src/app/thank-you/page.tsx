@@ -22,7 +22,7 @@ export default function ThankYouPage() {
           </h1>
           <p className="mt-3 leading-relaxed text-text-secondary">
             Thanks for reaching out. We&apos;ll review your website and get back to you
-            shortly with your free SEO opportunity review.
+            shortly with your free website review.
           </p>
           <Button href="/" className="mt-8">
             Back to Home

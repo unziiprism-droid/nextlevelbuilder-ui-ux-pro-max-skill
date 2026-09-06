@@ -11,7 +11,7 @@ const steps = ["About You", "Your Project", "Budget & Timeline"];
 
 const serviceOptions = [
   "Website Development",
-  "SEO",
+  "Unziiprism (Design & Branding)",
   "Full Stack Development",
   "Not sure yet",
 ];

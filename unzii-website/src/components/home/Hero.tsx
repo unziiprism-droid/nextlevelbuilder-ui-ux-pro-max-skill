@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 
 const valueProps = [
   { icon: Gauge, label: "Fast, modern builds" },
-  { icon: Search, label: "SEO focused foundations" },
+  { icon: Search, label: "Clean, semantic code" },
   { icon: TrendingUp, label: "Built to convert" },
 ];
 
@@ -16,7 +16,7 @@ export function Hero() {
 
       <Container className="grid items-center gap-16 pt-20 pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:pt-28 lg:pb-32">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-          <Eyebrow>SEO Agency for Startups</Eyebrow>
+          <Eyebrow>Website Development Agency</Eyebrow>
 
           <h1 className="mt-6 max-w-xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl">
             Fast Websites for Businesses <span className="text-brand-primary">Ready to Scale</span>
@@ -27,8 +27,8 @@ export function Hero() {
           </p>
 
           <p className="mt-4 max-w-xl text-balance text-lg leading-relaxed text-text-secondary">
-            Unzii partners with startups and growing businesses to create fast websites,
-            improve online visibility, and deliver measurable results.
+            Unzii partners with startups and growing businesses to build fast websites
+            and full-stack web applications that deliver measurable results.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">

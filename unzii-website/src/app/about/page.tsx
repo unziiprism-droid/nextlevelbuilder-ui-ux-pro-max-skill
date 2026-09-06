@@ -7,7 +7,7 @@ import { FinalCTA } from "@/components/shared/FinalCTA";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Unzii is a technology agency focused on website development and SEO, built around honesty, direct communication, and real craftsmanship.",
+    "Unzii is a technology agency focused on website development and full-stack web applications, built around honesty, direct communication, and real craftsmanship.",
 };
 
 const faqs = [
@@ -57,7 +57,7 @@ export default function AboutPage() {
         heading="Started to make a real website within reach"
         paragraphs={[
           "Unzii was founded by Unsa Zafar, with the idea taking shape in March 2026. It started from a simple problem: too many startups have the drive to grow, but not the budget for a website that actually represents them, and end up stuck without a real online presence because of it.",
-          "That is who we built Unzii for first, startups who need a genuinely good website without being priced out of one. Alongside that, we work with larger, established businesses too, building performance driven websites and pairing them with SEO to help them rank where their customers are searching.",
+          "That is who we built Unzii for first, startups who need a genuinely good website without being priced out of one. Alongside that, we work with larger, established businesses too, building performance driven websites with clean, crawlable code that helps them show up where their customers are searching.",
         ]}
         panelTitle="What guides our work"
         panelPoints={[

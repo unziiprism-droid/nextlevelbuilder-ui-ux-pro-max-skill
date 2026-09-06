@@ -23,7 +23,7 @@ const sections: BlogSection[] = [
     id: "about-our-services",
     heading: "About Our Services",
     body: [
-      "Unzii provides website development and SEO services, with full stack development coming soon. The specific scope, deliverables, timeline, and cost of any project are agreed separately in writing before work begins. These website Terms cover your use of theunzii.com itself, not the terms of an individual client engagement.",
+      "Unzii provides website development and design services through Unziiprism, with full stack development coming soon. The specific scope, deliverables, timeline, and cost of any project are agreed separately in writing before work begins. These website Terms cover your use of theunzii.com itself, not the terms of an individual client engagement.",
     ],
   },
   {

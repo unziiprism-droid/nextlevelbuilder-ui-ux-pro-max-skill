@@ -89,7 +89,7 @@ const faqs = [
   {
     question: "Is SEO included in website development?",
     answer:
-      "Basic technical SEO foundations are included in every build. For ongoing search growth, pair your website with our dedicated SEO service.",
+      "Yes. Technical SEO best practices — clean semantic markup, fast load times, and a crawlable structure — are built into every site from day one.",
   },
   {
     question: "What happens after my website launches?",

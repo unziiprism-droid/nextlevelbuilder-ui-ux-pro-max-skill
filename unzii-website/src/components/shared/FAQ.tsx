@@ -12,7 +12,7 @@ const defaultFaqs: FAQItem[] = [
   {
     question: "What services does Unzii offer?",
     answer:
-      "We build custom websites and provide SEO services to help businesses grow online. Full stack application development is coming soon as an additional service.",
+      "We build custom websites with SEO best practices built in from day one. Full stack application development is coming soon as an additional service, and our design department, Unziiprism, handles logo and brand identity work.",
   },
   {
     question: "Do you work with international or global clients?",

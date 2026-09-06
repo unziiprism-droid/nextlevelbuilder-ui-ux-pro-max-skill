@@ -47,9 +47,9 @@ export const services: ServiceLink[] = [
     status: "live",
   },
   {
-    label: "SEO",
-    href: "/seo",
-    description: "Technical, on page, and content SEO that compounds over time.",
+    label: "Unziiprism",
+    href: "/unziiprism",
+    description: "Unzii's design department — logo, brand identity, and visual design.",
     status: "live",
   },
   {
