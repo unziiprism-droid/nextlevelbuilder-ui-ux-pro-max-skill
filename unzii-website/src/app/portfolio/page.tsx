@@ -11,24 +11,19 @@ import { FinalCTA } from "@/components/shared/FinalCTA";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Unzii is a new agency. Here's a concept project that shows how we design and build, plus what to expect as real client work comes in.",
+    "See Hiii Sage, a real client project by Unzii: full brand refresh and WordPress rebuild for an events and marketplace platform.",
 };
 
 const faqs = [
   {
-    question: "Is Harvest & Home a real client?",
+    question: "Is Hiii Sage a real client?",
     answer:
-      "No. Harvest & Home is a concept project we designed and built ourselves to show our process and quality on a real, working page rather than a mockup or template. It isn't a paying client and we're upfront about that.",
-  },
-  {
-    question: "Why don't you have real client work yet?",
-    answer:
-      "Unzii is a new agency, and we would rather be honest about that than fill this page with fake case studies, purchased templates, or projects we didn't actually build.",
+      "Yes. Hiii Sage is a paying client who brought us in for a full brand refresh and website rebuild on a tight deadline, and gave us permission to share the design work here.",
   },
   {
     question: "How do I know you can deliver good work?",
     answer:
-      "The concept project above and this website itself are built with the same standards, process, and attention to detail we'll bring to your project. We're also happy to walk you through our approach before you commit to anything.",
+      "The Hiii Sage project above shows our actual process end to end, from branding through a full WordPress rebuild. We're also happy to walk you through our approach before you commit to anything.",
   },
   {
     question: "Will my project be featured as a case study?",
@@ -41,9 +36,24 @@ const faqs = [
       "Yes. We share progress throughout the project, not just at the end, so you always know what's being built.",
   },
   {
-    question: "What happens once you have real case studies?",
+    question: "What happens as you take on more clients?",
     answer:
-      "Real client work gets added alongside this concept project, with real results and real feedback from the businesses we've worked with. No filler, no fabricated numbers.",
+      "More real case studies get added alongside Hiii Sage, with real outcomes and real feedback from the businesses we've worked with. No filler, no fabricated numbers.",
+  },
+];
+
+const gallery = [
+  {
+    src: "/portfolio/hiiisage-activations.jpg",
+    alt: "Hiii Sage custom activations section with event lounge photography",
+  },
+  {
+    src: "/portfolio/hiiisage-events.jpg",
+    alt: "Hiii Sage curated event experiences photo gallery",
+  },
+  {
+    src: "/portfolio/hiiisage-difference.jpg",
+    alt: "Hiii Sage what makes us different feature grid",
   },
 ];
 
@@ -53,51 +63,66 @@ export default function PortfolioPage() {
       <ServiceHero
         eyebrow="Portfolio"
         heading="Our Next Success Story Could Be Yours"
-        description="We're just getting started, and we'd rather earn a portfolio with real results than pad this page with recycled templates. Here's a concept project that shows how we actually work."
-        secondaryLabel="See the Concept Project"
-        secondaryHref="#concept"
+        description="Real client work, honestly presented. Here's Hiii Sage, a full brand refresh and website rebuild we delivered on a tight deadline."
+        secondaryLabel="See the Case Study"
+        secondaryHref="#hiii-sage"
       />
 
-      <div id="concept" className="scroll-mt-20 py-24 lg:py-32">
+      <div id="hiii-sage" className="scroll-mt-20 py-24 lg:py-32">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Eyebrow className="justify-center">Concept Project</Eyebrow>
+            <Eyebrow className="justify-center">Case Study</Eyebrow>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
-              Harvest &amp; Home
+              Hiii Sage
             </h2>
             <p className="mt-4 text-base leading-relaxed text-text-secondary">
-              A farm-to-table meal delivery brand, designed and built by our team to demonstrate our
-              approach to brand identity and website design. Not a paying client, just an honest
-              example of our work.
+              An events and marketplace platform connecting entrepreneurs, operators, and decision
+              makers. Unzii delivered a full brand refresh and a rebuilt WordPress site, from new
+              visual identity to a live launch under a tight deadline.
             </p>
           </Reveal>
 
-          <Reveal delay={0.1} className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl border border-border shadow-lifted">
+          <Reveal delay={0.1} className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border border-border shadow-lifted">
             <Image
-              src="/portfolio/harvest-and-home-full.jpg"
-              alt="Harvest & Home concept website design, showing the homepage, brand story, and weekly menu sections"
-              width={1400}
-              height={2704}
+              src="/portfolio/hiiisage-hero.jpg"
+              alt="Hiii Sage homepage hero: The right people. In the right room."
+              width={1600}
+              height={735}
               className="w-full h-auto"
+              priority
             />
           </Reveal>
+
+          <div className="mx-auto mt-6 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
+            {gallery.map((item) => (
+              <Reveal key={item.src} delay={0.15} className="overflow-hidden rounded-2xl border border-border shadow-soft">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={1600}
+                  height={730}
+                  className="w-full h-auto"
+                />
+              </Reveal>
+            ))}
+          </div>
         </Container>
       </div>
 
       <div id="expect" className="scroll-mt-20">
         <Overview
           eyebrow="Beyond This Page"
-          heading="We won't show you work that isn't real"
+          heading="What working with us looks like"
           paragraphs={[
-            "Unzii is a new agency. Rather than fill this page with fake case studies, purchased templates, or projects we didn't actually build, we're being upfront: the project above is a concept piece, and our real client portfolio is still empty because we're just getting started.",
-            "What we can promise is the same care, speed, and honesty on your project that you can see reflected everywhere else on this site, in our process, our pricing conversations, and how we communicate.",
+            "Hiii Sage needed a full rebrand and a rebuilt website under a hard launch deadline. We handled the brand refresh, the WordPress rebuild, and every round of revisions, then got it live on time.",
+            "That's the same process, speed, and honesty you can expect on your project: a direct line to the person doing the work, transparent pricing, and progress you can actually see.",
           ]}
-          panelTitle="What you can expect instead"
+          panelTitle="What you can expect"
           panelPoints={[
             "A direct, honest conversation about your project",
             "The same process we use for every client",
             "Transparent pricing, not vague quotes",
-            "A team that treats your project like our first real case study",
+            "A team that treats your project like our next case study",
           ]}
         />
       </div>
