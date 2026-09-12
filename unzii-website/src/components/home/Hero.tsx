@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { Code2, Layers, Rocket, HeadphonesIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -26,106 +27,35 @@ const valueProps = [
   },
 ];
 
-// Coordinates are percentages of the hero section's own box, shared by
-// both the connecting <line> layer (viewBox 0 0 100 100) and the node
-// dots below, so the network spans the full section instead of a
-// boxed-off graphic on one side.
-const networkNodes = [
-  { x: 58, y: 12, size: 6, hub: false, opacity: 0.85 },
-  { x: 71, y: 8, size: 5, hub: false, opacity: 0.7 },
-  { x: 86, y: 16, size: 6, hub: false, opacity: 0.85 },
-  { x: 93, y: 30, size: 5, hub: false, opacity: 0.7 },
-  { x: 80, y: 38, size: 10, hub: true, opacity: 1 },
-  { x: 64, y: 33, size: 5, hub: false, opacity: 0.7 },
-  { x: 54, y: 48, size: 6, hub: false, opacity: 0.85 },
-  { x: 69, y: 54, size: 9, hub: true, opacity: 1 },
-  { x: 83, y: 60, size: 5, hub: false, opacity: 0.7 },
-  { x: 91, y: 74, size: 6, hub: false, opacity: 0.85 },
-  { x: 75, y: 80, size: 9, hub: true, opacity: 1 },
-  { x: 59, y: 88, size: 5, hub: false, opacity: 0.7 },
-  { x: 10, y: 18, size: 4, hub: false, opacity: 0.15 },
-  { x: 22, y: 42, size: 4, hub: false, opacity: 0.15 },
-  { x: 14, y: 68, size: 4, hub: false, opacity: 0.12 },
-  { x: 28, y: 88, size: 4, hub: false, opacity: 0.15 },
-] as const;
-
-const networkLines: Array<[number, number]> = [
-  [0, 1],
-  [1, 2],
-  [0, 3],
-  [1, 4],
-  [2, 3],
-  [3, 4],
-  [4, 5],
-  [5, 6],
-  [4, 7],
-  [6, 7],
-  [7, 8],
-  [3, 8],
-  [8, 9],
-  [7, 10],
-  [9, 10],
-  [10, 11],
-  [6, 11],
-];
+function floatStyle(y: string, duration: string, delay = "0s"): CSSProperties {
+  return {
+    "--float-y": y,
+    "--float-duration": duration,
+    "--float-delay": delay,
+  } as CSSProperties;
+}
 
 export function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden lg:min-h-[620px]">
+      <section className="relative overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-surface-muted/30" />
 
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="h-full w-full">
-            <g stroke="var(--color-brand-primary)" strokeWidth="0.15">
-              {networkLines.map(([a, b], i) => (
-                <line
-                  key={`${a}-${b}`}
-                  className="animate-line-glow"
-                  x1={networkNodes[a].x}
-                  y1={networkNodes[a].y}
-                  x2={networkNodes[b].x}
-                  y2={networkNodes[b].y}
-                  style={{ animationDelay: `${i * 0.2}s` }}
-                />
-              ))}
-            </g>
-          </svg>
-
-          {networkNodes.map((node, i) => (
-            <span
-              key={i}
-              className={`absolute rounded-full ${
-                node.hub ? "animate-pulse-node bg-brand-steel" : "animate-float-dot bg-brand-primary"
-              }`}
-              style={{
-                left: `${node.x}%`,
-                top: `${node.y}%`,
-                width: node.size,
-                height: node.size,
-                opacity: node.opacity,
-                animationDelay: `${i * 0.35}s`,
-                animationDuration: node.hub ? undefined : `${4 + (i % 3)}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        <Container className="relative py-20 lg:py-28">
-          <div className="flex max-w-2xl flex-col items-center text-center lg:items-start lg:text-left">
+        <Container className="grid items-center gap-16 pt-20 pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:pt-28 lg:pb-32">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="animate-fade-up">
               <Eyebrow>Web Development Agency</Eyebrow>
             </div>
 
             <h1
-              className="animate-fade-up mt-6 text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl"
+              className="animate-fade-up mt-6 max-w-xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl"
               style={{ animationDelay: "0.08s" }}
             >
               Websites &amp; Digital Products, <span className="text-brand-primary">Engineered Right</span>
             </h1>
 
             <p
-              className="animate-fade-up mt-5 text-balance text-lg leading-relaxed text-text-secondary"
+              className="animate-fade-up mt-5 max-w-xl text-balance text-lg leading-relaxed text-text-secondary"
               style={{ animationDelay: "0.16s" }}
             >
               Unzii builds fast, modern websites and full-stack applications for businesses that
@@ -142,6 +72,70 @@ export function Hero() {
               <Button href="/portfolio" variant="secondary" size="lg">
                 See Our Work
               </Button>
+            </div>
+          </div>
+
+          <div
+            className="animate-fade-up relative mx-auto h-[360px] w-full max-w-sm sm:h-[400px] sm:max-w-md lg:h-[440px] lg:max-w-none"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div
+              aria-hidden
+              className="animate-pulse-blob absolute inset-10 -z-10 rounded-full blur-3xl"
+              style={{ background: "var(--color-brand-primary)" }}
+            />
+
+            <div
+              className="animate-float absolute top-0 left-0 w-[76%] overflow-hidden rounded-2xl border border-border bg-surface shadow-lifted"
+              style={floatStyle("-12px", "6s")}
+            >
+              <div className="flex items-center gap-1.5 border-b border-border bg-surface-muted px-4 py-3">
+                <span className="size-2.5 rounded-full bg-[#ff5f57]" />
+                <span className="size-2.5 rounded-full bg-[#febc2e]" />
+                <span className="size-2.5 rounded-full bg-[#28c840]" />
+              </div>
+              <div className="space-y-2.5 p-5">
+                <div className="h-3 w-2/3 rounded-full bg-brand-secondary/15" />
+                <div className="h-2.5 w-5/6 rounded-full bg-border" />
+                <div className="h-2.5 w-3/4 rounded-full bg-border" />
+                <div className="mt-3 h-16 rounded-xl bg-surface-muted" />
+              </div>
+            </div>
+
+            <div
+              className="animate-float absolute -bottom-3 left-2 w-[54%] rounded-2xl border border-border bg-surface p-4 shadow-lifted sm:left-4"
+              style={floatStyle("11px", "5.5s", "0.3s")}
+            >
+              <p className="text-[11px] font-medium tracking-wide text-text-muted uppercase">Brand Palette</p>
+              <div className="mt-2 flex gap-1.5">
+                <span className="size-6 rounded-full bg-brand-secondary" />
+                <span className="size-6 rounded-full bg-brand-steel" />
+                <span className="size-6 rounded-full bg-brand-primary" />
+                <span className="size-6 rounded-full border border-border bg-surface-muted" />
+              </div>
+            </div>
+
+            <div
+              className="animate-float absolute top-16 right-0 w-[32%] overflow-hidden rounded-2xl border border-border bg-surface shadow-lifted"
+              style={floatStyle("-14px", "7s", "0.6s")}
+            >
+              <div className="flex justify-center border-b border-border bg-surface-muted py-2">
+                <span className="h-1.5 w-8 rounded-full bg-border" />
+              </div>
+              <div className="space-y-2 p-3">
+                <div className="h-12 rounded-lg bg-surface-muted" />
+                <div className="h-1.5 w-4/5 rounded-full bg-border" />
+                <div className="h-1.5 w-3/5 rounded-full bg-border" />
+                <div className="mt-2 h-6 rounded-lg bg-brand-steel/90" />
+              </div>
+            </div>
+
+            <div
+              className="animate-float absolute -top-6 right-2 flex items-center gap-2 rounded-2xl border border-border bg-surface px-4 py-3 shadow-lifted sm:right-6"
+              style={floatStyle("9px", "4.5s", "0.9s")}
+            >
+              <span className="text-lg font-semibold text-brand-secondary">Aa</span>
+              <span className="text-lg font-light text-text-muted">Aa</span>
             </div>
           </div>
         </Container>
