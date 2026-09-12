@@ -1,8 +1,37 @@
 import type { Metadata } from "next";
+import { Palette, Type, BookOpen, Sparkles } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
+import { Benefits } from "@/components/services/Benefits";
 import { Overview } from "@/components/services/Overview";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
+
+const benefits = [
+  {
+    icon: Palette,
+    title: "Logo & Brand Marks",
+    description:
+      "A distinct mark built to work at every size, from a favicon to a storefront sign.",
+  },
+  {
+    icon: Type,
+    title: "Colour & Typography Systems",
+    description:
+      "A defined palette and type scale so your brand looks consistent everywhere it shows up.",
+  },
+  {
+    icon: BookOpen,
+    title: "Brand Guidelines",
+    description:
+      "A clear reference document so anyone on your team, or any vendor, can apply your brand correctly.",
+  },
+  {
+    icon: Sparkles,
+    title: "Visual Design",
+    description:
+      "Social media kits, presentation decks, and print-ready assets that match your identity.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Unziiprism — Unzii's Design Department",
@@ -42,6 +71,12 @@ export default function UnziiprismPage() {
         description="Logo design, brand identity, and visual design — handled by the same team behind Unzii, under one dedicated design department."
         secondaryLabel="Get in Touch"
         secondaryHref="/contact"
+      />
+
+      <Benefits
+        heading="What Unziiprism delivers"
+        description="Everything a brand needs to look and feel consistent, wherever it shows up."
+        items={benefits}
       />
 
       <Overview

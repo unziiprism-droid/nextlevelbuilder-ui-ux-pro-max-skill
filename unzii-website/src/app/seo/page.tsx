@@ -18,9 +18,9 @@ import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Best SEO Agency for Startups",
+  title: "SEO Services",
   description:
-    "Looking for the best SEO agency for startups? Unzii delivers technical, on-page, and content SEO that compounds as your business grows.",
+    "Unzii delivers technical, on-page, and content SEO that compounds as your business grows.",
 };
 
 const benefits = [
@@ -111,7 +111,7 @@ const features = [
   "Internal linking strategy",
   "Search Console and Analytics setup",
   "Monthly performance reporting",
-  "Ongoing monitoring and optimization",
+  "Ongoing monitoring and optimisation",
   "Structuring content for AI search tools like ChatGPT and Gemini",
 ];
 
@@ -157,8 +157,8 @@ export default function SeoPage() {
   return (
     <>
       <ServiceHero
-        eyebrow="SEO Agency for Startups"
-        heading="SEO That Turns Search Into Growth for Startups"
+        eyebrow="SEO Services"
+        heading="SEO That Turns Search Into Growth"
         description="We improve how search engines see your business and how customers find you, with a process built on data, not guesswork."
         secondaryLabel="See Our Process"
         secondaryHref="#process"
@@ -166,7 +166,7 @@ export default function SeoPage() {
       />
       <SeoGrowthChart />
       <Benefits
-        heading="Why startups invest in SEO with Unzii"
+        heading="Why growing businesses invest in SEO with Unzii"
         description="Search visibility is a long term asset. Here's what that investment gets you."
         items={benefits}
       />

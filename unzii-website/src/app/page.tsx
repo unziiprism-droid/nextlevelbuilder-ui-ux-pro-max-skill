@@ -7,9 +7,9 @@ import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Website Development Agency for Startups | Unzii" },
+  title: { absolute: "Web Development Agency | Unzii" },
   description:
-    "Unzii is a website development agency for startups — we build fast, custom websites and full-stack web applications for growing businesses.",
+    "Unzii is a web development agency building fast, custom websites and full-stack web applications for growing businesses.",
 };
 
 export default function Home() {

@@ -32,8 +32,8 @@ export function SeoReviewOffer() {
               Not sure if your website is helping or hurting your business?
             </p>
             <p className="mt-4 text-base leading-relaxed text-text-secondary">
-              Send us your website and we&apos;ll record three practical improvements,
-              no generic report, no pressure.
+              This free website audit sends back three practical improvements after we
+              record a short walkthrough, no generic report, no pressure.
             </p>
             <ul className="mt-6 flex flex-col gap-3">
               {included.map(({ icon: Icon, label }) => (

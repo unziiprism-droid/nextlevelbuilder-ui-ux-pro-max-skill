@@ -14,7 +14,7 @@ const tiers = [
     originalPriceInPkr: 139000,
     priceInPkr: 97300,
     period: "one time",
-    description: "A clean, professional website for businesses that need to launch fast.",
+    description: "Small business website design that's clean, professional, and ready to launch fast.",
     features: [
       "Up to 5 pages",
       "Mobile responsive design",
@@ -28,7 +28,7 @@ const tiers = [
     originalPriceInPkr: 278000,
     priceInPkr: 194600,
     period: "one time",
-    description: "A custom built website for businesses ready to grow online.",
+    description: "A custom website development company build for businesses ready to grow online.",
     features: [
       "Up to 10 pages",
       "Custom design system",
@@ -43,7 +43,7 @@ const tiers = [
     originalPriceInPkr: 41700,
     priceInPkr: 29190,
     period: "per month",
-    description: "Ongoing SEO and content support after your website is live.",
+    description: "Website maintenance and SEO support to keep things running after launch.",
     features: [
       "Monthly SEO check ins",
       "Content strategy",
@@ -67,8 +67,7 @@ export function Pricing() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-secondary">
             No hidden fees and no confusing packages. These are starting points, every
-            quote is tailored to your business. Prices shown in {currency}, switch
-            currency in the header above.
+            quote is tailored to your business. Prices shown in USD.
           </p>
           <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-steel">
             First 5 clients also get 2 years of domain &amp; hosting free

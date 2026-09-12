@@ -8,9 +8,9 @@ import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Website Design Agency for Startups",
+  title: "Custom Website Development Company",
   description:
-    "Custom, high-performance websites built for startups — engineered for speed, SEO, and conversion from day one.",
+    "Custom, high-performance websites for growing businesses — engineered for speed, SEO, and conversion from day one.",
 };
 
 const benefits = [
@@ -102,8 +102,8 @@ export default function WebsiteDevelopmentPage() {
   return (
     <>
       <ServiceHero
-        eyebrow="Website Design Agency for Startups"
-        heading="Websites Built for Startups That Want to Grow"
+        eyebrow="Custom Website Development Company"
+        heading="Websites Built for Businesses That Want to Grow"
         description="We design and build fast, modern websites engineered for real business results, not just good looks."
         background="bg-surface-tint"
       />
