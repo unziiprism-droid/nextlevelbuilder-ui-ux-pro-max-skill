@@ -26,27 +26,106 @@ const valueProps = [
   },
 ];
 
+// Coordinates are percentages of the hero section's own box, shared by
+// both the connecting <line> layer (viewBox 0 0 100 100) and the node
+// dots below, so the network spans the full section instead of a
+// boxed-off graphic on one side.
+const networkNodes = [
+  { x: 58, y: 12, size: 6, hub: false, opacity: 0.85 },
+  { x: 71, y: 8, size: 5, hub: false, opacity: 0.7 },
+  { x: 86, y: 16, size: 6, hub: false, opacity: 0.85 },
+  { x: 93, y: 30, size: 5, hub: false, opacity: 0.7 },
+  { x: 80, y: 38, size: 10, hub: true, opacity: 1 },
+  { x: 64, y: 33, size: 5, hub: false, opacity: 0.7 },
+  { x: 54, y: 48, size: 6, hub: false, opacity: 0.85 },
+  { x: 69, y: 54, size: 9, hub: true, opacity: 1 },
+  { x: 83, y: 60, size: 5, hub: false, opacity: 0.7 },
+  { x: 91, y: 74, size: 6, hub: false, opacity: 0.85 },
+  { x: 75, y: 80, size: 9, hub: true, opacity: 1 },
+  { x: 59, y: 88, size: 5, hub: false, opacity: 0.7 },
+  { x: 10, y: 18, size: 4, hub: false, opacity: 0.15 },
+  { x: 22, y: 42, size: 4, hub: false, opacity: 0.15 },
+  { x: 14, y: 68, size: 4, hub: false, opacity: 0.12 },
+  { x: 28, y: 88, size: 4, hub: false, opacity: 0.15 },
+] as const;
+
+const networkLines: Array<[number, number]> = [
+  [0, 1],
+  [1, 2],
+  [0, 3],
+  [1, 4],
+  [2, 3],
+  [3, 4],
+  [4, 5],
+  [5, 6],
+  [4, 7],
+  [6, 7],
+  [7, 8],
+  [3, 8],
+  [8, 9],
+  [7, 10],
+  [9, 10],
+  [10, 11],
+  [6, 11],
+];
+
 export function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden lg:min-h-[620px]">
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-surface-muted/30" />
 
-        <Container className="grid items-center gap-16 pt-20 pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:pt-28 lg:pb-32">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="h-full w-full">
+            <g stroke="var(--color-brand-primary)" strokeWidth="0.15">
+              {networkLines.map(([a, b], i) => (
+                <line
+                  key={`${a}-${b}`}
+                  className="animate-line-glow"
+                  x1={networkNodes[a].x}
+                  y1={networkNodes[a].y}
+                  x2={networkNodes[b].x}
+                  y2={networkNodes[b].y}
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                />
+              ))}
+            </g>
+          </svg>
+
+          {networkNodes.map((node, i) => (
+            <span
+              key={i}
+              className={`absolute rounded-full ${
+                node.hub ? "animate-pulse-node bg-brand-steel" : "animate-float-dot bg-brand-primary"
+              }`}
+              style={{
+                left: `${node.x}%`,
+                top: `${node.y}%`,
+                width: node.size,
+                height: node.size,
+                opacity: node.opacity,
+                animationDelay: `${i * 0.35}s`,
+                animationDuration: node.hub ? undefined : `${4 + (i % 3)}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        <Container className="relative py-20 lg:py-28">
+          <div className="flex max-w-2xl flex-col items-center text-center lg:items-start lg:text-left">
             <div className="animate-fade-up">
               <Eyebrow>Web Development Agency</Eyebrow>
             </div>
 
             <h1
-              className="animate-fade-up mt-6 max-w-xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl"
+              className="animate-fade-up mt-6 text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl"
               style={{ animationDelay: "0.08s" }}
             >
               Websites &amp; Digital Products, <span className="text-brand-primary">Engineered Right</span>
             </h1>
 
             <p
-              className="animate-fade-up mt-5 max-w-xl text-balance text-lg leading-relaxed text-text-secondary"
+              className="animate-fade-up mt-5 text-balance text-lg leading-relaxed text-text-secondary"
               style={{ animationDelay: "0.16s" }}
             >
               Unzii builds fast, modern websites and full-stack applications for businesses that
@@ -63,65 +142,6 @@ export function Hero() {
               <Button href="/portfolio" variant="secondary" size="lg">
                 See Our Work
               </Button>
-            </div>
-          </div>
-
-          <div className="animate-fade-up relative mx-auto w-full max-w-md lg:mx-0" style={{ animationDelay: "0.2s" }}>
-            <div
-              aria-hidden
-              className="animate-pulse-blob absolute -inset-6 -z-10 rounded-[2rem]"
-              style={{ background: "var(--color-brand-primary)" }}
-            />
-
-            <span
-              aria-hidden
-              className="animate-float-chip absolute -top-5 -left-5 z-10 flex size-14 items-center justify-center rounded-2xl border border-border bg-surface shadow-lifted"
-            >
-              <Code2 className="size-6 text-brand-steel" aria-hidden />
-            </span>
-
-            <div className="animate-float-card flex aspect-square items-center justify-center rounded-2xl border border-border bg-surface p-8 shadow-lifted">
-              <svg viewBox="0 0 400 400" className="h-full w-full" aria-hidden>
-                <g stroke="var(--color-brand-primary)" strokeWidth="1.5">
-                  <line className="animate-line-glow" x1="60" y1="60" x2="180" y2="40" style={{ animationDelay: "0s" }} />
-                  <line className="animate-line-glow" x1="180" y1="40" x2="320" y2="70" style={{ animationDelay: "0.2s" }} />
-                  <line className="animate-line-glow" x1="60" y1="60" x2="90" y2="160" style={{ animationDelay: "0.4s" }} />
-                  <line className="animate-line-glow" x1="180" y1="40" x2="220" y2="140" style={{ animationDelay: "0.6s" }} />
-                  <line className="animate-line-glow" x1="320" y1="70" x2="340" y2="180" style={{ animationDelay: "0.8s" }} />
-                  <line className="animate-line-glow" x1="90" y1="160" x2="220" y2="140" style={{ animationDelay: "1s" }} />
-                  <line className="animate-line-glow" x1="220" y1="140" x2="340" y2="180" style={{ animationDelay: "1.2s" }} />
-                  <line className="animate-line-glow" x1="90" y1="160" x2="50" y2="260" style={{ animationDelay: "1.4s" }} />
-                  <line className="animate-line-glow" x1="220" y1="140" x2="170" y2="240" style={{ animationDelay: "1.6s" }} />
-                  <line className="animate-line-glow" x1="340" y1="180" x2="300" y2="270" style={{ animationDelay: "1.8s" }} />
-                  <line className="animate-line-glow" x1="340" y1="180" x2="380" y2="240" style={{ animationDelay: "2s" }} />
-                  <line className="animate-line-glow" x1="50" y1="260" x2="170" y2="240" style={{ animationDelay: "2.2s" }} />
-                  <line className="animate-line-glow" x1="170" y1="240" x2="300" y2="270" style={{ animationDelay: "2.4s" }} />
-                  <line className="animate-line-glow" x1="300" y1="270" x2="380" y2="240" style={{ animationDelay: "2.6s" }} />
-                  <line className="animate-line-glow" x1="50" y1="260" x2="120" y2="350" style={{ animationDelay: "2.8s" }} />
-                  <line className="animate-line-glow" x1="170" y1="240" x2="260" y2="360" style={{ animationDelay: "3s" }} />
-                  <line className="animate-line-glow" x1="300" y1="270" x2="260" y2="360" style={{ animationDelay: "3.2s" }} />
-                  <line className="animate-line-glow" x1="220" y1="140" x2="200" y2="190" style={{ animationDelay: "3.4s" }} />
-                  <line className="animate-line-glow" x1="170" y1="240" x2="200" y2="190" style={{ animationDelay: "3.6s" }} />
-                  <line className="animate-line-glow" x1="200" y1="190" x2="180" y2="40" style={{ animationDelay: "3.8s" }} />
-                </g>
-                <g fill="var(--color-brand-steel)">
-                  <circle className="animate-pulse-node" cx="200" cy="190" r="7" style={{ animationDelay: "0s" }} />
-                  <circle className="animate-pulse-node" cx="220" cy="140" r="5" style={{ animationDelay: "0.6s" }} />
-                  <circle className="animate-pulse-node" cx="170" cy="240" r="5" style={{ animationDelay: "1.2s" }} />
-                </g>
-                <g fill="var(--color-brand-primary)">
-                  <circle cx="60" cy="60" r="4" />
-                  <circle cx="180" cy="40" r="4" />
-                  <circle cx="320" cy="70" r="4" />
-                  <circle cx="90" cy="160" r="4" />
-                  <circle cx="340" cy="180" r="4" />
-                  <circle cx="50" cy="260" r="4" />
-                  <circle cx="300" cy="270" r="4" />
-                  <circle cx="380" cy="240" r="4" />
-                  <circle cx="120" cy="350" r="4" />
-                  <circle cx="260" cy="360" r="4" />
-                </g>
-              </svg>
             </div>
           </div>
         </Container>
