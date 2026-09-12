@@ -1,5 +1,4 @@
 import { Code2, Layers, Rocket, HeadphonesIcon } from "lucide-react";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -63,29 +62,48 @@ export function Hero() {
               style={{ background: "var(--color-brand-primary)" }}
             />
 
-            <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-lifted">
-              <div className="flex items-center gap-1.5 border-b border-border bg-surface-subtle px-4 py-3">
-                <span className="size-2.5 rounded-full bg-[#ef4444]" />
-                <span className="size-2.5 rounded-full bg-[#f59e0b]" />
-                <span className="size-2.5 rounded-full bg-[#22c55e]" />
-                <div className="ml-3 flex-1 truncate rounded-full bg-surface-muted px-3 py-1 text-[11px] text-text-muted">
-                  hiiisage.com
-                </div>
-              </div>
-
-              <div className="relative">
-                <Image
-                  src="/portfolio/hiiisage-hero.jpg"
-                  alt="Hiii Sage website homepage, a recent Unzii project"
-                  width={1600}
-                  height={735}
-                  className="w-full h-auto"
-                  priority
-                />
-                <span className="absolute left-3 top-3 rounded-full bg-brand-secondary/85 px-3 py-1 text-[11px] font-semibold text-text-inverse backdrop-blur">
-                  Recent build &mdash; Hiii Sage
-                </span>
-              </div>
+            <div className="flex aspect-square items-center justify-center rounded-2xl border border-border bg-surface p-8 shadow-lifted">
+              <svg viewBox="0 0 400 400" className="h-full w-full" aria-hidden>
+                <g stroke="var(--color-brand-primary)" strokeWidth="1.5" opacity="0.6">
+                  <line x1="60" y1="60" x2="180" y2="40" />
+                  <line x1="180" y1="40" x2="320" y2="70" />
+                  <line x1="60" y1="60" x2="90" y2="160" />
+                  <line x1="180" y1="40" x2="220" y2="140" />
+                  <line x1="320" y1="70" x2="340" y2="180" />
+                  <line x1="90" y1="160" x2="220" y2="140" />
+                  <line x1="220" y1="140" x2="340" y2="180" />
+                  <line x1="90" y1="160" x2="50" y2="260" />
+                  <line x1="220" y1="140" x2="170" y2="240" />
+                  <line x1="340" y1="180" x2="300" y2="270" />
+                  <line x1="340" y1="180" x2="380" y2="240" />
+                  <line x1="50" y1="260" x2="170" y2="240" />
+                  <line x1="170" y1="240" x2="300" y2="270" />
+                  <line x1="300" y1="270" x2="380" y2="240" />
+                  <line x1="50" y1="260" x2="120" y2="350" />
+                  <line x1="170" y1="240" x2="260" y2="360" />
+                  <line x1="300" y1="270" x2="260" y2="360" />
+                  <line x1="220" y1="140" x2="200" y2="190" />
+                  <line x1="170" y1="240" x2="200" y2="190" />
+                  <line x1="200" y1="190" x2="180" y2="40" />
+                </g>
+                <g fill="var(--color-brand-steel)">
+                  <circle cx="200" cy="190" r="7" />
+                  <circle cx="220" cy="140" r="5" />
+                  <circle cx="170" cy="240" r="5" />
+                </g>
+                <g fill="var(--color-brand-primary)">
+                  <circle cx="60" cy="60" r="4" />
+                  <circle cx="180" cy="40" r="4" />
+                  <circle cx="320" cy="70" r="4" />
+                  <circle cx="90" cy="160" r="4" />
+                  <circle cx="340" cy="180" r="4" />
+                  <circle cx="50" cy="260" r="4" />
+                  <circle cx="300" cy="270" r="4" />
+                  <circle cx="380" cy="240" r="4" />
+                  <circle cx="120" cy="350" r="4" />
+                  <circle cx="260" cy="360" r="4" />
+                </g>
+              </svg>
             </div>
           </div>
         </Container>
