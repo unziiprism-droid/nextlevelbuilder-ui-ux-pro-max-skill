@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ServiceHero } from "@/components/services/ServiceHero";
-import { Overview } from "@/components/services/Overview";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
@@ -62,7 +61,7 @@ export default function PortfolioPage() {
     <>
       <ServiceHero
         eyebrow="Portfolio"
-        heading="Our Next Success Story Could Be Yours"
+        heading="Selected Work"
         description="Real client work, honestly presented. Here's Hiii Sage, a full brand refresh and website rebuild we delivered on a tight deadline."
         secondaryLabel="See the Case Study"
         secondaryHref="#hiii-sage"
@@ -92,43 +91,69 @@ export default function PortfolioPage() {
               priority
             />
           </Reveal>
+        </Container>
+      </div>
 
-          <div className="mx-auto mt-6 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
-            {gallery.map((item) => (
-              <Reveal key={item.src} delay={0.15} className="overflow-hidden rounded-2xl border border-border shadow-soft">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={1600}
-                  height={730}
-                  className="w-full h-auto"
-                />
-              </Reveal>
-            ))}
+      <div className="border-t border-border py-24 lg:py-32">
+        <Container>
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-16">
+            <Reveal>
+              <Eyebrow>The Challenge</Eyebrow>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
+                A full rebrand, on a hard deadline
+              </h3>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
+                Hiii Sage needed to move on from its previous brand entirely: new name, new colors,
+                new fonts, new imagery, new copy, all while keeping the page layout the client
+                already liked. The site had to be rebuilt on a fresh install and live by a fixed
+                launch date, with no room to slip.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <Eyebrow>The Approach</Eyebrow>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
+                Rebuild the brand, keep what worked
+              </h3>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
+                We applied the new visual identity, palette, and typography across the existing
+                layout rather than starting from a blank page, rewrote the copy and imagery section
+                by section, and worked through several rounds of client revisions before rebuilding
+                everything in WordPress and connecting the new domain.
+              </p>
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                {gallery.map((item) => (
+                  <div key={item.src} className="overflow-hidden rounded-2xl border border-border shadow-soft">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={1600}
+                      height={730}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.15}>
+              <Eyebrow>The Result</Eyebrow>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-brand-secondary sm:text-3xl">
+                Live, on time, on the new domain
+              </h3>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
+                Hiii Sage launched on schedule with its new brand fully in place, the old domain
+                retired, and a site the client can keep building on as they add more events and
+                partners.
+              </p>
+            </Reveal>
           </div>
         </Container>
       </div>
 
-      <div id="expect" className="scroll-mt-20">
-        <Overview
-          eyebrow="Beyond This Page"
-          heading="What working with us looks like"
-          paragraphs={[
-            "Hiii Sage needed a full rebrand and a rebuilt website under a hard launch deadline. We handled the brand refresh, the WordPress rebuild, and every round of revisions, then got it live on time.",
-            "That's the same process, speed, and honesty you can expect on your project: a direct line to the person doing the work, transparent pricing, and progress you can actually see.",
-          ]}
-          panelTitle="What you can expect"
-          panelPoints={[
-            "A direct, honest conversation about your project",
-            "The same process we use for every client",
-            "Transparent pricing, not vague quotes",
-            "A team that treats your project like our next case study",
-          ]}
-        />
-      </div>
       <FAQ eyebrow="FAQ" heading="Portfolio, answered honestly" faqs={faqs} />
       <FinalCTA
-        heading="Ready to become our next case study?"
+        heading="Our Next Success Story Could Be Yours"
         description="Every agency's first real client took a chance on them. We'd love for that to be you."
       />
     </>
