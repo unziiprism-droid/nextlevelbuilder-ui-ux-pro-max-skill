@@ -1,29 +1,35 @@
 import { cn } from "@/lib/utils";
 
 /**
- * A faint, fading dot-grid texture — a crisp geometric accent used instead
- * of blurred color glows. `color` should be a Tailwind text-color utility
- * (with opacity), since the dots are drawn from `currentColor`.
+ * A fading two-tone dot-grid texture — a crisp geometric accent used
+ * instead of blurred color glows. Two interleaved dot colors (default
+ * navy + yellow) alternate across the grid.
  */
 export function DotGrid({
   className,
-  color = "text-brand-secondary/[0.09]",
-  size = 18,
+  colors = ["var(--color-brand-secondary)", "var(--color-brand-yellow)"],
+  size = 22,
+  dotSize = 2.6,
 }: {
   className?: string;
-  color?: string;
+  colors?: [string, string];
   size?: number;
+  dotSize?: number;
 }) {
+  const [first, second] = colors;
+  const half = size / 2;
+
   return (
     <div
       aria-hidden
-      className={cn("pointer-events-none absolute", color, className)}
+      className={cn("pointer-events-none absolute", className)}
       style={{
-        backgroundImage: "radial-gradient(currentColor 1.4px, transparent 1.4px)",
-        backgroundSize: `${size}px ${size}px`,
-        maskImage: "radial-gradient(ellipse 70% 70% at center, black 45%, transparent 100%)",
+        backgroundImage: `radial-gradient(${first} ${dotSize}px, transparent ${dotSize}px), radial-gradient(${second} ${dotSize}px, transparent ${dotSize}px)`,
+        backgroundSize: `${size}px ${size}px, ${size}px ${size}px`,
+        backgroundPosition: `0 0, ${half}px ${half}px`,
+        maskImage: "radial-gradient(ellipse 75% 75% at center, black 55%, transparent 100%)",
         WebkitMaskImage:
-          "radial-gradient(ellipse 70% 70% at center, black 45%, transparent 100%)",
+          "radial-gradient(ellipse 75% 75% at center, black 55%, transparent 100%)",
       }}
     />
   );

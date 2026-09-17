@@ -42,11 +42,17 @@ export function ServiceHero({
         </div>
       ) : variant === "dark" ? (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
-          <DotGrid className="-top-16 right-[6%] h-80 w-80" color="text-white/[0.12]" />
+          <DotGrid
+            className="-top-16 right-[6%] h-80 w-80"
+            colors={["white", "var(--color-brand-yellow)"]}
+          />
         </div>
       ) : yellow ? (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow">
-          <DotGrid className="-top-16 right-[6%] h-96 w-96" color="text-brand-secondary/[0.14]" />
+          <DotGrid
+            className="-top-16 right-[6%] h-96 w-96"
+            colors={["var(--color-brand-secondary)", "white"]}
+          />
         </div>
       ) : (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
