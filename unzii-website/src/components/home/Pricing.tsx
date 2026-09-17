@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { useCurrency } from "@/components/providers/CurrencyProvider";
 import { formatCurrencyFromPkr } from "@/lib/currency";
 import { cn } from "@/lib/utils";
-import { DotGrid } from "@/components/ui/DotGrid";
 
 const tiers = [
   {
@@ -87,12 +86,9 @@ export function Pricing() {
               )}
             >
               {tier.highlighted && (
-                <>
-                  <DotGrid className="-top-8 left-1/2 -z-10 h-20 w-48 -translate-x-1/2" />
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-yellow px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-secondary">
-                    Most Popular
-                  </span>
-                </>
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-yellow px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-secondary">
+                  Most Popular
+                </span>
               )}
               <h3 className="text-lg font-semibold text-brand-secondary">{tier.name}</h3>
               <div className="mt-4 flex items-baseline gap-2">

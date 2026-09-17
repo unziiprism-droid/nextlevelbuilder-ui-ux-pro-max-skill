@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { DotGrid } from "@/components/ui/DotGrid";
 import { cn } from "@/lib/utils";
 
 export function ServiceHero({
@@ -41,23 +40,12 @@ export function ServiceHero({
           <div className="absolute inset-0 bg-brand-secondary/70" />
         </div>
       ) : variant === "dark" ? (
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
-          <DotGrid
-            className="-top-16 right-[6%] h-80 w-80"
-            colors={["white", "var(--color-brand-yellow)"]}
-          />
-        </div>
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary" />
       ) : yellow ? (
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow">
-          <DotGrid
-            className="-top-16 right-[6%] h-96 w-96"
-            colors={["var(--color-brand-secondary)", "white"]}
-          />
-        </div>
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow" />
       ) : (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className={cn("absolute inset-0", background)} />
-          <DotGrid className="-top-16 right-[6%] h-80 w-80" />
         </div>
       )}
 
