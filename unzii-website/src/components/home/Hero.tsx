@@ -66,17 +66,17 @@ export function Hero() {
         </Container>
       </section>
 
-      <div className="border-t border-border bg-brand-secondary py-14">
+      <div className="border-t border-border bg-brand-yellow py-14">
         <Container>
           <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
             {valueProps.map(({ icon: Icon, title, description }) => (
               <div key={title} className="flex items-start gap-3">
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-text-inverse">
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-secondary/10 text-brand-secondary">
                   <Icon className="size-4" aria-hidden />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-text-inverse">{title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-text-inverse-muted">{description}</p>
+                  <p className="text-sm font-semibold text-brand-secondary">{title}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-brand-secondary/70">{description}</p>
                 </div>
               </div>
             ))}
