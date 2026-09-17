@@ -99,7 +99,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="border-y border-border bg-surface-muted py-20 lg:py-24">
+      <section className="border-y border-border bg-brand-yellow-light py-20 lg:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {nextSteps.map((step, index) => (
@@ -123,13 +123,13 @@ export default function ContactPage() {
 
       <FAQ eyebrow="FAQ" heading="Contact, answered" faqs={faqs} />
 
-      <section className="py-20 lg:py-24">
+      <section className="bg-brand-yellow py-20 lg:py-24">
         <Container className="flex flex-col items-center gap-6 text-center">
-          <p className="max-w-md text-base leading-relaxed text-text-secondary">
+          <p className="max-w-md text-base leading-relaxed text-brand-secondary/70">
             Already know what you need built? Skip ahead and tell us about your project
             directly.
           </p>
-          <Button href="/start-your-project" showArrow>
+          <Button href="/start-your-project" variant="inverse" showArrow>
             Start Your Project
           </Button>
         </Container>

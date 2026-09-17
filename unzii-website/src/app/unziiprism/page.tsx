@@ -77,6 +77,7 @@ export default function UnziiprismPage() {
         heading="What Unziiprism delivers"
         description="Everything a brand needs to look and feel consistent, wherever it shows up."
         items={benefits}
+        variant="navy"
       />
 
       <Overview
@@ -95,7 +96,12 @@ export default function UnziiprismPage() {
         ]}
       />
 
-      <FAQ eyebrow="FAQ" heading="Unziiprism, answered" faqs={faqs} />
+      <FAQ
+        eyebrow="FAQ"
+        heading="Unziiprism, answered"
+        faqs={faqs}
+        background="bg-brand-yellow-light"
+      />
 
       <FinalCTA
         heading="Need a logo or brand identity?"

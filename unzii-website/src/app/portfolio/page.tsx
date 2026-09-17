@@ -151,7 +151,12 @@ export default function PortfolioPage() {
         </Container>
       </div>
 
-      <FAQ eyebrow="FAQ" heading="Portfolio, answered honestly" faqs={faqs} />
+      <FAQ
+        eyebrow="FAQ"
+        heading="Portfolio, answered honestly"
+        faqs={faqs}
+        background="bg-brand-yellow-light"
+      />
       <FinalCTA
         heading="Our Next Success Story Could Be Yours"
         description="Every agency's first real client took a chance on them. We'd love for that to be you."

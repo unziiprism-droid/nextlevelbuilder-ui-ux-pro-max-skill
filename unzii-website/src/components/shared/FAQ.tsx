@@ -2,6 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { cn } from "@/lib/utils";
 
 export interface FAQItem {
   question: string;
@@ -45,10 +46,12 @@ export function FAQ({
   eyebrow = "FAQ",
   heading = "Frequently asked questions",
   faqs = defaultFaqs,
+  background,
 }: {
   eyebrow?: string;
   heading?: string;
   faqs?: FAQItem[];
+  background?: string;
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -64,7 +67,7 @@ export function FAQ({
   };
 
   return (
-    <section className="py-24 lg:py-32">
+    <section className={cn("py-24 lg:py-32", background)}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

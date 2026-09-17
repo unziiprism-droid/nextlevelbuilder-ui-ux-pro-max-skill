@@ -169,6 +169,7 @@ export default function SeoPage() {
         heading="Why growing businesses invest in SEO with Unzii"
         description="Search visibility is a long term asset. Here's what that investment gets you."
         items={benefits}
+        variant="navy"
       />
       <Process id="process" heading="How we approach SEO" steps={processSteps} />
       <Features

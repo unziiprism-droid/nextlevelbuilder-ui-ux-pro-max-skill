@@ -65,7 +65,12 @@ export default function BlogPage() {
         </Container>
       </section>
 
-      <FAQ eyebrow="FAQ" heading="Blog, answered" faqs={faqs} />
+      <FAQ
+        eyebrow="FAQ"
+        heading="Blog, answered"
+        faqs={faqs}
+        background="bg-brand-yellow-light"
+      />
       <FinalCTA
         heading="Want practical advice sooner than that?"
         description="You don't have to wait for the blog. Tell us about your project and let's talk directly."

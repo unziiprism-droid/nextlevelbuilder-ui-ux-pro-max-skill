@@ -111,6 +111,7 @@ export default function WebsiteDevelopmentPage() {
         heading="Why businesses choose Unzii for their website"
         description="A website is an investment. Here's what that investment gets you."
         items={benefits}
+        variant="navy"
       />
       <Features
         heading="What's included in every website"

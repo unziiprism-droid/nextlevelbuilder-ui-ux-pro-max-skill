@@ -19,7 +19,7 @@ export default function Home() {
       <Hero />
       <SeoReviewOffer />
       <Pricing />
-      <FAQ />
+      <FAQ background="bg-brand-yellow-light" />
       <FinalCTA />
     </>
   );

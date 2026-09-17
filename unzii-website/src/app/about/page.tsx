@@ -68,7 +68,12 @@ export default function AboutPage() {
           "Direct communication, always",
         ]}
       />
-      <FAQ eyebrow="FAQ" heading="About Unzii, answered" faqs={faqs} />
+      <FAQ
+        eyebrow="FAQ"
+        heading="About Unzii, answered"
+        faqs={faqs}
+        background="bg-brand-yellow-light"
+      />
       <FinalCTA
         heading="Want to work with a team that actually cares about your results?"
         description="Tell us about your business, and let's see if we're a good fit. No pressure, no fake urgency, just a straightforward conversation."

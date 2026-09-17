@@ -29,7 +29,7 @@ export function Technologies({
   const row = [...items, ...items];
 
   return (
-    <section className="border-y border-border bg-surface-muted py-20 lg:py-24">
+    <section className="border-y border-border bg-brand-yellow-light py-20 lg:py-24">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow className="justify-center">{eyebrow}</Eyebrow>

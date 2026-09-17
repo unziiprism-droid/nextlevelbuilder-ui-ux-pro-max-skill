@@ -21,7 +21,7 @@ const inputClasses =
 // entirely.
 export function SeoReviewOffer() {
   return (
-    <section className="border-y border-border bg-surface-muted py-16 lg:py-20">
+    <section className="border-y border-border bg-brand-yellow-light py-16 lg:py-20">
       <Container>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
