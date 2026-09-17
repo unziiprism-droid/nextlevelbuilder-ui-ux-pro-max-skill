@@ -2,6 +2,7 @@ import { Code2, Layers, Rocket, HeadphonesIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { DotGrid } from "@/components/ui/DotGrid";
 
 const valueProps = [
   {
@@ -31,11 +32,7 @@ export function Hero() {
     <>
       <section className="relative overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-surface-muted/30" />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-28 right-[4%] -z-10 h-96 w-96 rounded-full opacity-25 blur-3xl lg:right-[10%]"
-          style={{ background: "var(--color-brand-yellow)" }}
-        />
+        <DotGrid className="-top-16 right-[2%] -z-10 h-[26rem] w-[26rem] lg:right-[6%]" />
 
         <Container className="flex flex-col items-center pt-20 pb-24 text-center lg:items-start lg:pt-28 lg:pb-32 lg:text-left">
           <div className="animate-fade-up">

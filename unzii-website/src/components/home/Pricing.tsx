@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { useCurrency } from "@/components/providers/CurrencyProvider";
 import { formatCurrencyFromPkr } from "@/lib/currency";
 import { cn } from "@/lib/utils";
+import { DotGrid } from "@/components/ui/DotGrid";
 
 const tiers = [
   {
@@ -87,9 +88,9 @@ export function Pricing() {
             >
               {tier.highlighted && (
                 <>
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute -top-16 left-1/2 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-brand-yellow opacity-40 blur-3xl"
+                  <DotGrid
+                    className="-top-10 left-1/2 -z-10 h-36 w-56 -translate-x-1/2"
+                    color="text-brand-secondary/[0.12]"
                   />
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-yellow px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-secondary">
                     Most Popular

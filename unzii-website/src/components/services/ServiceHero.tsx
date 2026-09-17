@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { DotGrid } from "@/components/ui/DotGrid";
 import { cn } from "@/lib/utils";
 
 export function ServiceHero({
@@ -41,23 +42,16 @@ export function ServiceHero({
         </div>
       ) : variant === "dark" ? (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
-          <div
-            className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-20 blur-3xl"
-            style={{ background: "var(--color-brand-yellow)" }}
-          />
+          <DotGrid className="-top-16 right-[6%] h-80 w-80" color="text-white/[0.12]" />
         </div>
       ) : yellow ? (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow">
-          <div className="absolute -top-24 right-[8%] h-80 w-80 rounded-full bg-white opacity-40 blur-3xl" />
-          <div className="absolute -bottom-28 left-[4%] h-72 w-72 rounded-full bg-brand-secondary opacity-10 blur-3xl" />
+          <DotGrid className="-top-16 right-[6%] h-96 w-96" color="text-brand-secondary/[0.14]" />
         </div>
       ) : (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div
-            className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-30 blur-3xl"
-            style={{ background: "var(--color-brand-yellow)" }}
-          />
           <div className={cn("absolute inset-0", background)} />
+          <DotGrid className="-top-16 right-[6%] h-80 w-80" />
         </div>
       )}
 

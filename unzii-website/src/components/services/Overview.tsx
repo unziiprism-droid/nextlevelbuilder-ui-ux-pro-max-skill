@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { DotGrid } from "@/components/ui/DotGrid";
 
 export function Overview({
   eyebrow,
@@ -35,11 +36,7 @@ export function Overview({
           </Reveal>
 
           <Reveal delay={0.1} className="relative">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-10 -top-10 -z-10 h-56 w-56 rounded-full opacity-25 blur-3xl"
-              style={{ background: "var(--color-brand-yellow)" }}
-            />
+            <DotGrid className="-right-8 -top-8 -z-10 h-48 w-48" />
             <div className="relative rounded-3xl border border-border bg-surface-muted p-8">
               <h3 className="text-lg font-semibold text-brand-secondary">{panelTitle}</h3>
               <ul className="mt-6 flex flex-col gap-4">
