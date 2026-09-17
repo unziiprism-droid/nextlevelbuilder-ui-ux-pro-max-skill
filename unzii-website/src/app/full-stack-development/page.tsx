@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceHero } from "@/components/services/ServiceHero";
+import { FinalCTA } from "@/components/shared/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Full Stack Development",
@@ -9,14 +10,22 @@ export const metadata: Metadata = {
 
 export default function FullStackDevelopmentPage() {
   return (
-    <ServiceHero
-      eyebrow="Full Stack Development"
-      badge="Coming Soon"
-      heading="Full Stack Applications, Built From Idea to Launch"
-      description="We're expanding beyond websites into full product engineering, real backends, databases, and business logic built around what your product needs."
-      primaryLabel="Get Notified"
-      primaryHref="/contact"
-      background="bg-surface-tint"
-    />
+    <>
+      <ServiceHero
+        eyebrow="Full Stack Development"
+        badge="Coming Soon"
+        heading="Full Stack Applications, Built From Idea to Launch"
+        description="We're expanding beyond websites into full product engineering, real backends, databases, and business logic built around what your product needs."
+        primaryLabel="Get Notified"
+        primaryHref="/contact"
+        background="bg-surface-tint"
+      />
+      <FinalCTA
+        heading="Want to be first in line when this launches?"
+        description="Tell us a bit about what you're building and we'll reach out as soon as full stack development is ready."
+        primaryLabel="Get Notified"
+        primaryHref="/contact"
+      />
+    </>
   );
 }

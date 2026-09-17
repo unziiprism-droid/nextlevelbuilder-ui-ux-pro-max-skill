@@ -13,7 +13,7 @@ export interface BenefitItem {
 const sectionBg = {
   white: "bg-surface",
   "yellow-light": "bg-brand-yellow-light",
-  navy: "bg-brand-secondary",
+  dark: "bg-brand-secondary",
 };
 
 export function Benefits({
@@ -27,9 +27,9 @@ export function Benefits({
   heading: string;
   description?: string;
   items: BenefitItem[];
-  variant?: "white" | "yellow-light" | "navy";
+  variant?: "white" | "yellow-light" | "dark";
 }) {
-  const dark = variant === "navy";
+  const dark = variant === "dark";
 
   return (
     <section className={cn(sectionBg[variant], "py-24 lg:py-32")}>

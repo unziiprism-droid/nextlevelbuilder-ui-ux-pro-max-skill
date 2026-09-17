@@ -77,7 +77,6 @@ export default function UnziiprismPage() {
         heading="What Unziiprism delivers"
         description="Everything a brand needs to look and feel consistent, wherever it shows up."
         items={benefits}
-        variant="navy"
       />
 
       <Overview

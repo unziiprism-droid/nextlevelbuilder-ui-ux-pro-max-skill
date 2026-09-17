@@ -60,7 +60,12 @@ export default function StartYourProjectPage() {
         </Container>
       </section>
 
-      <FAQ eyebrow="FAQ" heading="Before you submit" faqs={faqs} />
+      <FAQ
+        eyebrow="FAQ"
+        heading="Before you submit"
+        faqs={faqs}
+        background="bg-brand-yellow-light"
+      />
     </>
   );
 }

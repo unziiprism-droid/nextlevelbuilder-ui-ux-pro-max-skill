@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand — the palette is yellow / navy / black only. Every neutral below is a
-     tint or shade of Deep Navy via color-mix, never an independent grey swatch. */
-  --color-brand-secondary: #101827; /* Deep Navy */
-  --color-brand-steel: color-mix(in srgb, var(--color-brand-secondary) 68%, white); /* Navy, lightened — secondary text/icon accents */
+  /* Brand — the palette is yellow / black / white only. Every neutral below is a
+     tint or shade of this Black via color-mix, never an independent grey swatch. */
+  --color-brand-secondary: #0a0a0c; /* Black */
+  --color-brand-steel: color-mix(in srgb, var(--color-brand-secondary) 68%, white); /* Black, lightened — secondary text/icon accents */
   --color-brand-bg: #ffffff; /* White — replaces the old Soft Grey brand fill */
   --color-brand-yellow: #ffcc00; /* Yellow — primary buttons, footer, value-prop band */
   --color-brand-yellow-light: color-mix(in srgb, var(--color-brand-yellow) 16%, white); /* Pale yellow — alternating section bands */
