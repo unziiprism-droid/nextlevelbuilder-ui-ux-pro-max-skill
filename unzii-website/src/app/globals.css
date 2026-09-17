@@ -2,19 +2,19 @@
 
 :root {
   /* Brand */
-  --color-brand-primary: #8a96a8; /* Cool Grey */
+  --color-brand-primary: #8a96a8; /* Cool Grey — legacy token, no longer used decoratively */
   --color-brand-secondary: #101827; /* Deep Navy */
   --color-brand-steel: #46536a; /* Steel/Slate Blue-Grey */
-  --color-brand-bg: #e8edf3; /* Soft Grey */
-  --color-brand-yellow: #f2b705; /* Warm Gold — primary buttons, footer, value-prop band */
+  --color-brand-bg: #ffffff; /* White — replaces the old Soft Grey brand fill */
+  --color-brand-yellow: #ffcc00; /* Yellow — primary buttons, footer, value-prop band */
 
   /* Semantic surface scale, derived only for layout use — hues stay on-brand */
   --color-surface: #ffffff;
   --color-surface-subtle: #f6f8fa;
   --color-surface-muted: var(--color-brand-bg);
   --color-surface-inverse: var(--color-brand-secondary);
-  /* Deeper tint of Soft Grey, for section backgrounds that need more weight */
-  --color-surface-tint: #d8dee7;
+  /* White section backgrounds that need more visual weight lean on a border instead of a grey tint */
+  --color-surface-tint: #ffffff;
 
   --color-border: #e2e6ec;
   --color-border-strong: #c9d0db;

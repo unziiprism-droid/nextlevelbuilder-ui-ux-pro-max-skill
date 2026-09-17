@@ -99,12 +99,12 @@ export function FirstClientsOffer() {
           type="button"
           onClick={dismiss}
           aria-label="Close"
-          className="absolute right-4 top-4 flex size-8 items-center justify-center rounded-full text-text-muted transition-colors hover:bg-surface-muted hover:text-brand-secondary"
+          className="absolute right-4 top-4 flex size-8 items-center justify-center rounded-full text-text-muted transition-colors hover:bg-surface-subtle hover:text-brand-secondary"
         >
           <X className="size-4" aria-hidden />
         </button>
 
-        <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-surface-muted text-brand-steel">
+        <span className="mx-auto flex size-12 items-center justify-center rounded-full border border-border bg-surface-muted text-brand-steel">
           <Gift className="size-5" aria-hidden />
         </span>
 

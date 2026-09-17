@@ -59,7 +59,7 @@ export function ServiceHero({
         <div className="flex flex-col items-center gap-3 sm:flex-row">
           <Eyebrow inverse={inverse}>{eyebrow}</Eyebrow>
           {badge && (
-            <span className="rounded-full bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
+            <span className="rounded-full border border-border bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
               {badge}
             </span>
           )}

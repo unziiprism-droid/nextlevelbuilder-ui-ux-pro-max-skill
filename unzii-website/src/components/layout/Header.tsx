@@ -85,7 +85,7 @@ export function Header() {
                         <span className="flex items-center gap-2 text-sm font-semibold text-brand-secondary">
                           {service.label}
                           {service.status === "coming-soon" && (
-                            <span className="rounded-full bg-brand-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
+                            <span className="rounded-full border border-border bg-brand-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
                               Coming soon
                             </span>
                           )}
@@ -148,7 +148,7 @@ export function Header() {
                 >
                   {service.label}
                   {service.status === "coming-soon" && (
-                    <span className="rounded-full bg-brand-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
+                    <span className="rounded-full border border-border bg-brand-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
                       Soon
                     </span>
                   )}

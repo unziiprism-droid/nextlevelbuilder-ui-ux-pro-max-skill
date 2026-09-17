@@ -13,7 +13,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   ghost:
     "bg-transparent text-brand-secondary hover:bg-surface-subtle focus-visible:outline-brand-secondary",
   inverse:
-    "bg-surface text-brand-secondary hover:bg-brand-bg focus-visible:outline-surface",
+    "bg-surface text-brand-secondary hover:bg-surface-subtle focus-visible:outline-surface",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

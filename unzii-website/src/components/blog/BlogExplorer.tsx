@@ -52,7 +52,7 @@ export function BlogExplorer({
               "rounded-full px-4 py-2 text-sm font-medium transition-colors",
               activeCategory === null
                 ? "bg-brand-secondary text-text-inverse"
-                : "bg-surface-muted text-text-secondary hover:bg-brand-bg",
+                : "border border-border bg-surface-muted text-text-secondary hover:bg-surface-subtle",
             )}
           >
             All
@@ -66,7 +66,7 @@ export function BlogExplorer({
                 "rounded-full px-4 py-2 text-sm font-medium transition-colors",
                 activeCategory === category
                   ? "bg-brand-secondary text-text-inverse"
-                  : "bg-surface-muted text-text-secondary hover:bg-brand-bg",
+                  : "border border-border bg-surface-muted text-text-secondary hover:bg-surface-subtle",
               )}
             >
               {category}

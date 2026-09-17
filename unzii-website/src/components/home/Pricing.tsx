@@ -69,7 +69,7 @@ export function Pricing() {
             No hidden fees and no confusing packages. These are starting points, every
             quote is tailored to your business. Prices shown in USD.
           </p>
-          <span className="mt-5 inline-flex items-center rounded-full bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-steel">
+          <span className="mt-5 inline-flex items-center rounded-full border border-border bg-brand-bg px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-steel">
             First 5 clients also get 2 years of domain &amp; hosting free
           </span>
         </div>
