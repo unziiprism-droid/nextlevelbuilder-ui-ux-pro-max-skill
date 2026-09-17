@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand */
-  --color-brand-primary: #8a96a8; /* Cool Grey — legacy token, no longer used decoratively */
+  /* Brand — the palette is yellow / navy / black only. Every neutral below is a
+     tint or shade of Deep Navy via color-mix, never an independent grey swatch. */
   --color-brand-secondary: #101827; /* Deep Navy */
-  --color-brand-steel: #46536a; /* Steel/Slate Blue-Grey */
+  --color-brand-steel: color-mix(in srgb, var(--color-brand-secondary) 68%, white); /* Navy, lightened — secondary text/icon accents */
   --color-brand-bg: #ffffff; /* White — replaces the old Soft Grey brand fill */
   --color-brand-yellow: #ffcc00; /* Yellow — primary buttons, footer, value-prop band */
 
@@ -16,14 +16,14 @@
   /* White section backgrounds that need more visual weight lean on a border instead of a grey tint */
   --color-surface-tint: #ffffff;
 
-  --color-border: #e2e6ec;
-  --color-border-strong: #c9d0db;
+  --color-border: color-mix(in srgb, var(--color-brand-secondary) 10%, white);
+  --color-border-strong: color-mix(in srgb, var(--color-brand-secondary) 20%, white);
 
   --color-text-primary: var(--color-brand-secondary);
-  --color-text-secondary: #4b5768;
-  --color-text-muted: var(--color-brand-primary);
+  --color-text-secondary: color-mix(in srgb, var(--color-brand-secondary) 80%, white);
+  --color-text-muted: color-mix(in srgb, var(--color-brand-secondary) 48%, white);
   --color-text-inverse: #f3f5f8;
-  --color-text-inverse-muted: #a7b0bf;
+  --color-text-inverse-muted: color-mix(in srgb, white 68%, transparent);
 
   /* Status accent — used only for functional "live/available" signals, never decoratively */
   --color-status-live: #1a9c6b;
@@ -35,7 +35,6 @@
 @theme inline {
   --font-sans: var(--font-poppins);
 
-  --color-brand-primary: var(--color-brand-primary);
   --color-brand-secondary: var(--color-brand-secondary);
   --color-brand-steel: var(--color-brand-steel);
   --color-brand-bg: var(--color-brand-bg);

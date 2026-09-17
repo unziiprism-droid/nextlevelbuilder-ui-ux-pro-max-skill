@@ -34,8 +34,13 @@ export function Overview({
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-border bg-surface-muted p-8">
+          <Reveal delay={0.1} className="relative">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-10 -top-10 -z-10 h-56 w-56 rounded-full opacity-25 blur-3xl"
+              style={{ background: "var(--color-brand-yellow)" }}
+            />
+            <div className="relative rounded-3xl border border-border bg-surface-muted p-8">
               <h3 className="text-lg font-semibold text-brand-secondary">{panelTitle}</h3>
               <ul className="mt-6 flex flex-col gap-4">
                 {panelPoints.map((point) => (

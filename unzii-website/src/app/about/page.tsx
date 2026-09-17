@@ -50,7 +50,7 @@ export default function AboutPage() {
         eyebrow="About Unzii"
         heading="We Build Technology That Grows Real Businesses"
         description="Unzii exists to give businesses of every size access to fast, modern websites and real search visibility, without the bloat, guesswork, or empty promises so much of this industry runs on."
-        dark
+        variant="yellow"
       />
       <Overview
         eyebrow="Our Story"

@@ -79,12 +79,23 @@ export function Pricing() {
             <div
               key={tier.name}
               className={cn(
-                "flex h-full flex-col rounded-3xl border p-8",
+                "relative flex h-full flex-col rounded-3xl border p-8",
                 tier.highlighted
-                  ? "border-brand-secondary bg-surface-muted shadow-lifted"
+                  ? "border-brand-yellow bg-surface shadow-lifted lg:-translate-y-3"
                   : "border-border bg-surface-muted",
               )}
             >
+              {tier.highlighted && (
+                <>
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute -top-16 left-1/2 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-brand-yellow opacity-40 blur-3xl"
+                  />
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-yellow px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-secondary">
+                    Most Popular
+                  </span>
+                </>
+              )}
               <h3 className="text-lg font-semibold text-brand-secondary">{tier.name}</h3>
               <div className="mt-4 flex items-baseline gap-2">
                 <p className="text-3xl font-semibold text-brand-secondary">

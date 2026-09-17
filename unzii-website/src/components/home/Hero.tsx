@@ -31,6 +31,11 @@ export function Hero() {
     <>
       <section className="relative overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-surface-muted/30" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-28 right-[4%] -z-10 h-96 w-96 rounded-full opacity-25 blur-3xl lg:right-[10%]"
+          style={{ background: "var(--color-brand-yellow)" }}
+        />
 
         <Container className="flex flex-col items-center pt-20 pb-24 text-center lg:items-start lg:pt-28 lg:pb-32 lg:text-left">
           <div className="animate-fade-up">

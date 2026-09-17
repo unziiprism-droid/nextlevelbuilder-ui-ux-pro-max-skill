@@ -15,7 +15,7 @@ export function ServiceHero({
   secondaryHref,
   background = "bg-surface-muted/30",
   heroImage,
-  dark = false,
+  variant = "light",
 }: {
   eyebrow: string;
   badge?: string;
@@ -27,9 +27,10 @@ export function ServiceHero({
   secondaryHref?: string;
   background?: string;
   heroImage?: string;
-  dark?: boolean;
+  variant?: "light" | "dark" | "yellow";
 }) {
-  const inverse = !!heroImage || dark;
+  const inverse = !!heroImage || variant === "dark";
+  const yellow = variant === "yellow";
 
   return (
     <section className="relative overflow-hidden">
@@ -38,12 +39,17 @@ export function ServiceHero({
           <Image src={heroImage} alt="" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-brand-secondary/70" />
         </div>
-      ) : dark ? (
+      ) : variant === "dark" ? (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
           <div
             className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-20 blur-3xl"
             style={{ background: "var(--color-brand-yellow)" }}
           />
+        </div>
+      ) : yellow ? (
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow">
+          <div className="absolute -top-24 right-[8%] h-80 w-80 rounded-full bg-white opacity-40 blur-3xl" />
+          <div className="absolute -bottom-28 left-[4%] h-72 w-72 rounded-full bg-brand-secondary opacity-10 blur-3xl" />
         </div>
       ) : (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -84,7 +90,7 @@ export function ServiceHero({
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-          <Button href={primaryHref} size="lg" showArrow variant={inverse ? "inverse" : "primary"}>
+          <Button href={primaryHref} size="lg" showArrow variant={inverse || yellow ? "inverse" : "primary"}>
             {primaryLabel}
           </Button>
           {secondaryLabel && secondaryHref && (
