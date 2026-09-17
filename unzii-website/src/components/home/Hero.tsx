@@ -2,6 +2,7 @@ import { Code2, Layers, Rocket, HeadphonesIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Glow } from "@/components/ui/Glow";
 
 const valueProps = [
   {
@@ -31,6 +32,9 @@ export function Hero() {
     <>
       <section className="relative overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-surface-muted/30" />
+        <Glow className="-top-24 right-[2%] h-[26rem] w-[26rem] lg:right-[6%]" opacity={28} />
+        <Glow className="top-1/2 -left-20 h-64 w-64" opacity={14} />
+        <Glow className="-bottom-16 right-[22%] h-44 w-44" opacity={18} />
 
         <Container className="flex flex-col items-center pt-20 pb-24 text-center lg:items-start lg:pt-28 lg:pb-32 lg:text-left">
           <div className="animate-fade-up">

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { useCurrency } from "@/components/providers/CurrencyProvider";
 import { formatCurrencyFromPkr } from "@/lib/currency";
 import { cn } from "@/lib/utils";
+import { Glow } from "@/components/ui/Glow";
 
 const tiers = [
   {
@@ -86,9 +87,13 @@ export function Pricing() {
               )}
             >
               {tier.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-yellow px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-secondary">
-                  Most Popular
-                </span>
+                <>
+                  <Glow className="-top-10 left-1/2 -z-10 h-32 w-32 -translate-x-1/2" opacity={35} />
+                  <Glow className="-bottom-6 -right-6 -z-10 h-24 w-24" opacity={18} />
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-yellow px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-secondary">
+                    Most Popular
+                  </span>
+                </>
               )}
               <h3 className="text-lg font-semibold text-brand-secondary">{tier.name}</h3>
               <div className="mt-4 flex items-baseline gap-2">

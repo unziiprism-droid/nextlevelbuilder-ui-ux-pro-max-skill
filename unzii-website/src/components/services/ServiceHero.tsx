@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Glow } from "@/components/ui/Glow";
 import { cn } from "@/lib/utils";
 
 export function ServiceHero({
@@ -40,12 +41,23 @@ export function ServiceHero({
           <div className="absolute inset-0 bg-brand-secondary/70" />
         </div>
       ) : variant === "dark" ? (
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
+          <Glow className="-top-24 right-[8%] h-80 w-80" opacity={22} />
+          <Glow className="top-1/2 -left-20 h-56 w-56" opacity={12} />
+          <Glow className="-bottom-16 right-[28%] h-40 w-40" opacity={16} />
+        </div>
       ) : yellow ? (
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow">
+          <Glow className="-top-24 right-[6%] h-96 w-96" color="white" opacity={40} />
+          <Glow className="-bottom-24 left-[4%] h-72 w-72" color="var(--color-brand-secondary)" opacity={10} />
+          <Glow className="top-1/3 right-[30%] h-40 w-40" color="white" opacity={25} />
+        </div>
       ) : (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className={cn("absolute inset-0", background)} />
+          <Glow className="-top-20 right-[8%] h-80 w-80" opacity={30} />
+          <Glow className="top-1/2 -left-16 h-56 w-56" opacity={16} />
+          <Glow className="-bottom-10 right-[26%] h-40 w-40" opacity={20} />
         </div>
       )}
 

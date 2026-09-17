@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { Glow } from "@/components/ui/Glow";
 
 export function Overview({
   eyebrow,
@@ -34,8 +35,10 @@ export function Overview({
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-border bg-surface-muted p-8">
+          <Reveal delay={0.1} className="relative">
+            <Glow className="-right-8 -top-8 -z-10 h-40 w-40" opacity={22} />
+            <Glow className="-bottom-6 -left-6 -z-10 h-28 w-28" opacity={14} />
+            <div className="relative rounded-3xl border border-border bg-surface-muted p-8">
               <h3 className="text-lg font-semibold text-brand-secondary">{panelTitle}</h3>
               <ul className="mt-6 flex flex-col gap-4">
                 {panelPoints.map((point) => (
