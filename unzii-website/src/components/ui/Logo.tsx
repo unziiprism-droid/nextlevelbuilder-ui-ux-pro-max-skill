@@ -22,8 +22,8 @@ export function Logo({
       <Image
         src="/logo/unzii-logo.png"
         alt="Unzii"
-        width={2704}
-        height={857}
+        width={2932}
+        height={957}
         className={cn("h-14 w-auto", className)}
         priority
       />
