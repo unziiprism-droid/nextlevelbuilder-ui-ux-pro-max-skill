@@ -42,14 +42,14 @@ export function ServiceHero({
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
           <div
             className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-20 blur-3xl"
-            style={{ background: "var(--color-brand-primary)" }}
+            style={{ background: "var(--color-brand-yellow)" }}
           />
         </div>
       ) : (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div
             className="absolute -top-20 right-[10%] h-72 w-72 rounded-full opacity-30 blur-3xl"
-            style={{ background: "var(--color-brand-primary)" }}
+            style={{ background: "var(--color-brand-yellow)" }}
           />
           <div className={cn("absolute inset-0", background)} />
         </div>

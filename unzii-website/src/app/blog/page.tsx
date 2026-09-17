@@ -43,7 +43,7 @@ export default function BlogPage() {
       <section className="border-b border-border bg-surface-muted/30 py-16 lg:py-20">
         <Container>
           <h1 className="text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl">
-            The Unzii Blog
+            The <span className="text-brand-yellow">Unzii Blog</span>
           </h1>
         </Container>
       </section>

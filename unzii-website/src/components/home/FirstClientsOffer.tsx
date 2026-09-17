@@ -8,7 +8,7 @@ const DISMISS_KEY = "unzii-first-clients-offer-dismissed";
 
 const CONFETTI_COLORS = [
   "var(--color-text-inverse)",
-  "var(--color-brand-primary)",
+  "var(--color-brand-yellow)",
   "var(--color-border-strong)",
   "var(--color-status-live)",
   "var(--color-brand-steel)",
@@ -113,7 +113,7 @@ export function FirstClientsOffer() {
         </p>
 
         <h2 className="mt-3 text-2xl font-semibold tracking-tight text-brand-secondary">
-          Get a website built, plus 2 years of domain &amp; hosting FREE.
+          Get a website built, plus 2 years of domain &amp; hosting <span className="text-brand-yellow">FREE</span>.
         </h2>
 
         <p className="mt-3 text-sm text-text-secondary">
