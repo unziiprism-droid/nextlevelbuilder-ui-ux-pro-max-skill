@@ -14,21 +14,13 @@ export function FinalCTA({
   primaryHref?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-brand-secondary py-24 lg:py-28">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(50% 60% at 50% 0%, color-mix(in srgb, var(--color-brand-primary) 35%, transparent), transparent)",
-        }}
-      />
+    <section className="relative overflow-hidden bg-brand-yellow py-24 lg:py-28">
       <Container className="relative flex flex-col items-center text-center">
         <Reveal>
-          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-text-inverse sm:text-4xl">
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
             {heading}
           </h2>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-text-inverse-muted">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-secondary/70">
             {description}
           </p>
         </Reveal>
@@ -40,7 +32,7 @@ export function FinalCTA({
             href="/contact"
             variant="ghost"
             size="lg"
-            className="text-text-inverse hover:bg-white/10"
+            className="text-brand-secondary hover:bg-brand-secondary/10"
           >
             Contact Us
           </Button>

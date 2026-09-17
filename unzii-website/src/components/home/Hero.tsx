@@ -41,7 +41,7 @@ export function Hero() {
             className="animate-fade-up mt-6 max-w-2xl text-4xl font-semibold tracking-tight text-brand-secondary sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.08s" }}
           >
-            Websites &amp; Digital Products, <span className="text-brand-primary">Engineered Right</span>
+            Websites &amp; Digital Products, <span className="text-brand-yellow">Engineered Right</span>
           </h1>
 
           <p
