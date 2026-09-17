@@ -36,7 +36,7 @@ export function Logo({
       alt="Unzii"
       width={200}
       height={200}
-      className={cn("h-14 w-14 rounded-xl", className)}
+      className={cn("h-14 w-14", className)}
       priority
     />
   );
