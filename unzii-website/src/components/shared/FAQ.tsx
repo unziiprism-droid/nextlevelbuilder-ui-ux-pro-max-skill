@@ -47,11 +47,13 @@ export function FAQ({
   heading = "Frequently asked questions",
   faqs = defaultFaqs,
   background,
+  dark = false,
 }: {
   eyebrow?: string;
   heading?: string;
   faqs?: FAQItem[];
   background?: string;
+  dark?: boolean;
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -74,8 +76,13 @@ export function FAQ({
       />
       <Container className="mx-auto max-w-3xl">
         <Reveal className="text-center">
-          <Eyebrow className="justify-center">{eyebrow}</Eyebrow>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
+          <Eyebrow inverse={dark} className="justify-center">{eyebrow}</Eyebrow>
+          <h2
+            className={cn(
+              "mt-4 text-3xl font-semibold tracking-tight sm:text-4xl",
+              dark ? "text-text-inverse" : "text-brand-secondary",
+            )}
+          >
             {heading}
           </h2>
         </Reveal>

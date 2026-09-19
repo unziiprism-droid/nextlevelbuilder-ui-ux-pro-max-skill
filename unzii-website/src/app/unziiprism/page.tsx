@@ -101,7 +101,8 @@ export default function UnziiprismPage() {
         eyebrow="FAQ"
         heading="Unziiprism, answered"
         faqs={faqs}
-        background="bg-brand-yellow-light"
+        background="bg-brand-secondary-light"
+        dark
       />
 
       <FinalCTA

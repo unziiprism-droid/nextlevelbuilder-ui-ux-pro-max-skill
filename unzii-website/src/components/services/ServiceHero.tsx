@@ -41,11 +41,7 @@ export function ServiceHero({
           <div className="absolute inset-0 bg-brand-secondary/70" />
         </div>
       ) : variant === "dark" ? (
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-secondary">
-          <Glow className="-top-24 right-[8%] h-80 w-80" opacity={22} />
-          <Glow className="top-1/2 -left-20 h-56 w-56" opacity={12} />
-          <Glow className="-bottom-16 right-[28%] h-40 w-40" opacity={16} />
-        </div>
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-brand-secondary" />
       ) : yellow ? (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-brand-yellow">
           <Glow className="-top-24 right-[6%] h-96 w-96" color="white" opacity={40} />
