@@ -51,7 +51,7 @@ export function FAQ({
   dark = false,
 }: {
   eyebrow?: string;
-  heading?: string;
+  heading?: React.ReactNode;
   headingClassName?: string;
   faqs?: FAQItem[];
   background?: string;

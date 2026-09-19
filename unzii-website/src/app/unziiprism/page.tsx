@@ -79,7 +79,7 @@ export default function UnziiprismPage() {
       />
 
       <Benefits
-        heading="What Unziiprism delivers"
+        heading={<>What Unzii<span className="text-brand-yellow">prism</span> delivers</>}
         headingClassName="font-plaax font-bold tracking-normal"
         description="Everything a brand needs to look and feel consistent, wherever it shows up."
         items={benefits}
@@ -105,7 +105,7 @@ export default function UnziiprismPage() {
 
       <FAQ
         eyebrow="FAQ"
-        heading="Unziiprism, answered"
+        heading={<>Unzii<span className="text-brand-yellow">prism</span>, answered</>}
         headingClassName="font-plaax font-bold tracking-normal"
         faqs={faqs}
         background="bg-brand-secondary-light"

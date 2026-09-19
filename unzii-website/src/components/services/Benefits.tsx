@@ -25,7 +25,7 @@ export function Benefits({
   variant = "white",
 }: {
   eyebrow?: string;
-  heading: string;
+  heading: React.ReactNode;
   headingClassName?: string;
   description?: string;
   items: BenefitItem[];
