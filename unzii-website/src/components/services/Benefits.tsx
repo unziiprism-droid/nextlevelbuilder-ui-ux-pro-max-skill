@@ -19,12 +19,14 @@ const sectionBg = {
 export function Benefits({
   eyebrow = "Benefits",
   heading,
+  headingClassName,
   description,
   items,
   variant = "white",
 }: {
   eyebrow?: string;
   heading: string;
+  headingClassName?: string;
   description?: string;
   items: BenefitItem[];
   variant?: "white" | "yellow-light" | "dark";
@@ -42,6 +44,7 @@ export function Benefits({
             className={cn(
               "mt-4 text-3xl font-semibold tracking-tight sm:text-4xl",
               dark ? "text-text-inverse" : "text-brand-secondary",
+              headingClassName,
             )}
           >
             {heading}

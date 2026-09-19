@@ -3,16 +3,19 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { Glow } from "@/components/ui/Glow";
+import { cn } from "@/lib/utils";
 
 export function Overview({
   eyebrow,
   heading,
+  headingClassName,
   paragraphs,
   panelTitle,
   panelPoints,
 }: {
   eyebrow: string;
   heading: string;
+  headingClassName?: string;
   paragraphs: string[];
   panelTitle: string;
   panelPoints: string[];
@@ -23,7 +26,7 @@ export function Overview({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <Reveal>
             <Eyebrow>{eyebrow}</Eyebrow>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
+            <h2 className={cn("mt-4 text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl", headingClassName)}>
               {heading}
             </h2>
             <div className="mt-6 flex flex-col gap-4">

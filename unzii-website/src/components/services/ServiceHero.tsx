@@ -7,8 +7,10 @@ import { cn } from "@/lib/utils";
 
 export function ServiceHero({
   eyebrow,
+  eyebrowLogo,
   badge,
   heading,
+  headingClassName,
   description,
   primaryLabel = "Start Your Project",
   primaryHref = "/start-your-project",
@@ -19,8 +21,10 @@ export function ServiceHero({
   variant = "light",
 }: {
   eyebrow: string;
+  eyebrowLogo?: { src: string; alt: string; width: number; height: number };
   badge?: string;
   heading: string;
+  headingClassName?: string;
   description: string;
   primaryLabel?: string;
   primaryHref?: string;
@@ -59,7 +63,18 @@ export function ServiceHero({
 
       <Container className="flex flex-col items-center pt-20 pb-20 text-center lg:pt-28 lg:pb-24">
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <Eyebrow inverse={inverse}>{eyebrow}</Eyebrow>
+          {eyebrowLogo ? (
+            <Image
+              src={eyebrowLogo.src}
+              alt={eyebrowLogo.alt}
+              width={eyebrowLogo.width}
+              height={eyebrowLogo.height}
+              className="h-8 w-auto sm:h-9"
+              priority
+            />
+          ) : (
+            <Eyebrow inverse={inverse}>{eyebrow}</Eyebrow>
+          )}
           {badge && (
             <span className="rounded-full border border-border bg-brand-bg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brand-steel">
               {badge}
@@ -71,6 +86,7 @@ export function ServiceHero({
           className={cn(
             "mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl",
             inverse ? "text-text-inverse" : "text-brand-secondary",
+            headingClassName,
           )}
         >
           {heading}

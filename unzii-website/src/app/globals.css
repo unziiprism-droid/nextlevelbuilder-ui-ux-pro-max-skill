@@ -36,6 +36,7 @@
 
 @theme inline {
   --font-sans: var(--font-poppins);
+  --font-plaax: var(--font-plaax);
 
   --color-brand-secondary: var(--color-brand-secondary);
   --color-brand-steel: var(--color-brand-steel);

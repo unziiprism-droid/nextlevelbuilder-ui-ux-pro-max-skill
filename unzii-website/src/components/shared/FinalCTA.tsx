@@ -2,14 +2,17 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { Glow } from "@/components/ui/Glow";
+import { cn } from "@/lib/utils";
 
 export function FinalCTA({
   heading = "Ready to grow your business online?",
+  headingClassName,
   description = "Tell us about your project and we'll get back to you with next steps. No pressure, no fake urgency, just a straightforward conversation.",
   primaryLabel = "Start Your Project",
   primaryHref = "/start-your-project",
 }: {
   heading?: string;
+  headingClassName?: string;
   description?: string;
   primaryLabel?: string;
   primaryHref?: string;
@@ -21,7 +24,7 @@ export function FinalCTA({
       <Glow className="top-1/4 right-[30%] h-40 w-40" color="white" opacity={22} />
       <Container className="relative flex flex-col items-center text-center">
         <Reveal>
-          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl">
+          <h2 className={cn("max-w-2xl text-3xl font-semibold tracking-tight text-brand-secondary sm:text-4xl", headingClassName)}>
             {heading}
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-secondary/70">

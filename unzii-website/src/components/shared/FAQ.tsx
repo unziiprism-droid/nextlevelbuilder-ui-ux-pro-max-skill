@@ -45,12 +45,14 @@ const defaultFaqs: FAQItem[] = [
 export function FAQ({
   eyebrow = "FAQ",
   heading = "Frequently asked questions",
+  headingClassName,
   faqs = defaultFaqs,
   background,
   dark = false,
 }: {
   eyebrow?: string;
   heading?: string;
+  headingClassName?: string;
   faqs?: FAQItem[];
   background?: string;
   dark?: boolean;
@@ -81,6 +83,7 @@ export function FAQ({
             className={cn(
               "mt-4 text-3xl font-semibold tracking-tight sm:text-4xl",
               dark ? "text-text-inverse" : "text-brand-secondary",
+              headingClassName,
             )}
           >
             {heading}
