@@ -71,12 +71,14 @@ export default function UnziiprismPage() {
         description="Logo design, brand identity, and visual design — handled by the same team behind Unzii, under one dedicated design department."
         secondaryLabel="Get in Touch"
         secondaryHref="/contact"
+        variant="dark"
       />
 
       <Benefits
         heading="What Unziiprism delivers"
         description="Everything a brand needs to look and feel consistent, wherever it shows up."
         items={benefits}
+        variant="dark"
       />
 
       <Overview
