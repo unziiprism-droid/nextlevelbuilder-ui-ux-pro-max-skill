@@ -23,7 +23,7 @@ export function ServiceHero({
   eyebrow: string;
   eyebrowLogo?: { src: string; alt: string; width: number; height: number };
   badge?: string;
-  heading: string;
+  heading: React.ReactNode;
   headingClassName?: string;
   description: string;
   primaryLabel?: string;
@@ -102,7 +102,12 @@ export function ServiceHero({
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-          <Button href={primaryHref} size="lg" showArrow variant={inverse || yellow ? "inverse" : "primary"}>
+          <Button
+            href={primaryHref}
+            size="lg"
+            showArrow
+            variant={variant === "dark" ? "primary" : inverse || yellow ? "inverse" : "primary"}
+          >
             {primaryLabel}
           </Button>
           {secondaryLabel && secondaryHref && (

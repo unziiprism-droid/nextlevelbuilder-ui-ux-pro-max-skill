@@ -14,7 +14,7 @@ export function Overview({
   panelPoints,
 }: {
   eyebrow: string;
-  heading: string;
+  heading: React.ReactNode;
   headingClassName?: string;
   paragraphs: string[];
   panelTitle: string;

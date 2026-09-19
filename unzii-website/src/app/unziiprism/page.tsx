@@ -70,8 +70,8 @@ export default function UnziiprismPage() {
       <ServiceHero
         eyebrow="Unziiprism"
         eyebrowLogo={{ src: "/logo/unziiprism-logo.png", alt: "Unziiprism", width: 3553, height: 694 }}
-        heading="Unzii's Design Department"
-        headingClassName="font-plaax font-bold"
+        heading={<><span className="text-brand-yellow">Unzii</span>&apos;s Design Department</>}
+        headingClassName="font-plaax font-bold tracking-normal"
         description="Logo design, brand identity, and visual design — handled by the same team behind Unzii, under one dedicated design department."
         secondaryLabel="Get in Touch"
         secondaryHref="/contact"
@@ -80,7 +80,7 @@ export default function UnziiprismPage() {
 
       <Benefits
         heading="What Unziiprism delivers"
-        headingClassName="font-plaax font-bold"
+        headingClassName="font-plaax font-bold tracking-normal"
         description="Everything a brand needs to look and feel consistent, wherever it shows up."
         items={benefits}
         variant="dark"
@@ -89,7 +89,7 @@ export default function UnziiprismPage() {
       <Overview
         eyebrow="About Unziiprism"
         heading="The design side of Unzii"
-        headingClassName="font-plaax font-bold"
+        headingClassName="font-plaax font-bold tracking-normal"
         paragraphs={[
           "Unziiprism is Unzii's design department, focused on logo design, brand identity, and visual design work. It isn't a separate company — it's part of the same team, held to the same standards of honesty and quality as everything else we build.",
           "We're building out this page over time as branding projects are completed, so you can see real work rather than placeholders. If you need a logo or brand identity now, get in touch and we'll walk you through it directly.",
@@ -106,7 +106,7 @@ export default function UnziiprismPage() {
       <FAQ
         eyebrow="FAQ"
         heading="Unziiprism, answered"
-        headingClassName="font-plaax font-bold"
+        headingClassName="font-plaax font-bold tracking-normal"
         faqs={faqs}
         background="bg-brand-secondary-light"
         dark
@@ -114,7 +114,7 @@ export default function UnziiprismPage() {
 
       <FinalCTA
         heading="Need a logo or brand identity?"
-        headingClassName="font-plaax font-bold"
+        headingClassName="font-plaax font-bold tracking-normal"
         description="Tell us about your business and we'll show you how Unziiprism can help bring your brand to life."
         primaryLabel="Start a Design Project"
       />
