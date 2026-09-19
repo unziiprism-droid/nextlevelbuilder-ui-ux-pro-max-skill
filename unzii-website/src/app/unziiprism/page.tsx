@@ -90,7 +90,6 @@ export default function UnziiprismPage() {
         eyebrow="About Unziiprism"
         heading="The design side of Unzii"
         headingClassName="font-plaax font-bold tracking-normal"
-        dark
         paragraphs={[
           "Unziiprism is Unzii's design department, focused on logo design, brand identity, and visual design work. It isn't a separate company — it's part of the same team, held to the same standards of honesty and quality as everything else we build.",
           "We're building out this page over time as branding projects are completed, so you can see real work rather than placeholders. If you need a logo or brand identity now, get in touch and we'll walk you through it directly.",
