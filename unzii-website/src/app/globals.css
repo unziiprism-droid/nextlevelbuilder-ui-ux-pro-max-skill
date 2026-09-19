@@ -8,7 +8,6 @@
   --color-brand-bg: #ffffff; /* White — replaces the old Soft Grey brand fill */
   --color-brand-yellow: #ffcc00; /* Yellow — primary buttons, footer, value-prop band */
   --color-brand-yellow-light: color-mix(in srgb, var(--color-brand-yellow) 16%, white); /* Pale yellow — alternating section bands */
-  --color-brand-secondary-light: color-mix(in srgb, var(--color-brand-secondary) 88%, white); /* Charcoal — lighter dark band, e.g. Unziiprism sections */
 
   /* Semantic surface scale, derived only for layout use — hues stay on-brand */
   --color-surface: #ffffff;
@@ -43,7 +42,6 @@
   --color-brand-bg: var(--color-brand-bg);
   --color-brand-yellow: var(--color-brand-yellow);
   --color-brand-yellow-light: var(--color-brand-yellow-light);
-  --color-brand-secondary-light: var(--color-brand-secondary-light);
 
   --color-surface: var(--color-surface);
   --color-surface-subtle: var(--color-surface-subtle);
