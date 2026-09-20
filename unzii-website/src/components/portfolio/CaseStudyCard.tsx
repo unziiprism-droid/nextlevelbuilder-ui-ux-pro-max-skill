@@ -9,7 +9,7 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
       href={`/portfolio/${caseStudy.slug}`}
       className="group relative block overflow-hidden rounded-3xl bg-brand-secondary shadow-lifted"
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
         <Image
           src={caseStudy.coverImage}
           alt={caseStudy.coverAlt}
