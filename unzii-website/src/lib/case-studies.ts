@@ -29,9 +29,9 @@ export const caseStudies: CaseStudy[] = [
     tagline: "Brand refresh + WordPress rebuild",
     summary:
       "An events and marketplace platform connecting entrepreneurs, operators, and decision makers. Full brand refresh and a rebuilt WordPress site, delivered on a tight deadline.",
-    coverImage: "/portfolio/hiiisage-hero.jpg",
+    coverImage: "/portfolio/hiiisage-cover.jpg",
     coverAlt: "Hiii Sage homepage hero: The right people. In the right room.",
-    heroImage: "/portfolio/hiiisage-hero.jpg",
+    heroImage: "/portfolio/hiiisage-cover.jpg",
     heroAlt: "Hiii Sage homepage hero: The right people. In the right room.",
     challenge: {
       heading: "A full rebrand, on a hard deadline",

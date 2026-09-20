@@ -50,8 +50,8 @@ export default async function CaseStudyPage(props: PageProps<"/portfolio/[slug]"
             <Image
               src={caseStudy.heroImage}
               alt={caseStudy.heroAlt}
-              width={1600}
-              height={735}
+              width={1891}
+              height={856}
               className="w-full h-auto"
               priority
             />

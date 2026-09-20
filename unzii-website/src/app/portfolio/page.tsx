@@ -24,7 +24,7 @@ export default function PortfolioPage() {
 
       <div className="py-24 lg:py-32">
         <Container>
-          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-8">
+          <div className="mx-auto flex max-w-6xl flex-wrap gap-8">
             {caseStudies.map((caseStudy) => (
               <div key={caseStudy.slug} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]">
                 <CaseStudyCard caseStudy={caseStudy} />
