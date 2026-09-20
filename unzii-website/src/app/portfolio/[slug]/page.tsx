@@ -41,8 +41,7 @@ export default async function CaseStudyPage(props: PageProps<"/portfolio/[slug]"
         eyebrow="Case Study"
         heading={caseStudy.client}
         description={caseStudy.summary}
-        secondaryLabel="Back to Portfolio"
-        secondaryHref="/portfolio"
+        hideActions
       />
 
       <div className="py-24 lg:py-32">
@@ -112,6 +111,7 @@ export default async function CaseStudyPage(props: PageProps<"/portfolio/[slug]"
       <FinalCTA
         heading="Our Next Success Story Could Be Yours"
         description="Every agency's first real client took a chance on them. We'd love for that to be you."
+        singleButton
       />
     </>
   );

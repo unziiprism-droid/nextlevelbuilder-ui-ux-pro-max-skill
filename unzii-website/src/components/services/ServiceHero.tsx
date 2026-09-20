@@ -19,6 +19,7 @@ export function ServiceHero({
   background = "bg-surface-muted/30",
   heroImage,
   variant = "light",
+  hideActions = false,
 }: {
   eyebrow: string;
   eyebrowLogo?: { src: string; alt: string; width: number; height: number };
@@ -33,6 +34,7 @@ export function ServiceHero({
   background?: string;
   heroImage?: string;
   variant?: "light" | "dark" | "yellow";
+  hideActions?: boolean;
 }) {
   const inverse = !!heroImage || variant === "dark";
   const yellow = variant === "yellow";
@@ -101,26 +103,28 @@ export function ServiceHero({
           {description}
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-          <Button
-            href={primaryHref}
-            size="lg"
-            showArrow
-            variant={variant === "dark" ? "primary" : inverse || yellow ? "inverse" : "primary"}
-          >
-            {primaryLabel}
-          </Button>
-          {secondaryLabel && secondaryHref && (
+        {!hideActions && (
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Button
-              href={secondaryHref}
-              variant="secondary"
+              href={primaryHref}
               size="lg"
-              className={inverse ? "border-white/40 text-text-inverse hover:bg-white/10" : undefined}
+              showArrow
+              variant={variant === "dark" ? "primary" : inverse || yellow ? "inverse" : "primary"}
             >
-              {secondaryLabel}
+              {primaryLabel}
             </Button>
-          )}
-        </div>
+            {secondaryLabel && secondaryHref && (
+              <Button
+                href={secondaryHref}
+                variant="secondary"
+                size="lg"
+                className={inverse ? "border-white/40 text-text-inverse hover:bg-white/10" : undefined}
+              >
+                {secondaryLabel}
+              </Button>
+            )}
+          </div>
+        )}
       </Container>
     </section>
   );

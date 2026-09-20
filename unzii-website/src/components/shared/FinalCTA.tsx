@@ -10,12 +10,14 @@ export function FinalCTA({
   description = "Tell us about your project and we'll get back to you with next steps. No pressure, no fake urgency, just a straightforward conversation.",
   primaryLabel = "Start Your Project",
   primaryHref = "/start-your-project",
+  singleButton = false,
 }: {
   heading?: string;
   headingClassName?: string;
   description?: string;
   primaryLabel?: string;
   primaryHref?: string;
+  singleButton?: boolean;
 }) {
   return (
     <section className="relative overflow-hidden bg-brand-yellow py-24 lg:py-28">
@@ -35,14 +37,16 @@ export function FinalCTA({
           <Button href={primaryHref} variant="inverse" size="lg" showArrow>
             {primaryLabel}
           </Button>
-          <Button
-            href="/contact"
-            variant="ghost"
-            size="lg"
-            className="text-brand-secondary hover:bg-brand-secondary/10"
-          >
-            Contact Us
-          </Button>
+          {!singleButton && (
+            <Button
+              href="/contact"
+              variant="ghost"
+              size="lg"
+              className="text-brand-secondary hover:bg-brand-secondary/10"
+            >
+              Contact Us
+            </Button>
+          )}
         </Reveal>
       </Container>
     </section>
